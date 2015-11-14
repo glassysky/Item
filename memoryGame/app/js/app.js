@@ -37,7 +37,7 @@ define(['jquery'],function($){
 				console.log(time);
 				if(time<0){
 					stopCount(Ttemp);
-					that.update(interval);
+					that.timerUpdate(interval);
 				}
 			},1000);
 
@@ -47,26 +47,43 @@ define(['jquery'],function($){
 
 			return t;
 		},
-		update : function(interval){
+		timerUpdate : function(){
 			var t1,//timer
 				t2,//interval
-				second = 0,
-				minute = 0,
+				timerText = "",
 				timeArray = [],
 				timerNum = $("#timer-top").find("span"),
-				flashNum = $("#num-flash").find("span");
+				flashNum = $("#num-flash").find("span"),
+				that = this;
 
 			$(".prepare-part").css("display","none");
 			$(".flash-part").css("display","block");
 
 			timeArray = timerNum.html().split(":");
-			console.log(timeArray);
+
+			t1 = setTimeout(function(){
+				if(timeArray[1]<60){
+					timeArray[1] = addZero(parseInt(timeArray[1])+1);
+				} else {
+					timeArray[1] = "00";
+					timeArray[0] = addZero(parseInt(timeArray[0])+1);
+				}
+				console.log(timeArray);
+				timerText = timeArray.join(":");
+				timerNum.html(timerText);
+
+				that.timerUpdate();
+			},1000);
 
 			function addZero(num){
 				if(num<10){
 					num = "0" + num;
 				}
+				return num;
 			}
+		},
+		flashUpdate : function(){
+
 		}
 	};
 });
