@@ -24,13 +24,13 @@
 					<div class="form-group">
 						<label for="" class="col-md-2 control-label col-md-offset-2">闪现间隔(s)：</label>
 						<div class="col-md-6">
-							<input type="text" class="form-control" placeholder="0.2-10s">
+							<input type="text" class="form-control" id="time-interval" placeholder="0.2-10s">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="" class="col-md-2 control-label col-md-offset-2">准备时间(s)：</label>
 						<div class="col-md-6">
-							<select name="" id="" class="form-control">
+							<select name="" id="time-prepare" class="form-control">
 								<option value="5">5</option>
 								<option value="10">10</option>
 								<option value="15">15</option>
@@ -42,11 +42,20 @@
 					</div>
 				</form>
 			</div>
-			<button class="btn btn-primary">开始</button>
+			<button class="btn btn-primary" id="start-btn">开始</button>
 		</div>
 		<div class="prepare-part">
-			<h1>5</h1>
+			<h1 id="prepare-text">05</h1>
 			<button class="btn-lg btn-primary">取消</button>
+		</div>
+		<div class="flash-part">
+			<div class="timer" id="timer-top">
+				<span>00:00</span>
+			</div>
+			<div class="flash-body" id="num-flash">
+				<span>0</span>
+			</div>
+			<button class="btn-lg btn-primary">结束</button>
 		</div>
 		<footer></footer>
 	</div>

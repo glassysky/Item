@@ -13,6 +13,6 @@ requirejs.config({
     }
 });
 
-requirejs(['jquery','app'],function($,init,render,update){
-
+requirejs(['jquery','app'],function($,app){
+    app.btnClickListener();
 });

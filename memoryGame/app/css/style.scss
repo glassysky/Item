@@ -11,10 +11,9 @@ body {
 
 	header {
 		/*test*/
-		display: none;
+		/*display: none;*/
 		img {
 			width: 500px;
-			margin-top: 50px;
 		}
 		h1 {
 			color: $textcolor;
@@ -25,7 +24,7 @@ body {
 #numCoding {
 	.select-part {
 		/*test*/
-		display: none;
+		/*display: none;*/
 		width: 60%;
 		margin: 0 auto;
 		padding: 30px;
@@ -42,11 +41,28 @@ body {
 		}
 	}
 	.prepare-part {
+		display: none;
 		h1 {
 			color: #fff;
 			font-size: 20em;
 			margin-top: 100px;
 			padding: 1px;
+		}
+	}
+	.flash-part {
+		display: none;
+		.timer {
+			color: #fff;
+			font-size: 3em;
+		}
+		.flash-body {
+			width: 80%;
+			margin: 20px auto;
+			background-color: #aaa;
+			span {
+				display: inline-block;
+				font-size: 20em;
+			}
 		}
 	}
 }

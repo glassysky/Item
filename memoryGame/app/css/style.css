@@ -6,16 +6,15 @@ body {
   text-align: center; }
   .container-fluid header {
     /*test*/
-    display: none; }
+    /*display: none;*/ }
     .container-fluid header img {
-      width: 500px;
-      margin-top: 50px; }
+      width: 500px; }
     .container-fluid header h1 {
       color: #eee; }
 
 #numCoding .select-part {
   /*test*/
-  display: none;
+  /*display: none;*/
   width: 60%;
   margin: 0 auto;
   padding: 30px;
@@ -26,10 +25,24 @@ body {
     #numCoding .select-part .setting-part form input {
       /*text-align: right;*/
       color: #000; }
-#numCoding .prepare-part h1 {
-  color: #fff;
-  font-size: 20em;
-  margin-top: 100px;
-  padding: 1px; }
+#numCoding .prepare-part {
+  display: none; }
+  #numCoding .prepare-part h1 {
+    color: #fff;
+    font-size: 20em;
+    margin-top: 100px;
+    padding: 1px; }
+#numCoding .flash-part {
+  display: none; }
+  #numCoding .flash-part .timer {
+    color: #fff;
+    font-size: 3em; }
+  #numCoding .flash-part .flash-body {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #aaa; }
+    #numCoding .flash-part .flash-body span {
+      display: inline-block;
+      font-size: 20em; }
 
 /*# sourceMappingURL=style.css.map */
