@@ -1,4 +1,5 @@
 define(['jquery'],function($){
+	var cacheArray = [];
 	return {
 		btnClickListener : function(){
 			var that = this;
@@ -37,7 +38,8 @@ define(['jquery'],function($){
 				console.log(time);
 				if(time<0){
 					stopCount(Ttemp);
-					that.timerUpdate(interval);
+					that.timerUpdate();
+					that.flashUpdate(interval);
 				}
 			},1000);
 
@@ -53,7 +55,6 @@ define(['jquery'],function($){
 				timerText = "",
 				timeArray = [],
 				timerNum = $("#timer-top").find("span"),
-				flashNum = $("#num-flash").find("span"),
 				that = this;
 
 			$(".prepare-part").css("display","none");
@@ -68,7 +69,7 @@ define(['jquery'],function($){
 					timeArray[1] = "00";
 					timeArray[0] = addZero(parseInt(timeArray[0])+1);
 				}
-				console.log(timeArray);
+				// console.log(timeArray);
 				timerText = timeArray.join(":");
 				timerNum.html(timerText);
 
@@ -82,8 +83,35 @@ define(['jquery'],function($){
 				return num;
 			}
 		},
-		flashUpdate : function(){
+		flashUpdate : function(interval){
+			var t2,
+				randomNum,
+				showNum,
+				numArray = [],
+				flashNum = $("#num-flash").find("span"),
+				that = this;
 
+			for(var i = 0;i<10;i++){
+				numArray.push(i);
+			}
+
+			console.log(cacheArray);
+			t2 = setTimeout(function(){
+				if(!cacheArray){
+					randomNum = Math.ceil(Math.random()*9);
+					showNum = numArray[randomNum];
+					cacheArray.push(showNum);
+				} else {
+					console.log("else");
+					do {
+						randomNum = Math.ceil(Math.random()*9);
+						showNum = numArray[randomNum];
+					} while (cacheArray[cacheArray.length-1] == showNum);
+					cacheArray.push(showNum);
+				}
+				flashNum.html(showNum);
+				that.flashUpdate(interval)
+			},interval*1000);
 		}
 	};
 });
