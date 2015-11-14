@@ -1,0 +1,52 @@
+$bgcolor : #4d4d4d;
+$textcolor : #eee;
+
+body {
+	background-color: $bgcolor;
+}
+
+.container-fluid {
+	padding: 30px;
+	text-align: center;
+
+	header {
+		/*test*/
+		display: none;
+		img {
+			width: 500px;
+			margin-top: 50px;
+		}
+		h1 {
+			color: $textcolor;
+		}
+	}
+}
+
+#numCoding {
+	.select-part {
+		/*test*/
+		display: none;
+		width: 60%;
+		margin: 0 auto;
+		padding: 30px;
+		background-color: #333;
+		.setting-part {
+			form {
+				color: $textcolor;
+				/*text-align: center;*/
+				input {
+					/*text-align: right;*/
+					color: #000;
+				}
+			}
+		}
+	}
+	.prepare-part {
+		h1 {
+			color: #fff;
+			font-size: 20em;
+			margin-top: 100px;
+			padding: 1px;
+		}
+	}
+}

@@ -10,9 +10,46 @@
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<p>hello world</p>
+	<div class="container-fluid" id="numCoding">
+		<header>
+			<img src="img/number.jpg" alt="number pictrue">
+			<h1>数字-编码训练</h1>
+		</header>
+		<div class="select-part">
+			<div class="setting-part">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="" class="col-md-2 control-label col-md-offset-2">闪现间隔(s)：</label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" placeholder="0.2-10s">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-md-2 control-label col-md-offset-2">准备时间(s)：</label>
+						<div class="col-md-6">
+							<select name="" id="" class="form-control">
+								<option value="5">5</option>
+								<option value="10">10</option>
+								<option value="15">15</option>
+								<option value="30">30</option>
+								<option value="45">45</option>
+								<option value="60" selected>60</option>
+						</select>
+						</div>
+					</div>
+				</form>
+			</div>
+			<button class="btn btn-primary">开始</button>
+		</div>
+		<div class="prepare-part">
+			<h1>5</h1>
+			<button class="btn-lg btn-primary">取消</button>
+		</div>
+		<footer></footer>
+	</div>
 
 	<script src="js/lib/require.js" data-main="js/main.js"></script>
 </body>
