@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #4d4d4d; }
 
@@ -12,6 +13,7 @@ body {
     .container-fluid header h1 {
       color: #eee; }
 
+/*鏁板瓧-缂栫爜閮ㄥ垎*/
 #numCoding .select-part {
   /*test*/
   /*display: none;*/
@@ -42,6 +44,40 @@ body {
     margin: 20px auto;
     background-color: #aaa; }
     #numCoding .flash-part .flash-body span {
+      display: inline-block;
+      font-size: 20em; }
+
+/*鏁板瓧-鑱旂粨閮ㄥ垎*/
+#numBinding .select-part {
+  /*test*/
+  /*display: none;*/
+  width: 60%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #333; }
+  #numBinding .select-part .setting-part form {
+    color: #eee;
+    /*text-align: center;*/ }
+    #numBinding .select-part .setting-part form input {
+      /*text-align: right;*/
+      color: #000; }
+#numBinding .prepare-part {
+  display: none; }
+  #numBinding .prepare-part h1 {
+    color: #fff;
+    font-size: 20em;
+    margin-top: 100px;
+    padding: 1px; }
+#numBinding .flash-part {
+  display: none; }
+  #numBinding .flash-part .timer {
+    color: #fff;
+    font-size: 3em; }
+  #numBinding .flash-part .flash-body {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #aaa; }
+    #numBinding .flash-part .flash-body span {
       display: inline-block;
       font-size: 20em; }
 

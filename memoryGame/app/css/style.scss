@@ -21,7 +21,55 @@ body {
 	}
 }
 
+/*数字-编码部分*/
 #numCoding {
+	.select-part {
+		/*test*/
+		/*display: none;*/
+		width: 60%;
+		margin: 0 auto;
+		padding: 30px;
+		background-color: #333;
+		.setting-part {
+			form {
+				color: $textcolor;
+				/*text-align: center;*/
+				input {
+					/*text-align: right;*/
+					color: #000;
+				}
+			}
+		}
+	}
+	.prepare-part {
+		display: none;
+		h1 {
+			color: #fff;
+			font-size: 20em;
+			margin-top: 100px;
+			padding: 1px;
+		}
+	}
+	.flash-part {
+		display: none;
+		.timer {
+			color: #fff;
+			font-size: 3em;
+		}
+		.flash-body {
+			width: 80%;
+			margin: 20px auto;
+			background-color: #aaa;
+			span {
+				display: inline-block;
+				font-size: 20em;
+			}
+		}
+	}
+}
+
+/*数字-联结部分*/
+#numBinding {
 	.select-part {
 		/*test*/
 		/*display: none;*/

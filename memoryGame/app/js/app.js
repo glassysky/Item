@@ -7,6 +7,7 @@ define(['jquery'],function($){
 			$("#start-btn").on("click",function(){
 				var timeInterval = $("#time-interval").val(),
 					timePrepare = $("#time-prepare").val(),
+					digitShow = $("#digit-show").val(),
 					check = false;
 
 				if(timeInterval<=10 && timeInterval>=0.2 && timePrepare){
@@ -17,14 +18,15 @@ define(['jquery'],function($){
 					$("header").css("display","none");
 					$(".select-part").css("display","none");
 					$(".prepare-part").css("display","block");
-					that.startGame(timePrepare,timeInterval);
+					that.startGame(timePrepare,timeInterval,digitShow);
 				}
 			});
 		},
-		startGame : function(timePrepare,timeInterval){
+		startGame : function(timePrepare,timeInterval,digitShow){
 			var text = $("#prepare-text"),
 				time = timePrepare,
 				interval = timeInterval,
+				digit = digitShow,
 				that = this,
 				t,Ttemp;
 
@@ -35,12 +37,12 @@ define(['jquery'],function($){
 
 			t = setTimeout(function(){
 				time = parseInt(time) - 1;
-				Ttemp = that.startGame(time,interval);
+				Ttemp = that.startGame(time,interval,digit);
 				console.log(time);
 				if(time<0){
 					stopCount(Ttemp);
 					that.timerUpdate();
-					that.flashUpdate(interval);
+					that.flashUpdate(interval,digit);
 				}
 			},1000);
 
@@ -94,33 +96,51 @@ define(['jquery'],function($){
 
 			return t1;
 		},
-		flashUpdate : function(interval){
+		flashUpdate : function(interval,digit){
 			var t2,
 				randomNum,
 				showNum,
-				numArray = [],
+				indexNum = 0,
 				flashNum = $("#num-flash").find("span"),
 				that = this;
-
-			for(var i = 0;i<10;i++){
-				numArray.push(i);
-			}
 
 			// console.log(cacheArray);
 			t2 = setTimeout(function(){
 				if(!cacheArray){
-					randomNum = Math.ceil(Math.random()*9);
-					showNum = numArray[randomNum];
-					cacheArray.push(showNum);
-				} else {
-					do {
+
+					if(!digit){
 						randomNum = Math.ceil(Math.random()*9);
-						showNum = numArray[randomNum];
+						showNum = randomNum;
+					} else {
+						indexNum = that.indexCalculate(digit);
+						randomNum = Math.ceil(Math.random()*indexNum);
+						showNum = randomNum;
+					}
+					
+					cacheArray.push(showNum);
+
+				} else {
+
+					do {
+
+						if(!digit){
+							randomNum = Math.ceil(Math.random()*9);
+							showNum = randomNum;
+						} else {
+							indexNum = that.indexCalculate(digit);
+							randomNum = Math.ceil(Math.random()*indexNum);
+							showNum = randomNum;
+						}
+
 					} while (cacheArray[cacheArray.length-1] == showNum);
 					cacheArray.push(showNum);
+
 				}
+
+				console.log(cacheArray);
+
 				flashNum.html(showNum);
-				that.flashUpdate(interval)
+				that.flashUpdate(interval,digit);
 			},interval*1000);
 
 			this.stopBtnListener(t2);
@@ -142,6 +162,14 @@ define(['jquery'],function($){
 				$("#timer-top").find("span").html("00:00");
 				$("#num-flash").find("span").html("0");
 			});
-		}
+		},
+		indexCalculate : function(index){
+			var num = 1;
+			for(var i = 0;i<index;i++){
+				num *= 10;
+			}
+			return num;
+		},
+		makeRandomNumber : function(){}
 	};
 });
