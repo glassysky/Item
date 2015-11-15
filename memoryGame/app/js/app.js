@@ -155,12 +155,26 @@ define(['jquery'],function($){
 			var randomNum = 0,
 				indexNum = 1;
 			if(!digit){
-				randomNum = Math.ceil(Math.random()*9);
+				randomNum = Math.floor(Math.random()*9);
 			} else {
 				indexNum = this.indexCalculate(digit);
-				randomNum = Math.ceil(Math.random()*indexNum);
+				randomNum = Math.floor(Math.random()*indexNum);
+				randomNum = this.completeNumber(randomNum,digit);
 			}
 			return randomNum;
+		},
+		completeNumber : function(num,digit){
+			var i = "",
+				consultNum = this.indexCalculate(digit);
+
+			if(num<consultNum){
+				i = num.toString();
+				for(var j = 0;j<(digit-i.length);j++){
+					num = "0" + num;
+				}
+			}
+
+			return num;
 		}
 	};
 });
