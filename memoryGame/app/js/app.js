@@ -6,7 +6,6 @@ define(['jquery','startGame'],function($,startGame){
 		 * @return {[type]}
 		 */
 		btnClickListener : function(){
-			var that = this;
 			$("#start-btn").on("click",function(){
 				var timeInterval = $("#time-interval").val(),
 					timePrepare = $("#time-prepare").val(),
@@ -22,6 +21,19 @@ define(['jquery','startGame'],function($,startGame){
 					$(".select-part").css("display","none");
 					$(".prepare-part").css("display","block");
 					startGame.startGame(timePrepare,timeInterval,digitShow);
+				}
+			});
+
+			$("#start-memory").on("click",function(){
+				var prepareTime = $("#time-prepare").val(),
+					memoryAmount = $("#memory-amount").val(),
+					memoryTime = $("#memory-time").val();
+
+				if(memoryAmount){
+					$("header").css("display","none");
+					$(".select-part").css("display","none");
+					$(".prepare-part").css("display","block");
+					startGame.startMemory(prepareTime,memoryTime,memoryAmount);
 				}
 			});
 		}

@@ -108,11 +108,13 @@ body {
     color: #fff;
     font-size: 3em; }
   #numMemory .flash-part .flash-body {
-    width: 80%;
     margin: 20px auto;
     background-color: #aaa; }
-    #numMemory .flash-part .flash-body span {
-      display: inline-block;
-      font-size: 20em; }
+    #numMemory .flash-part .flash-body table {
+      table-layout: fixed; }
+      #numMemory .flash-part .flash-body table th {
+        text-align: center; }
+      #numMemory .flash-part .flash-body table td {
+        text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

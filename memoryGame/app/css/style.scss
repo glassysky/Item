@@ -151,13 +151,17 @@ body {
 			font-size: 3em;
 		}
 		.flash-body {
-			width: 80%;
 			margin: 20px auto;
 			background-color: #aaa;
-			span {
-				display: inline-block;
-				font-size: 20em;
+			table {
+				table-layout: fixed;
+				th {
+					text-align: center;
+				}
+				td {
+					text-align: center;
+				}
 			}
 		}
 	}
-}
+} 
