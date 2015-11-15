@@ -2,6 +2,10 @@ define(['jquery'],function($){
 	var cacheArray = [];
 
 	return {
+		/**
+		 * 监听开始按钮
+		 * @return {[type]}
+		 */
 		btnClickListener : function(){
 			var that = this;
 			$("#start-btn").on("click",function(){
@@ -22,6 +26,13 @@ define(['jquery'],function($){
 				}
 			});
 		},
+		/**
+		 * 开始游戏
+		 * @param  {number}
+		 * @param  {number}
+		 * @param  {number}
+		 * @return {t:object}
+		 */
 		startGame : function(timePrepare,timeInterval,digitShow){
 			var text = $("#prepare-text"),
 				time = timePrepare,
@@ -59,6 +70,10 @@ define(['jquery'],function($){
 
 			return t;
 		},
+		/**
+		 * 顶部计时器
+		 * @return {t1(object)}
+		 */
 		timerUpdate : function(){
 			var t1,//timer
 				t2,//interval
@@ -96,6 +111,12 @@ define(['jquery'],function($){
 
 			return t1;
 		},
+		/**
+		 * 页面闪烁更新
+		 * @param  {number}
+		 * @param  {number}
+		 * @return {t2:object}
+		 */
 		flashUpdate : function(interval,digit){
 			var t2,
 				showNum,
@@ -128,11 +149,21 @@ define(['jquery'],function($){
 
 			return t2;
 		},
+		/**
+		 * 停止计时
+		 * @param  {object}
+		 * @return {[type]}
+		 */
 		countCancel : function(t){
 			function stopCount(t){
 				clearTimeout(t);
 			}
 		},
+		/**
+		 * 监听停止按钮
+		 * @param  {object}
+		 * @return {[type]}
+		 */
 		stopBtnListener : function(t){
 			$("#flash-over").on("click",function(){
 				clearTimeout(t);
@@ -144,6 +175,11 @@ define(['jquery'],function($){
 				$("#num-flash").find("span").html("0");
 			});
 		},
+		/**
+		 * 指数计算
+		 * @param  {num}
+		 * @return {num}
+		 */
 		indexCalculate : function(index){
 			var num = 1;
 			for(var i = 0;i<index;i++){
@@ -151,6 +187,11 @@ define(['jquery'],function($){
 			}
 			return num;
 		},
+		/**
+		 * 生成随机数
+		 * @param  {number}
+		 * @return {number}
+		 */
 		makeRandomNumber : function(digit){
 			var randomNum = 0,
 				indexNum = 1;
@@ -163,6 +204,12 @@ define(['jquery'],function($){
 			}
 			return randomNum;
 		},
+		/**
+		 * 补全数字
+		 * @param  {number}
+		 * @param  {number}
+		 * @return {number}
+		 */
 		completeNumber : function(num,digit){
 			var i = "",
 				consultNum = this.indexCalculate(digit);
