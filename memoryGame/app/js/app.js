@@ -98,9 +98,7 @@ define(['jquery'],function($){
 		},
 		flashUpdate : function(interval,digit){
 			var t2,
-				randomNum,
 				showNum,
-				indexNum = 0,
 				flashNum = $("#num-flash").find("span"),
 				that = this;
 
@@ -108,30 +106,13 @@ define(['jquery'],function($){
 			t2 = setTimeout(function(){
 				if(!cacheArray){
 
-					if(!digit){
-						randomNum = Math.ceil(Math.random()*9);
-						showNum = randomNum;
-					} else {
-						indexNum = that.indexCalculate(digit);
-						randomNum = Math.ceil(Math.random()*indexNum);
-						showNum = randomNum;
-					}
-					
+					showNum = that.makeRandomNumber(digit);
 					cacheArray.push(showNum);
 
 				} else {
 
 					do {
-
-						if(!digit){
-							randomNum = Math.ceil(Math.random()*9);
-							showNum = randomNum;
-						} else {
-							indexNum = that.indexCalculate(digit);
-							randomNum = Math.ceil(Math.random()*indexNum);
-							showNum = randomNum;
-						}
-
+						showNum = that.makeRandomNumber(digit);
 					} while (cacheArray[cacheArray.length-1] == showNum);
 					cacheArray.push(showNum);
 
@@ -170,6 +151,16 @@ define(['jquery'],function($){
 			}
 			return num;
 		},
-		makeRandomNumber : function(){}
+		makeRandomNumber : function(digit){
+			var randomNum = 0,
+				indexNum = 1;
+			if(!digit){
+				randomNum = Math.ceil(Math.random()*9);
+			} else {
+				indexNum = this.indexCalculate(digit);
+				randomNum = Math.ceil(Math.random()*indexNum);
+			}
+			return randomNum;
+		}
 	};
 });
