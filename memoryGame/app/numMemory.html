@@ -4,15 +4,72 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>numCoding</title>
+	<title>numMemory</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<p>hello world</p>
+	<div class="container-fluid" id="numMemory">
+		<header>
+			<img src="img/number.jpg" alt="number pictrue">
+			<h1>数字-记忆训练</h1>
+		</header>
+		<div class="select-part">
+			<div class="setting-part">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="" class="col-md-2 control-label col-md-offset-2">记忆数量：</label>
+						<div class="col-md-6">
+							<input type="text" class="form-control" id="num-amount" placeholder="">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-md-2 control-label col-md-offset-2">准备时间(s)：</label>
+						<div class="col-md-6">
+							<select name="" id="time-prepare" class="form-control">
+								<option value="5">5</option>
+								<option value="10">10</option>
+								<option value="15">15</option>
+								<option value="30">30</option>
+								<option value="45">45</option>
+								<option value="60" selected>60</option>
+						</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="" class="col-md-2 control-label col-md-offset-2">记忆时间：</label>
+						<div class="col-md-6">
+							<select name="" id="memory-time" class="form-control">
+								<option value="5" selected>5min</option>
+								<option value="15">15min</option>
+								<option value="30">30min</option>
+								<option value="60">60min</option>
+						</select>
+						</div>
+					</div>
+				</form>
+			</div>
+			<button class="btn btn-primary" id="start-btn">开始</button>
+		</div>
+		<div class="prepare-part">
+			<h1 id="prepare-text">05</h1>
+			<button class="btn-lg btn-primary" id="prepare-over">取消</button>
+		</div>
+		<div class="flash-part">
+			<div class="timer" id="timer-top">
+				<span>00:00</span>
+			</div>
+			<div class="flash-body" id="num-flash">
+				<span>0</span>
+			</div>
+			<button class="btn-lg btn-primary" id="flash-over">结束</button>
+		</div>
+		<footer></footer>
+	</div>
 
 	<script src="js/lib/require.js" data-main="js/main.js"></script>
 </body>

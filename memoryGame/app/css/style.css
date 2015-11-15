@@ -81,4 +81,38 @@ body {
       display: inline-block;
       font-size: 20em; }
 
+/*鏁板瓧-璁板繂閮ㄥ垎*/
+#numMemory .select-part {
+  /*test*/
+  /*display: none;*/
+  width: 60%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #333; }
+  #numMemory .select-part .setting-part form {
+    color: #eee;
+    /*text-align: center;*/ }
+    #numMemory .select-part .setting-part form input {
+      /*text-align: right;*/
+      color: #000; }
+#numMemory .prepare-part {
+  display: none; }
+  #numMemory .prepare-part h1 {
+    color: #fff;
+    font-size: 20em;
+    margin-top: 100px;
+    padding: 1px; }
+#numMemory .flash-part {
+  display: none; }
+  #numMemory .flash-part .timer {
+    color: #fff;
+    font-size: 3em; }
+  #numMemory .flash-part .flash-body {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #aaa; }
+    #numMemory .flash-part .flash-body span {
+      display: inline-block;
+      font-size: 20em; }
+
 /*# sourceMappingURL=style.css.map */

@@ -6,7 +6,10 @@ requirejs.config({
     paths: {
         jquery : 'lib/jquery.min',
         bootstrap : 'lib/bootstrap.min',
-        app : 'app'
+        app : 'app',
+        startGame : 'startGame',
+        count : 'count',
+        update : 'update'
     },
     shim: {
         
