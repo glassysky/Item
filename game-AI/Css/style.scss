@@ -8,26 +8,26 @@ $version-height: 100px;
 
 @keyframes changecolor
 {
-	from {color: red;}
-	to {color: yellow;}
+	from {background: red;}
+	to {background: yellow;}
 }
 
-@-moz-keyframes changecolor /* Firefox */
+@-moz-keyframes changecolor
 {
-	from {color: red;}
-	to {color: yellow;}
+	from {background: red;}
+	to {background: yellow;}
 }
 
-@-webkit-keyframes changecolor /* Safari 和 Chrome */
+@-webkit-keyframes changecolor
 {
-	from {color: red;}
-	to {color: yellow;}
+	from {background: red;}
+	to {background: yellow;}
 }
 
-@-o-keyframes changecolor /* Opera */
+@-o-keyframes changecolor
 {
-	from {color: red;}
-	to {color: yellow;}
+	from {background: red;}
+	to {background: yellow;}
 }
 
 @mixin nav-a {
@@ -85,12 +85,6 @@ $version-height: 100px;
 				a {
 					text-align: center;
 					@include nav-a;
-					&:hover {
-						animation: changecolor 5s;
-						-moz-animation: changecolor 5s;	/* Firefox */
-						-webkit-animation: changecolor 5s;	/* Safari 和 Chrome */
-						-o-animation: changecolor 5s;	/* Opera */
-					}
 				}
 			}
 		}

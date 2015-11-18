@@ -6,14 +6,20 @@ requirejs.config({
     paths: {
         jquery: 'lib/jquery.min',
         bootstrap: 'lib/bootstrap.min',
-        reg: 'reg'
+        jquerycolor: 'lib/jquery.color',
+        reg: 'reg',
+        style: 'style'
     },
     shim: {
         'jquery' : { exports : 'jquery' },
         'bootstrap' : { exports : 'bootstrap' },
+        'jquerycolor' : {
+            deps : ['jquery'],
+            exports : 'jquerycolor'
+        }
     }
 });
 
-requirejs(['reg'],function(reg){
+requirejs(['reg','style'],function(reg,style){
     reg.reg();
 });
