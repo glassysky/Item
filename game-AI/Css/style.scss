@@ -1,0 +1,237 @@
+$container-padding: 50px;
+$a-height: 100px;
+$form-width: 400px;
+$nav-color: #999;
+$battle-color: #ddd;
+$choose-enemy-height: 40px;
+$version-height: 100px;
+
+@mixin nav-a {
+	padding-top: 0;
+	padding-bottom: 0;
+	height: $a-height;
+	line-height: $a-height; 
+	color: #fff;
+}
+
+@mixin table-compoment {
+	h1 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	table {
+		thead {
+			color: white;
+			background-color: #87CEEB;
+			th {
+				text-align: center;
+			}
+		}
+		tbody {
+			td {
+				text-align: center;
+			}
+		}
+	}
+}
+
+#nav-background {
+	position: absolute;
+	width: 100%;
+	height: $a-height;
+	background-color: $nav-color;
+}
+
+#navbar {
+	margin-bottom: 0;
+	background-color: #999;
+	border: none;
+	.navbar-header {
+		.navbar-brand {
+			padding: 0 20px;
+			@include nav-a;
+		}
+	}
+	#navbar-game {
+		width: 100%;
+		margin: 0 auto;
+		ul {
+			li {
+				a {
+					text-align: center;
+					@include nav-a;
+					&:hover {
+						background-color: #FFA500;
+					}
+				}
+			}
+		}
+	}
+}
+
+#ai-game {
+	padding-left: 0;
+	padding-right: 0;
+	#homepage {
+		.jumbotron {
+			img {
+				margin: 0 auto;
+			}
+		}
+		.description-text {
+			p {
+				font-size: 0.9em;
+			}
+		}
+	}
+	#regpage {
+		form {
+			width: $form-width;
+			margin: 0 auto;
+			h1 {
+				text-align: center;
+				margin: 20px;
+				font-size: 1.6em;
+			}
+		}
+		.submit-compoments {
+			width: $form-width;
+			margin: 0 auto;
+			text-align: right;
+			.submit-btn {
+				a {
+					width: 100%;
+				}
+			}
+		}
+	}
+	#rankpage {
+		@include table-compoment;
+	}
+	#battlepage {
+		margin-top: 5px;
+		padding: 0 20px;
+		.battle-part {
+			width: 100%;
+			height: 300px;
+			background-color: $battle-color;
+			padding: 10px;
+			.choose-enemy {
+				width: 60%;
+				height: $choose-enemy-height;
+				line-height: $choose-enemy-height;
+				margin: 30px auto;
+				select {
+					height: $choose-enemy-height;
+				}
+				a {
+					height: $choose-enemy-height;
+					padding: 0;
+					line-height: $choose-enemy-height;
+				}
+			}
+			.battle-result {
+				width: 60%;
+				margin: 0 auto;
+				text-align: center;
+				span {
+					color: #999;
+					font-size: 1em;
+				}
+				p {
+					color: #FF7F50;
+					font-size: 2.5em;
+					margin-top: 20px;
+					margin-bottom: 30px;
+				}
+			}
+		}
+		.battle-history {
+			@include table-compoment;
+		}
+	}
+	#code-management {
+		.code-header {
+			margin-top: 5px;
+			padding: 15px;
+			height: 100px;
+			background-color: #ddd;
+			h1 {
+				font-size: 1.5em;
+				font-weight: 700;
+				margin-top: 0;
+				margin-bottom: 15px;
+			}
+			span {
+				font-size: 1.2em;
+				color: #999;
+			}
+		}
+		.version-list {
+			.ver-list-wrap {
+				margin: 20px 0;
+				.ver-item {
+					display: inline-block;
+					margin: 10px;
+					.ver-pic {
+						display: inline-block;
+						float: left;
+						height: $version-height;
+						width: $version-height;
+						border: 1px solid #999;
+						line-height: $version-height;
+						p {
+							width: 40px;
+							margin: 0 auto;
+							font-size: .9em;
+						}
+					}
+					.ver-detail {
+						display: inline-block;
+						margin: 0 10px;
+						span {
+							display: block;
+							font-size: .8em;
+						}
+					}
+				}
+			}
+			.ver-select {
+				text-align: center;
+				span {
+					display: block;
+					margin: 15px;
+					color: #999;
+				}
+			}
+		}
+		.file-submit {
+			width: 100%;
+			height: 350px;
+			padding: 10px;
+			margin-bottom: 50px;
+			background-color: #ddd;
+			.submit-part {
+				width: 80%;
+				margin: 0 auto;
+				.file-select {
+					input {
+						background-color: #ddd;
+					}
+				}
+				.confirm {
+					color: #1E90FF;
+				}
+				.submit-file-btn {
+					width: 100%;
+					margin: 20px 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+/*@media (max-width: 1390px){#nav-background{height: 200px;}}
+@media (max-width: 1108px){#nav-background{height: 300px;}}
+@media (max-width: 767px){#nav-background{height: 100px;}}*/
