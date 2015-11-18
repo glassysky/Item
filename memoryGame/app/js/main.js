@@ -19,9 +19,9 @@ requirejs.config({
 
 requirejs(['jquery','app','render'],function($,app,render){
     app.btnClickListener();
-    $("header").css("display","none");
-    $(".select-part").css("display","none");
-    $(".prepare-part").css("display","none");
-    $(".flash-part").css("display","block");
-    render.makeNumberTable(100,10);
+    // $("header").css("display","none");
+    // $(".select-part").css("display","none");
+    // $(".prepare-part").css("display","none");
+    // $(".flash-part").css("display","block");
+    // render.makeNumberTable(100,10);
 });
