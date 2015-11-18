@@ -6,12 +6,37 @@ $battle-color: #ddd;
 $choose-enemy-height: 40px;
 $version-height: 100px;
 
+@keyframes changecolor
+{
+	from {color: red;}
+	to {color: yellow;}
+}
+
+@-moz-keyframes changecolor /* Firefox */
+{
+	from {color: red;}
+	to {color: yellow;}
+}
+
+@-webkit-keyframes changecolor /* Safari 和 Chrome */
+{
+	from {color: red;}
+	to {color: yellow;}
+}
+
+@-o-keyframes changecolor /* Opera */
+{
+	from {color: red;}
+	to {color: yellow;}
+}
+
 @mixin nav-a {
-	padding-top: 0;
-	padding-bottom: 0;
+	padding: 0 20px;
 	height: $a-height;
 	line-height: $a-height; 
 	color: #fff;
+	font-size: medium;
+	font-weight: 700;
 }
 
 @mixin table-compoment {
@@ -61,7 +86,10 @@ $version-height: 100px;
 					text-align: center;
 					@include nav-a;
 					&:hover {
-						background-color: #FFA500;
+						animation: changecolor 5s;
+						-moz-animation: changecolor 5s;	/* Firefox */
+						-webkit-animation: changecolor 5s;	/* Safari 和 Chrome */
+						-o-animation: changecolor 5s;	/* Opera */
 					}
 				}
 			}
@@ -231,6 +259,7 @@ $version-height: 100px;
 		}
 	}
 }
+
 
 /*@media (max-width: 1390px){#nav-background{height: 200px;}}
 @media (max-width: 1108px){#nav-background{height: 300px;}}
