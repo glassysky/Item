@@ -6,4 +6,12 @@ define(['jquery','jquerycolor'],function($){
            $(this).animate({"color":"#fff"},150);
        });
    });
+    $(".ver-item").each(function(){
+        $(this).css("cursor","pointer");
+        $(this).hover(function(){
+            $(this).css("background-color","rgba(150,150,150,0.9)");
+        },function(){
+            $(this).css("background-color","rgba(233,233,233,0.7)");
+        });
+    });
 });
