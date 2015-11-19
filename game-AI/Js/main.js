@@ -8,7 +8,8 @@ requirejs.config({
         bootstrap: 'lib/bootstrap.min',
         jquerycolor: 'lib/jquery.color',
         reg: 'reg',
-        style: 'style'
+        style: 'style',
+        bootstrapSelect: 'lib/bootstrap-select'
     },
     shim: {
         'jquery' : { exports : 'jquery' },

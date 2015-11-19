@@ -14,6 +14,9 @@ $battle-color: #ddd;
 $choose-enemy-height: 40px;
 $version-height: 100px;
 
+html, body {
+	height: 100%
+;}
 
 @mixin nav-a {
 	padding: 0 30px;
@@ -55,7 +58,7 @@ $version-height: 100px;
 }
 
 #navbar {
-	margin-bottom: 0;
+	margin-bottom: 20px;
 	background-color: $nav-color;
 	border: none;
 	.navbar-header {
@@ -82,6 +85,10 @@ $version-height: 100px;
 	padding-left: 0;
 	padding-right: 0;
 	width: 100%;
+	height: 100%;
+	background: url("../Image/background.jpg") no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
 	#homepage {
 		.jumbotron {
 			img {
@@ -137,7 +144,7 @@ $version-height: 100px;
 		.battle-part {
 			width: 100%;
 			height: 300px;
-			background-color: $battle-color;
+			background-color: $design06;
 			padding: 10px;
 			.choose-enemy {
 				width: 60%;
@@ -152,6 +159,10 @@ $version-height: 100px;
 					padding: 0;
 					line-height: $choose-enemy-height;
 				}
+				span {
+					font-size: 1.1em;
+					font-weight: 700;
+				}
 			}
 			.battle-result {
 				width: 60%;
@@ -162,7 +173,7 @@ $version-height: 100px;
 					font-size: 1em;
 				}
 				p {
-					color: #FF7F50;
+					color: $design04;
 					font-size: 2.5em;
 					margin-top: 20px;
 					margin-bottom: 30px;
