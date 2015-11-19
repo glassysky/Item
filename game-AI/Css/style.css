@@ -7,7 +7,7 @@ html, body {
 
 #navbar {
   margin-bottom: 20px;
-  background-color: #337ab7;
+  background-color: #262F3C;
   border: none; }
   #navbar .navbar-header .navbar-brand {
     padding: 0 30px;
@@ -69,13 +69,15 @@ html, body {
     text-align: center;
     margin-bottom: 20px;
     font-weight: 700;
-    color: #363636; }
+    color: #fff;
+    text-shadow: 2px 2px 2px #fff; }
   #ai-game #rankpage table thead {
     color: white;
-    font-size: 1em;
-    background-color: #7FCCFF; }
+    font-size: 1em; }
     #ai-game #rankpage table thead th {
       text-align: center; }
+  #ai-game #rankpage table tbody tr:nth-child(even) {
+    background-color: #ddd; }
   #ai-game #rankpage table tbody td {
     text-align: center;
     vertical-align: middle; }
@@ -85,8 +87,11 @@ html, body {
     #ai-game #battlepage .battle-part {
       width: 100%;
       height: 300px;
-      background-color: #A4A4A4;
-      padding: 10px; }
+      padding: 10px;
+      border: 2px solid #1b6d85;
+      -webkit-box-shadow: 1px 1px 1px 2px #204d74;
+      -moz-box-shadow: 1px 1px 1px 2px #204d74;
+      box-shadow: 1px 1px 1px 2px #204d74; }
       #ai-game #battlepage .battle-part .choose-enemy {
         width: 60%;
         height: 40px;
@@ -100,7 +105,8 @@ html, body {
           line-height: 40px; }
         #ai-game #battlepage .battle-part .choose-enemy span {
           font-size: 1.1em;
-          font-weight: 700; }
+          font-weight: 700;
+          color: white; }
       #ai-game #battlepage .battle-part .battle-result {
         width: 60%;
         margin: 0 auto;
@@ -117,13 +123,15 @@ html, body {
       text-align: center;
       margin-bottom: 20px;
       font-weight: 700;
-      color: #363636; }
+      color: #fff;
+      text-shadow: 2px 2px 2px #fff; }
     #ai-game #battlepage .battle-history table thead {
       color: white;
-      font-size: 1em;
-      background-color: #7FCCFF; }
+      font-size: 1em; }
       #ai-game #battlepage .battle-history table thead th {
         text-align: center; }
+    #ai-game #battlepage .battle-history table tbody tr:nth-child(even) {
+      background-color: #ddd; }
     #ai-game #battlepage .battle-history table tbody td {
       text-align: center;
       vertical-align: middle; }

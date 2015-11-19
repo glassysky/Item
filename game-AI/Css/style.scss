@@ -5,11 +5,12 @@ $design04: #FF873F;
 $design05: #363636;
 $design06: #A4A4A4;
 $design07: #242424;
+$design08: #262F3C;
 
 $container-padding: 50px;
 $a-height: 100px;
 $form-width: 400px;
-$nav-color: $design01;
+$nav-color: #262F3C;
 $battle-color: #ddd;
 $choose-enemy-height: 40px;
 $version-height: 100px;
@@ -32,18 +33,21 @@ html, body {
 		text-align: center;
 		margin-bottom: 20px;
 		font-weight: 700;
-		color: $design05;
+		color: #fff;
+		text-shadow: 2px 2px 2px #fff;
 	}
 	table {
 		thead {
 			color: white;
 			font-size: 1em;
-			background-color: $design03;
 			th {
 				text-align: center;
 			}
 		}
 		tbody {
+			tr:nth-child(even) {
+				background-color: #ddd;
+			}
 			td {
 				text-align: center;
 				vertical-align: middle;
@@ -144,8 +148,11 @@ html, body {
 		.battle-part {
 			width: 100%;
 			height: 300px;
-			background-color: $design06;
 			padding: 10px;
+			border: 2px solid #1b6d85;
+			-webkit-box-shadow: 1px 1px 1px 2px #204d74;
+			-moz-box-shadow: 1px 1px 1px 2px #204d74;
+			box-shadow: 1px 1px 1px 2px #204d74;
 			.choose-enemy {
 				width: 60%;
 				height: $choose-enemy-height;
@@ -162,6 +169,7 @@ html, body {
 				span {
 					font-size: 1.1em;
 					font-weight: 700;
+					color: white;
 				}
 			}
 			.battle-result {
