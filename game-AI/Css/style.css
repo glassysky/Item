@@ -1,36 +1,14 @@
-@keyframes changecolor {
-  from {
-    background: red; }
-  to {
-    background: yellow; } }
-@-moz-keyframes changecolor {
-  from {
-    background: red; }
-  to {
-    background: yellow; } }
-@-webkit-keyframes changecolor {
-  from {
-    background: red; }
-  to {
-    background: yellow; } }
-@-o-keyframes changecolor {
-  from {
-    background: red; }
-  to {
-    background: yellow; } }
-#nav-background {
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  background-color: #999; }
+.second-container {
+  width: 85%;
+  margin: 0 auto; }
 
 #navbar {
   margin-bottom: 0;
-  background-color: #999;
+  background-color: #337ab7;
   border: none; }
   #navbar .navbar-header .navbar-brand {
-    padding: 0 20px;
-    padding: 0 20px;
+    padding: 0 30px;
+    padding: 0 30px;
     height: 100px;
     line-height: 100px;
     color: #fff;
@@ -41,7 +19,7 @@
     margin: 0 auto; }
     #navbar #navbar-game ul li a {
       text-align: center;
-      padding: 0 20px;
+      padding: 0 30px;
       height: 100px;
       line-height: 100px;
       color: #fff;
@@ -50,34 +28,50 @@
 
 #ai-game {
   padding-left: 0;
-  padding-right: 0; }
+  padding-right: 0;
+  width: 100%; }
   #ai-game #homepage .jumbotron img {
     margin: 0 auto; }
   #ai-game #homepage .description-text p {
     font-size: 0.9em; }
-  #ai-game #regpage form {
-    width: 400px;
-    margin: 0 auto; }
-    #ai-game #regpage form h1 {
-      text-align: center;
-      margin: 20px;
-      font-size: 1.6em; }
-  #ai-game #regpage .submit-compoments {
-    width: 400px;
-    margin: 0 auto;
-    text-align: right; }
-    #ai-game #regpage .submit-compoments .submit-btn a {
-      width: 100%; }
+  #ai-game #regpage {
+    padding: 30px 0; }
+    #ai-game #regpage form {
+      width: 400px;
+      margin: 0 auto; }
+      #ai-game #regpage form h1 {
+        text-align: center;
+        margin: 20px;
+        color: #242424;
+        font-size: 2em;
+        font-weight: 700; }
+      #ai-game #regpage form label {
+        color: #363636; }
+    #ai-game #regpage .submit-compoments {
+      width: 400px;
+      margin: 0 auto;
+      text-align: right; }
+      #ai-game #regpage .submit-compoments .submit-btn a {
+        width: 100%;
+        font-weight: 700; }
+      #ai-game #regpage .submit-compoments .details {
+        margin-top: 10px; }
+        #ai-game #regpage .submit-compoments .details a {
+          text-decoration-line: underline; }
   #ai-game #rankpage h1 {
     text-align: center;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #363636; }
   #ai-game #rankpage table thead {
     color: white;
-    background-color: #87CEEB; }
+    font-size: 1em;
+    background-color: #7FCCFF; }
     #ai-game #rankpage table thead th {
       text-align: center; }
   #ai-game #rankpage table tbody td {
-    text-align: center; }
+    text-align: center;
+    vertical-align: middle; }
   #ai-game #battlepage {
     margin-top: 5px;
     padding: 0 20px; }
@@ -111,14 +105,18 @@
           margin-bottom: 30px; }
     #ai-game #battlepage .battle-history h1 {
       text-align: center;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: #363636; }
     #ai-game #battlepage .battle-history table thead {
       color: white;
-      background-color: #87CEEB; }
+      font-size: 1em;
+      background-color: #7FCCFF; }
       #ai-game #battlepage .battle-history table thead th {
         text-align: center; }
     #ai-game #battlepage .battle-history table tbody td {
-      text-align: center; }
+      text-align: center;
+      vertical-align: middle; }
   #ai-game #code-management .code-header {
     margin-top: 5px;
     padding: 15px;

@@ -33,6 +33,7 @@ define(['jquery','count'],function($,count){
 			},1000);
 
 			this.stopBtnListener(t1);
+			this.startTrain(t1);
 
 			function addZero(num){
 				if(num<10){
@@ -96,6 +97,68 @@ define(['jquery','count'],function($,count){
 				$("#timer-top").find("span").html("00:00");
 				$("#num-flash").find("span").html("0");
 			});
+		},
+		/**
+		 * 监听开始记忆训练按钮
+		 * @param {object}
+		 * @retrun {[type]}
+		 */
+		startTrain : function(t){
+			$("#start-train").on("click",function(){
+				clearTimeout(t);
+				$(".table-block").each(function(){
+					$(this).html("<input type='text' class='player-answer'>");
+				});
+				$(this).css("display","none");
+				$("#show-result").css("display","inline-block");
+			});
+		},
+		/**
+		 * 监听显示结果按钮
+		 * @param {array}
+		 * @return {[type]}
+		 */
+		showResult : function(answerArray){
+			console.log(answerArray);
+
+			var playerAnswer = [],
+					tpl = "",
+					row = 0,
+					flag = true,
+					amount = answerArray.length,
+					numTable = $("#num-table");
+
+			row = Math.ceil(amount/20);
+
+			$(".player-answer").each(function(){
+				playerAnswer.push($(this).val());
+			});
+
+			for(var i = 0;i<row;i++){
+				if(flag){
+					for(var j = 0;j<20;j++){
+						if(i*20+j+1 > amount){
+							break;
+						} else {
+							tpl = tpl + "<div class='table-block pos-"+ i + "-" + j + "'>" + answerArray[20*i+j] + "</div>"
+						}
+					}
+					flag = false;
+				} else {
+					for(var k = 0;k<20;k++){
+						if(i*20+k+1 > amount){
+							break;
+						} else {
+							tpl = tpl + "<div class='table-block pos-"+ i + "-" + k + "'>" + playerAnswer[20*i+k] + "</div>"
+						}
+					}
+					flag = true;
+				}
+			}
+
+			tpl = tpl + "<div class='clear'></div>"
+			numTable.html(tpl);
+
 		}
 	};
 });

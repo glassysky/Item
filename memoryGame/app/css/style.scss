@@ -1,5 +1,6 @@
 $bgcolor : #4d4d4d;
 $textcolor : #eee;
+$blockTableSize : 40px;
 
 body {
 	background-color: $bgcolor;
@@ -152,16 +153,35 @@ body {
 		}
 		.flash-body {
 			margin: 20px auto;
-			background-color: #aaa;
-			table {
-				table-layout: fixed;
-				th {
-					text-align: center;
-				}
-				td {
+			padding: 10px;
+			background-color: #f5f5f5;
+			width: 1020px;
+			.table-block{
+				//display: inline-block;
+				float: left;
+				background-color: #5cb85c;
+				width: $blockTableSize;
+				height: $blockTableSize;
+				line-height: 36px;
+				margin:5px;
+				font-size: 1.3em;
+				font-weight: 700;
+				border:2px solid #2b542c;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				input {
+					width:36px;
+					height:36px;
 					text-align: center;
 				}
 			}
+			.clear {
+				clear: both;
+			}
+		}
+		#show-result {
+			display: none;
 		}
 	}
 } 
