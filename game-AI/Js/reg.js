@@ -1,7 +1,6 @@
 define(['jquery'],function(){
 	return {
 		reg : function(){
-			console.log('reg');
 			$("#reg-btn").on("click",function(){
 				var email = $("inputEmail").val(),
 					nickname = $("#inputNickname").val(),

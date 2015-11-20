@@ -1,0 +1,18 @@
+{
+  "programmers" : [{
+    "player01" : {
+      "x" : 1,
+      "y" : 1,
+      "status" : null
+    },
+    "player02" : {
+      "x" : 2,
+      "y" : 2,
+      "status" : null
+    },
+    "master01" : {
+      "x" : 4,
+      "y" : 4
+    }
+  }]
+}

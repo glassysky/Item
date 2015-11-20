@@ -9,6 +9,7 @@ requirejs.config({
         jquerycolor: 'lib/jquery.color',
         reg: 'reg',
         style: 'style',
+        battle: 'battle',
         bootstrapSelect: 'lib/bootstrap-select'
     },
     shim: {
@@ -21,6 +22,6 @@ requirejs.config({
     }
 });
 
-requirejs(['reg','style'],function(reg,style){
+requirejs(['reg','style','battle'],function(reg,style){
     reg.reg();
 });
