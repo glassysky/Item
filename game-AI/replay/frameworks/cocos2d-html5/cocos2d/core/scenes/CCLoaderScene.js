@@ -44,8 +44,8 @@ cc.LoaderScene = cc.Scene.extend({
         var self = this;
 
         //logo
-        var logoWidth = 160;
-        var logoHeight = 200;
+        var logoWidth = 1600;
+        var logoHeight = 2000;
 
         // bg
         var bgLayer = self._bgLayer = new cc.LayerColor(cc.color(32, 32, 32, 255));
@@ -60,7 +60,7 @@ cc.LoaderScene = cc.Scene.extend({
                 logoHeight = img.height;
                 self._initStage(img, cc.visibleRect.center);
             });
-            fontSize = 14;
+            fontSize = 140;
             lblHeight = -logoHeight / 2 - 10;
         }
         //loading percent

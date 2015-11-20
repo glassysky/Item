@@ -2,7 +2,7 @@ requirejs.config({
     //forbid cache
     urlArgs: "bust=" + (new Date()).getTime(),
 
-    baseUrl: 'Js',
+    baseUrl: '/game-AI/Js',
     paths: {
         jquery: 'lib/jquery.min',
         bootstrap: 'lib/bootstrap.min',

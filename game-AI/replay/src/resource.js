@@ -1,7 +1,15 @@
 var res = {
     HelloWorld_png : "res/HelloWorld.png",
 
-    background_png : "res/整体背景.jpg"
+    background_png : "res/整体背景.jpg",
+
+    //testpart
+    TextureTransparentPack_png : "res/playGame/textureTransparentPack.png",
+
+    //blocks
+    paperBlock : "res/playGame/blocks/paperBlock.png",
+    woodBlock : "res/playGame/blocks/woodBlock.png",
+    stoneBlock : "res/playGame/blocks/stoneBlock.png"
 };
 
 var g_resources = [];
