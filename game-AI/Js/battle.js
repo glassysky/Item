@@ -9,7 +9,7 @@ define(['jquery'],function($){
             url : "data.json",
             type : "GET",
             success : function(back){
-                window.location.href="HelloWorld/index.html";
+                window.location.href="replay/index.html";
             },
             error : function(back){
                 console.log("error " + back);

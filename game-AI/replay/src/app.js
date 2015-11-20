@@ -24,7 +24,7 @@ var HelloWorldLayer = cc.Layer.extend({
         this.addChild(helloLabel, 5);
 
         // add "HelloWorld" splash screen"
-        this.sprite = new cc.Sprite(res.HelloWorld_png);
+        this.sprite = new cc.Sprite(res.background_png);
         this.sprite.attr({
             x: size.width / 2,
             y: size.height / 2
