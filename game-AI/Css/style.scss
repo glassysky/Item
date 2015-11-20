@@ -295,6 +295,19 @@ body {
 			}
 		}
 	}
+	#replay {
+		margin-right: 0;
+		margin-left: 0;
+		padding: 10px;
+		width: 100%;
+		.scene-container {
+			width: 80%;
+			min-width: 800px;
+			height: 570px;
+			margin: 0 auto;
+			background-color: #1E90FF;
+		}
+	}
 }
 
 

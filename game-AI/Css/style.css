@@ -215,6 +215,17 @@ body {
         width: 100%;
         margin: 20px 0;
         text-align: center; }
+  #ai-game #replay {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px;
+    width: 100%; }
+    #ai-game #replay .scene-container {
+      width: 80%;
+      min-width: 800px;
+      height: 570px;
+      margin: 0 auto;
+      background-color: #1E90FF; }
 
 /*@media (max-width: 1390px){#nav-background{height: 200px;}}
 @media (max-width: 1108px){#nav-background{height: 300px;}}
