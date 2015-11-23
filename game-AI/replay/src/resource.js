@@ -14,7 +14,7 @@ var res = {
 };
 
 var resJSON = {
-    Map_JSON : "res/map.json"
+    Map_JSON : "res/data.json"
 };
 
 
