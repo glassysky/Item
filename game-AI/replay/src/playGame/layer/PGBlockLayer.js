@@ -26,7 +26,8 @@ var PGBlockLayer = cc.Layer.extend({
     },
 
     addJson : function(){
-        cc.loader._loadTxtSync("res/data.json");
+        var json = cc.loader.getRes(resJSON.Map_JSON);
+        cc.log(json);
     }
 
 })

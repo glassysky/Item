@@ -9,10 +9,22 @@ var res = {
     //blocks
     paperBlock : "res/playGame/blocks/paperBlock.png",
     woodBlock : "res/playGame/blocks/woodBlock.png",
-    stoneBlock : "res/playGame/blocks/stoneBlock.png"
+    stoneBlock : "res/playGame/blocks/stoneBlock.png",
+
 };
 
+var resJSON = {
+    Map_JSON : "res/map.json"
+};
+
+
 var g_resources = [];
+
 for (var i in res) {
     g_resources.push(res[i]);
 }
+
+for (var j in resJSON) {
+    g_resources.push(resJSON[j]);
+}
+
