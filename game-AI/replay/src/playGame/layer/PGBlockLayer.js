@@ -23,8 +23,8 @@ var PGBlockLayer = cc.Layer.extend({
     },
 
     addJson : function(){
-        _sptMap = cc.loader.getRes(resJSON.Map_JSON);
-        cc.log(_sptMap);
+        this._sptMap = cc.loader.getRes(resJSON.Map_JSON);
+        //cc.log(this._sptMap.map[0]["line1"][0]);
     },
 
     initBlock : function(){
@@ -32,15 +32,53 @@ var PGBlockLayer = cc.Layer.extend({
         this._sptWoodBlock = new cc.Sprite(res.woodBlock);
         this._sptStoneBlock = new cc.Sprite(res.stoneBlock);
 
-        for(var i = 0;i<16;i++){
-            var block = new cc.Sprite(res.stoneBlock);
-            block.attr({
-                anchorX : 0,
-                anchorY : 0,
-                x : Math.random()*256,
-                y : Math.random()*256
-            });
-            this.addChild(block);
+        var blockStyle = null;
+
+        //for (var i = 0;i<5;i++){
+        //    var block = new cc.Sprite(res.paperBlock);
+        //    block.attr({
+        //        anchorX : 0,
+        //        anchorY : 0,
+        //        x : Math.random()*1000,
+        //        y : Math.random()*1000
+        //    });
+        //    this.addChild(block);
+        //}
+
+        for(var i = 0;i<17;i++){
+            for(var j = 0;j<17;j++){
+                blockStyle = this._sptMap.map[i*17+j];
+                if(blockStyle == 1){
+                    var blockPaper = new cc.Sprite(res.paperBlock);
+                    blockPaper.attr({
+                        anchorX : 0,
+                        anchorY : 0,
+                        x : i*256,
+                        y : j*256
+                    });
+                    this.addChild(blockPaper);
+                    cc.log(blockStyle);
+                    cc.log(i*256);
+                } else if (blockStyle == 2) {
+                    var blockWood = new cc.Sprite(res.woodBlock);
+                    blockWood.attr({
+                        anchorX : 0,
+                        anchorY : 0,
+                        x : i*256,
+                        y : j*256
+                    });
+                    this.addChild(blockWood);
+                } else if (blockStyle == 3) {
+                    var blockStone = new cc.Sprite(res.stoneBlock);
+                    blockStone.attr({
+                        anchorX : 0,
+                        anchorY : 0,
+                        x : i*256,
+                        y : j*256
+                    });
+                    this.addChild(blockStone);
+                }
+            }
         }
 
     }
