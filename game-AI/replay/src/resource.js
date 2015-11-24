@@ -12,7 +12,11 @@ var res = {
     stoneBlock : "res/playGame/blocks/stoneBlock.png",
 
     //player
-    player : "res/playGame/player/player01.png"
+    player : "res/playGame/player/player01.png",
+
+    //startPlace
+    blueBegin : "res/playGame/startPlace/蓝队起点.png",
+    greenBegin : "res/playGame/startPlace/绿队起点.png"
 
 };
 
