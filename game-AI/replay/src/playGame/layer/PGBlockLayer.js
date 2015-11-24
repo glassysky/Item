@@ -31,13 +31,18 @@ var PGBlockLayer = cc.Layer.extend({
         this._sptPaperBlock = new cc.Sprite(res.paperBlock);
         this._sptWoodBlock = new cc.Sprite(res.woodBlock);
         this._sptStoneBlock = new cc.Sprite(res.stoneBlock);
-        this._sptPaperBlock.attr({
-            anchorX : 0,
-            anchorY : 0,
-            x: 0,
-            y: 0
-        });
-        this.addChild(this._sptPaperBlock);
+
+        for(var i = 0;i<16;i++){
+            var block = new cc.Sprite(res.stoneBlock);
+            block.attr({
+                anchorX : 0,
+                anchorY : 0,
+                x : Math.random()*256,
+                y : Math.random()*256
+            });
+            this.addChild(block);
+        }
+
     }
 
 })

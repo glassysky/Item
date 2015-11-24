@@ -2,7 +2,7 @@
     "project_type": "javascript",
 
     "debugMode" : 1,
-    "showFPS" : false,
+    "showFPS" : true,
     "frameRate" : 60,
     "noCache" : false,
     "id" : "gameCanvas",
@@ -18,6 +18,8 @@
         "src/playGame/scene/playGame.js",
         "src/playGame/layer/PGBackgroundLayer.js",
         "src/playGame/layer/PGBlockLayer.js",
+
+        "src/playGame/sprite/BlockSprite.js",
 
         "src/config/GameConfig.js"
     ]

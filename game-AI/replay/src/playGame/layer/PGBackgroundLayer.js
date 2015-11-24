@@ -16,7 +16,7 @@
         this.initBackground();
 
         //this.initShip();
-
+        //
         //this.initLogo();
     },
 

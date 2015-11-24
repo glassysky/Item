@@ -11,6 +11,9 @@ var res = {
     woodBlock : "res/playGame/blocks/woodBlock.png",
     stoneBlock : "res/playGame/blocks/stoneBlock.png",
 
+    //player
+    player : "res/playGame/player/player01.png"
+
 };
 
 var resJSON = {
