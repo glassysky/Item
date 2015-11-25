@@ -19,8 +19,8 @@ var res = {
     greenBegin : "res/playGame/startPlace/绿队起点.png",
 
     //player
-    player01_plist : "res/playGame/企鹅正面.plist",
-    player01_png : "res/playGame/企鹅正面.png",
+    playerD_plist : "res/playGame/企鹅正面.plist",
+    playerD_png : "res/playGame/企鹅正面.png",
 
 };
 

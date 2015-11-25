@@ -10,8 +10,8 @@ var PlayerSprite = cc.Sprite.extend({
     ctor : function(aTexture){
         this._super(aTexture);
 
-        cc.spriteFrameCache.addSpriteFrames(res.player01_plist);
-        cc.textureCache.addImage(res.player01_png);
+        cc.spriteFrameCache.addSpriteFrames(res.playerD_plist);
+        cc.textureCache.addImage(res.playerD_png);
 
         //set frame
         var animFrames = [];
@@ -21,9 +21,6 @@ var PlayerSprite = cc.Sprite.extend({
             }
             animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅正面跳动00" + i + ".png"));
         }
-
-        cc.log(animFrames);
-        cc.log(cc.spriteFrameCache.getSpriteFrame("企鹅正面跳动0001.png"));
 
         //player animate
         var animation = new cc.Animation(animFrames, 0.1);

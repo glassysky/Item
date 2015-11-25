@@ -7,6 +7,7 @@ var PGBlockLayer = cc.Layer.extend({
     _sptWoodBlock : null,
     _sptStoneBlock : null,
     _sptMap : null,
+    //方块对象组
     _sptBlockArray : [],
 
     ctor : function(){
@@ -15,19 +16,13 @@ var PGBlockLayer = cc.Layer.extend({
         //加载res 里的图片列表
         //cc.spriteFrameCache.addSpriteFrames(res.TextureTransparentPack_plist);
 
-        this.addJson();
+        this._sptMap = cc.loader.getRes(resJSON.Map_JSON);
 
         this.initBlock();
 
         this.changeBlock();
 
         this.removeBlock();
-    },
-
-    //获取json文件（需要预加载）
-    addJson : function(){
-        this._sptMap = cc.loader.getRes(resJSON.Map_JSON);
-        //cc.log(this._sptMap.map[0]["line1"][0]);
     },
 
     //初始化精灵
@@ -94,8 +89,6 @@ var PGBlockLayer = cc.Layer.extend({
                 }
             }
         }
-
-        console.log(this._sptBlockArray);
 
     },
 

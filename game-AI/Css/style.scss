@@ -73,6 +73,10 @@ body {
 		.navbar-brand {
 			padding: 0 30px;
 			@include nav-a;
+			img {
+				width: 200px;
+				height: 100%;
+			}
 		}
 	}
 	#navbar-game {
