@@ -4,13 +4,12 @@
 
 var PlayGameLayer = cc.Layer.extend({
     _backgroundLayer : null,
-    _touchLayer : null,
+    _PGPlayerLayer : null,
     ctor : function(){
         this._super();
 
         this.addBackgroundLayer();
 
-        //this.addTouchLayer();
     },
 
     addBackgroundLayer : function(){
@@ -18,20 +17,20 @@ var PlayGameLayer = cc.Layer.extend({
         this.addChild(this._backgroundLayer);
     },
 
-    addTouchLayer : function(){
-        this._touchLayer = new PGTouchLayer();
-        this.addChild(this._touchLayer);
-    },
 
 });
 
 var PlayGameScene = cc.Scene.extend({
     onEnter:function(){
         this._super();
+
         var layer = new PlayGameLayer();
         this.addChild(layer);
 
         var blockLayer = new PGBlockLayer();
         this.addChild(blockLayer);
+
+        var playerLayer = new PGPlayerLayer();
+        this.addChild(playerLayer);
     }
 });

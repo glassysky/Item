@@ -5,15 +5,34 @@ var PlayerSprite = cc.Sprite.extend({
     _x : null,
     _y : null,
     _sptPlayer : null,
+    active : true,
 
     ctor : function(aTexture){
         this._super(aTexture);
 
-        this._sptPlayer = new cc.Sprite(res.player);
-        this.addChild(this._sptPlayer);
+        cc.spriteFrameCache.addSpriteFrames(res.player01_plist);
+        cc.textureCache.addImage(res.player01_png);
+
+        //set frame
+        var animFrames = [];
+        for(var i = 1;i<43;i++){
+            if(i<10){
+                i = "0" + i;
+            }
+            animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅正面跳动00" + i + ".png"));
+        }
+
+        cc.log(animFrames);
+        cc.log(cc.spriteFrameCache.getSpriteFrame("企鹅正面跳动0001.png"));
+
+        //player animate
+        var animation = new cc.Animation(animFrames, 0.1);
+        var animate = cc.animate(animation);
+        var action = animate.repeatForever();
+        this.runAction(action);
     },
 
     PlayerSpriteMove : function(){
 
     }
-})
+});

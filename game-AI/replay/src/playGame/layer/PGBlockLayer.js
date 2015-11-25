@@ -1,9 +1,6 @@
 /**
  * Created by cui on 2015/11/21.
  */
-/**
- * Created by cui on 2015/11/20.
- */
 
 var PGBlockLayer = cc.Layer.extend({
     _sptPaperBlock : null,
