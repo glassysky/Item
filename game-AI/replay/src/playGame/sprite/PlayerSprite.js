@@ -26,6 +26,7 @@ var PlayerSprite = cc.Sprite.extend({
         var animation = new cc.Animation(animFrames, 0.1);
         var animate = cc.animate(animation);
         var action = animate.repeatForever();
+        action.setTag("before");
         this.runAction(action);
     },
 

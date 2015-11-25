@@ -70,7 +70,8 @@ var PGPlayerLayer = cc.Layer.extend({
         //三个角色
         for(var i = 0;i<3;i++){
             var x = 0,
-                y = 0;
+                y = 0,
+                direction = "D";
             this._posxBefore = this._playerArray[i]._position.x/256;
             this._posyBefore = this._playerArray[i]._position.y/256;
             this._posxAfter = this._playerPos.playerMove["A"+this._character][this._step][0];
@@ -81,47 +82,56 @@ var PGPlayerLayer = cc.Layer.extend({
 
             //转向判断 ↑U →R ↓D ←L
             if(x == 0 && y > 0){
-                this._direction = "U";
+                direction = "U";
             } else if (x == 0 && y < 0){
-                this._direction = "D";
+                direction = "D";
             } else if (y == 0 && x > 0){
-                this._direction = "R";
+                direction = "R";
             } else if (y == 0 && x < 0){
-                this._direction = "L";
+                direction = "L";
             }
 
             //待加转向改图片
-            this.changeImage(this._playerArray[i]);
+            this.changeImage(this._playerArray[i],direction);
 
             this._playerArray[i].runAction(new cc.MoveBy(1, cc.p(x*256, y*256)));
             this._character++;
 
-            console.log([this._posxAfter,this._posyAfter]);
-            console.log([this._posxBefore,this._posyBefore]);
-            console.log([x,y]);
+            //console.log([this._posxAfter,this._posyAfter]);
+            //console.log([this._posxBefore,this._posyBefore]);
+            //console.log([x,y]);
         }
         this._character = 1;
         this._step++;
     },
 
-    changeImage : function(player){
-
-        //console.log()
+    changeImage : function(player,direction){
 
         //set frame
+
+        player.stopActionByTag("before");
         var animFrames = [];
         for(var i = 1;i<43;i++){
             if(i<10){
                 i = "0" + i;
             }
-            animFrames.push(cc.spriteFrameCache.getSpriteFrame("小企鹅背面00" + i + ".png"));
+            if(direction == "U"){
+                animFrames.push(cc.spriteFrameCache.getSpriteFrame("小企鹅背面00" + i + ".png"));
+            } else if (direction == "D") {
+                animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅正面跳动00" + i + ".png"));
+            } else if (direction == "R") {
+                animFrames.push(cc.spriteFrameCache.getSpriteFrame("小企鹅右侧" + i + ".png"));
+            } else if (direction == "L") {
+                animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅左侧" + i + ".png"));
+            }
         }
 
         //player animate
         var animation = new cc.Animation(animFrames, 0.1);
         var animate = cc.animate(animation);
         var action = animate.repeatForever();
-        this.runAction(action);
+        action.setTag("before");
+        player.runAction(action);
 
     },
 

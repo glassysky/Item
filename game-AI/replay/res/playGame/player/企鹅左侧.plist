@@ -595,13 +595,13 @@
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>企鹅右侧.png</string>
+            <string>企鹅左侧.png</string>
             <key>size</key>
             <string>{2016,1306}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:51b4f570bad7645155a9876ba50db1c9:1f05ac44c0fafd42db7e0f5c8a1f17f7:30549a005c20ea57019e339ab371d8ef$</string>
+            <string>$TexturePacker:SmartUpdate:17b93bd7496e70e0b15e95b99a6a21cf:1f05ac44c0fafd42db7e0f5c8a1f17f7:d616e78f56f70528b69301aa269e3698$</string>
             <key>textureFileName</key>
-            <string>企鹅右侧.png</string>
+            <string>企鹅左侧.png</string>
         </dict>
     </dict>
 </plist>
