@@ -21,6 +21,12 @@ var PGPlayerLayer = cc.Layer.extend({
         //加载res 里的图片列表
         cc.spriteFrameCache.addSpriteFrames(res.playerD_plist);
         cc.textureCache.addImage(res.playerD_png);
+        //cc.spriteFrameCache.addSpriteFrames(res.playerU_plist);
+        //cc.textureCache.addImage(res.playerU_png);
+        cc.spriteFrameCache.addSpriteFrames(res.playerR_plist);
+        cc.textureCache.addImage(res.playerR_png);
+        cc.spriteFrameCache.addSpriteFrames(res.playerL_plist);
+        cc.textureCache.addImage(res.playerL_png);
 
         //加载json
         this._playerPos = cc.loader.getRes(resJSON.Map_JSON);
@@ -32,7 +38,7 @@ var PGPlayerLayer = cc.Layer.extend({
         this.scheduleUpdate();
 
         //cc.log(this._playerPos.playerMove["A"+1][1]);
-        //cc.log(this._playerArray);
+        cc.log(this._playerArray);
 
     },
 
@@ -99,7 +105,24 @@ var PGPlayerLayer = cc.Layer.extend({
     },
 
     changeImage : function(player){
-        //player.
+
+        //console.log()
+
+        //set frame
+        var animFrames = [];
+        for(var i = 1;i<43;i++){
+            if(i<10){
+                i = "0" + i;
+            }
+            animFrames.push(cc.spriteFrameCache.getSpriteFrame("小企鹅背面00" + i + ".png"));
+        }
+
+        //player animate
+        var animation = new cc.Animation(animFrames, 0.1);
+        var animate = cc.animate(animation);
+        var action = animate.repeatForever();
+        this.runAction(action);
+
     },
 
     test : function(){

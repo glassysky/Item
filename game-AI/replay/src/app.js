@@ -24,7 +24,7 @@ var HelloWorldLayer = cc.Layer.extend({
         this.addChild(helloLabel, 5);
 
         // add "HelloWorld" splash screen"
-        this.sprite = new cc.Sprite(res.background_png);
+        //this.sprite = new cc.Sprite(res.background_png);
         this.sprite.attr({
             x: size.width / 2,
             y: size.height / 2
@@ -35,11 +35,11 @@ var HelloWorldLayer = cc.Layer.extend({
     }
 });
 
-var HelloWorldScene = cc.Scene.extend({
-    onEnter:function () {
-        this._super();
-        var layer = new HelloWorldLayer();
-        this.addChild(layer);
-    }
-});
+//var HelloWorldScene = cc.Scene.extend({
+//    onEnter:function () {
+//        this._super();
+//        var layer = new HelloWorldLayer();
+//        this.addChild(layer);
+//    }
+//});
 

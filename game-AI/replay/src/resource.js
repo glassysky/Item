@@ -1,26 +1,24 @@
 var res = {
-    HelloWorld_png : "res/HelloWorld.png",
-
     background_png : "res/整体背景.jpg",
-
-    //testpart
-    TextureTransparentPack_png : "res/playGame/textureTransparentPack.png",
 
     //blocks
     paperBlock : "res/playGame/blocks/paperBlock.png",
     woodBlock : "res/playGame/blocks/woodBlock.png",
     stoneBlock : "res/playGame/blocks/stoneBlock.png",
 
-    //player
-    player : "res/playGame/player/player01.png",
-
     //startPlace
     blueBegin : "res/playGame/startPlace/蓝队起点.png",
     greenBegin : "res/playGame/startPlace/绿队起点.png",
 
     //player
-    playerD_plist : "res/playGame/企鹅正面.plist",
-    playerD_png : "res/playGame/企鹅正面.png",
+    playerD_plist : "res/playGame/player/企鹅正面.plist",
+    playerD_png : "res/playGame/player/企鹅正面.png",
+    playerR_plist : "res/playGame/player/企鹅右侧.plist",
+    playerR_png : "res/playGame/player/企鹅右侧.png",
+    playerU_plist : "res/playGame/player/企鹅背面.plist",
+    playerU_png : "res/playGame/player/企鹅背面.png",
+    playerL_plist : "res/playGame/player/企鹅左侧.plist",
+    playerL_png : "res/playGame/player/企鹅左侧.png",
 
 };
 
