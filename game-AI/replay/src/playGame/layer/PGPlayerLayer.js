@@ -19,21 +19,26 @@ var PGPlayerLayer = cc.Layer.extend({
         this._super();
 
         //加载res 里的图片列表
-        cc.spriteFrameCache.addSpriteFrames(res.playerD_plist);
-        cc.textureCache.addImage(res.playerD_png);
-        //cc.spriteFrameCache.addSpriteFrames(res.playerU_plist);
-        //cc.textureCache.addImage(res.playerU_png);
-        cc.spriteFrameCache.addSpriteFrames(res.playerR_plist);
-        cc.textureCache.addImage(res.playerR_png);
-        cc.spriteFrameCache.addSpriteFrames(res.playerL_plist);
-        cc.textureCache.addImage(res.playerL_png);
+        cc.spriteFrameCache.addSpriteFrames(res.AplayerD_plist);
+        cc.textureCache.addImage(res.AplayerD_png);
+
+        cc.spriteFrameCache.addSpriteFrames(res.BplayerD_plist);
+        cc.textureCache.addImage(res.BplayerD_png);
+
+        cc.spriteFrameCache.addSpriteFrames(res.CplayerD_plist);
+        cc.textureCache.addImage(res.CplayerD_png);
+
+        cc.spriteFrameCache.addSpriteFrames(res.DplayerD_plist);
+        cc.textureCache.addImage(res.DplayerD_png);
+
 
         //加载json
         this._playerPos = cc.loader.getRes(resJSON.Map_JSON);
 
-        for(var i = 1;i<4;i++){
-            this.initPlayer(this._playerPos.player["A"+i]);
-        }
+        //加载精灵
+        this.initPlayerA(this._playerPos.player["A1"]);
+        this.initPlayerB(this._playerPos.player["A2"]);
+        this.initPlayerC(this._playerPos.player["A3"]);
 
         this.scheduleUpdate();
 
@@ -42,10 +47,38 @@ var PGPlayerLayer = cc.Layer.extend({
 
     },
 
-    initPlayer : function(pos){
+    initPlayerA : function(pos){
         var player = null;
         //加载背景图，设置属性
-        player = new PlayerSprite("#企鹅正面跳动0001.png");
+        player = new PlayerSpriteA("#企鹅正面1.png");
+        player.attr({
+            anchorX : 0,
+            anchorY : 0,
+            x: pos[0]*256,
+            y: pos[1]*256
+        });
+        this._playerArray.push(player);
+        this.addChild(player);
+    },
+
+    initPlayerB : function(pos){
+        var player = null;
+        //加载背景图，设置属性
+        player = new PlayerSpriteB("#大便正面1.png");
+        player.attr({
+            anchorX : 0,
+            anchorY : 0,
+            x: pos[0]*256,
+            y: pos[1]*256
+        });
+        this._playerArray.push(player);
+        this.addChild(player);
+    },
+
+    initPlayerC : function(pos){
+        var player = null;
+        //加载背景图，设置属性
+        player = new PlayerSpriteC("#外星人正面1.png");
         player.attr({
             anchorX : 0,
             anchorY : 0,
@@ -111,18 +144,60 @@ var PGPlayerLayer = cc.Layer.extend({
 
         player.stopActionByTag("before");
         var animFrames = [];
-        for(var i = 1;i<43;i++){
-            if(i<10){
-                i = "0" + i;
-            }
+
+        if (player._typeP == "A") {
             if(direction == "U"){
-                animFrames.push(cc.spriteFrameCache.getSpriteFrame("小企鹅背面00" + i + ".png"));
-            } else if (direction == "D") {
-                animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅正面跳动00" + i + ".png"));
-            } else if (direction == "R") {
-                animFrames.push(cc.spriteFrameCache.getSpriteFrame("小企鹅右侧" + i + ".png"));
-            } else if (direction == "L") {
-                animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅左侧" + i + ".png"));
+                for(var i = 1;i<player._imgLength+1;i++){
+                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅背面" + i + ".png"));
+                }
+            } else if (direction == "D"){
+                for(var i = 1;i<player._imgLength+1;i++){
+                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅正面" + i + ".png"));
+                }
+            } else if (direction == "L"){
+                for(var i = 1;i<player._imgLength+1;i++){
+                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅左侧" + i + ".png"));
+                }
+            } else if (direction == "R"){
+                for(var i = 1;i<player._imgLength+1;i++){
+                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅右侧" + i + ".png"));
+                }
+            }
+        } else if (player._typeP == "B") {
+            if(direction == "U"){
+                for(var i = 1;i<player._imgLength+1;i++){
+                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("大便背面" + i + ".png"));
+                }
+            } else if (direction == "D"){
+                for(var i = 1;i<player._imgLength+1;i++){
+                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("大便正面" + i + ".png"));
+                }
+            } else if (direction == "L"){
+                for(var i = 1;i<player._imgLength+1;i++){
+                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("大便左侧" + i + ".png"));
+                }
+            } else if (direction == "R"){
+                for(var i = 1;i<player._imgLength+1;i++){
+                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("大便右侧" + i + ".png"));
+                }
+            }
+        } else if (player._typeP == "C") {
+            if(direction == "U"){
+                for(var i = 1;i<player._imgLength+1;i++){
+                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("外星人背面" + i + ".png"));
+                }
+            } else if (direction == "D"){
+                for(var i = 1;i<player._imgLength+1;i++){
+                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("外星人正面" + i + ".png"));
+                }
+            } else if (direction == "L"){
+                for(var i = 1;i<player._imgLength+1;i++){
+                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("外星人左侧" + i + ".png"));
+                }
+            } else if (direction == "R"){
+                for(var i = 1;i<player._imgLength+1;i++){
+                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("外星人右侧" + i + ".png"));
+                }
             }
         }
 
