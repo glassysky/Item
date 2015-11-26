@@ -5,6 +5,8 @@ var res = {
     paperBlock : "res/playGame/blocks/paperBlock.png",
     woodBlock : "res/playGame/blocks/woodBlock.png",
     stoneBlock : "res/playGame/blocks/stoneBlock.png",
+    bomb_plist : "res/playGame/blocks/炸弹.plist",
+    bomb_png : "res/playGame/blocks/炸弹.png",
 
     //startPlace
     blueBegin : "res/playGame/startPlace/蓝队起点.png",

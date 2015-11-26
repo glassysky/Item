@@ -13,7 +13,7 @@ var PGPlayerLayer = cc.Layer.extend({
     _posyBefore : 0,
     _posxAfter : 0,
     _posyAfter : 0,
-    _direction : "B",
+    _direction : "D",
 
     ctor : function(){
         this._super();
