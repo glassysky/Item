@@ -1,24 +1,37 @@
 html {
-  min-height: 100%; }
+  min-height: 100%;
+  background: url("../Image/background.gif") no-repeat top center;
+  -webkit-background-size: 100%;
+  background-size: 100%; }
 
 body {
   height: 100%;
-  background: #000000; }
+  background: none; }
+
+.cover-layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000; }
 
 .second-container {
   width: 85%;
   margin: 0 auto; }
 
+#Cocos2dGameContainer {
+  text-align: center; }
+
 #navbar {
   margin-bottom: 20px;
-  background-color: #262F3C;
-  border: none; }
+  background-color: #ff873f;
+  border: none;
+  box-shadow: 1px 1px 2px #aaa; }
   #navbar .navbar-header .navbar-brand {
     padding: 0 30px;
     padding: 0 30px;
     height: 100px;
     line-height: 100px;
-    color: #fff;
+    color: #eee;
     font-size: medium;
     font-weight: 700; }
     #navbar .navbar-header .navbar-brand img {
@@ -32,7 +45,7 @@ body {
       padding: 0 30px;
       height: 100px;
       line-height: 100px;
-      color: #fff;
+      color: #eee;
       font-size: medium;
       font-weight: 700; }
 
@@ -41,7 +54,6 @@ body {
   padding-right: 0;
   width: 100%;
   height: 100%;
-  background: url("../Image/background.jpg") no-repeat;
   -webkit-background-size: 100% 100%;
   background-size: 100% 100%; }
   #ai-game #homepage .jumbotron img {
@@ -76,11 +88,12 @@ body {
     text-align: center;
     margin-bottom: 20px;
     font-weight: 700;
-    color: #fff;
-    text-shadow: 2px 2px 2px #fff; }
+    color: #FF9E32;
+    text-shadow: 2px 2px 2px #000; }
   #ai-game #rankpage table thead {
-    color: white;
-    font-size: 1em; }
+    color: #FF9E32;
+    font-size: 1em;
+    background-color: #eee; }
     #ai-game #rankpage table thead th {
       text-align: center; }
   #ai-game #rankpage table tbody tr:nth-child(even) {
@@ -95,10 +108,10 @@ body {
       width: 100%;
       height: 300px;
       padding: 10px;
-      border: 2px solid #1b6d85;
-      -webkit-box-shadow: 1px 1px 1px 2px #204d74;
-      -moz-box-shadow: 1px 1px 1px 2px #204d74;
-      box-shadow: 1px 1px 1px 2px #204d74; }
+      border: 2px solid #FF9E32;
+      -webkit-box-shadow: 1px 1px 1px 2px #FF9E32;
+      -moz-box-shadow: 1px 1px 1px 2px #FF9E32;
+      box-shadow: 1px 1px 1px 2px #FF9E32; }
       #ai-game #battlepage .battle-part .choose-enemy {
         width: 60%;
         height: 40px;
@@ -130,11 +143,12 @@ body {
       text-align: center;
       margin-bottom: 20px;
       font-weight: 700;
-      color: #fff;
-      text-shadow: 2px 2px 2px #fff; }
+      color: #FF9E32;
+      text-shadow: 2px 2px 2px #000; }
     #ai-game #battlepage .battle-history table thead {
-      color: white;
-      font-size: 1em; }
+      color: #FF9E32;
+      font-size: 1em;
+      background-color: #eee; }
       #ai-game #battlepage .battle-history table thead th {
         text-align: center; }
     #ai-game #battlepage .battle-history table tbody tr:nth-child(even) {
@@ -219,16 +233,10 @@ body {
         margin: 20px 0;
         text-align: center; }
   #ai-game #replay {
-    margin-right: 0;
-    margin-left: 0;
-    padding: 10px;
-    width: 100%; }
+    padding: 10px; }
     #ai-game #replay .scene-container {
-      width: 80%;
-      min-width: 800px;
       height: 650px;
-      margin: 0 auto;
-      background-color: #1E90FF; }
+      margin: 0 auto; }
 
 /*@media (max-width: 1390px){#nav-background{height: 200px;}}
 @media (max-width: 1108px){#nav-background{height: 300px;}}

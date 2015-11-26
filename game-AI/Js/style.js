@@ -1,9 +1,11 @@
 define(['jquery','jquerycolor'],function($){
    $("#navbar-game").find("a").each(function(){
        $(this).hover(function(){
-           $(this).animate({"color":"#FF873F"},150);
+           $(this).animate({"color":"#fff"},150)
+               .css({"text-shadow":"1px 1px 1px #eee"});
        },function(){
-           $(this).animate({"color":"#fff"},150);
+           $(this).animate({"color":"#eee"},150)
+               .css({"text-shadow":"none"});
        });
    });
     $(".ver-item").each(function(){
@@ -13,5 +15,8 @@ define(['jquery','jquerycolor'],function($){
         },function(){
             $(this).css("background-color","rgba(233,233,233,0.7)");
         });
+    });
+    $("#Cocos2dGameContainer").ready(function(){
+        $(".cover-layer").css("display","none");
     });
 });

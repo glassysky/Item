@@ -99,7 +99,7 @@ var PGBlockLayer = cc.Layer.extend({
                 }
             }
         }
-        cc.log(this._sptBlockArray);
+        //cc.log(this._sptBlockArray);
 
     },
 
@@ -128,7 +128,7 @@ var PGBlockLayer = cc.Layer.extend({
             for(var i = 0;i<data[this._step].length;i++){
                 position = data[this._step][i]["position"];
                 status = data[this._step][i]["status"];
-                console.log(position);
+                //console.log(position);
                 if(this._sptBlockArray[(position[0])+Math.round((position[1]))*17]){
                     this.removeChild(this._sptBlockArray[(position[0])+Math.round((position[1]))*17]);
                 }

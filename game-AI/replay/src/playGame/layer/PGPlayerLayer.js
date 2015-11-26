@@ -43,7 +43,7 @@ var PGPlayerLayer = cc.Layer.extend({
         this.scheduleUpdate();
 
         //cc.log(this._playerPos.playerMove["A"+1][1]);
-        cc.log(this._playerArray);
+        //cc.log(this._playerArray);
 
     },
 

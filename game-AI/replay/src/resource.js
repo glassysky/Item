@@ -1,5 +1,6 @@
 var res = {
     background_png : "res/整体背景.jpg",
+    panel_jpg : "res/playGame/面板背景.jpg",
 
     //blocks
     paperBlock : "res/playGame/blocks/paperBlock.png",
