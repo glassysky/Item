@@ -118,7 +118,9 @@ var PlayerSpriteD = cc.Sprite.extend({
     _x : null,
     _y : null,
     _sptPlayer : null,
+    _typeP : "D",
     active : true,
+    _imgLength :45,
 
     ctor : function(aTexture){
         this._super(aTexture);
@@ -135,7 +137,6 @@ var PlayerSpriteD = cc.Sprite.extend({
         //set frame
         var animFrames = [];
         for(var i = 1;i<46;i++){
-
             animFrames.push(cc.spriteFrameCache.getSpriteFrame("坏企鹅正面" + i + ".png"));
         }
 
@@ -154,7 +155,9 @@ var PlayerSpriteE = cc.Sprite.extend({
     _x : null,
     _y : null,
     _sptPlayer : null,
+    _typeP : "E",
     active : true,
+    _imgLength : 28,
 
     ctor : function(aTexture){
         this._super(aTexture);
@@ -190,7 +193,9 @@ var PlayerSpriteF = cc.Sprite.extend({
     _x : null,
     _y : null,
     _sptPlayer : null,
+    _typeP : "F",
     active : true,
+    _imgLength : 40,
 
     ctor : function(aTexture){
         this._super(aTexture);
@@ -207,7 +212,6 @@ var PlayerSpriteF = cc.Sprite.extend({
         //set frame
         var animFrames = [];
         for(var i = 1;i<41;i++){
-
             animFrames.push(cc.spriteFrameCache.getSpriteFrame("坏外星人正面" + i + ".png"));
         }
 

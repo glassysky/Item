@@ -148,6 +148,9 @@ var PGPlayerLayer = cc.Layer.extend({
             this.moveSpriteB();
             this.time = 0;
             this._step++;
+            if(this._step == this._playerPos.round){
+                this.unscheduleUpdate();
+            }
         }
     },
 
@@ -243,6 +246,8 @@ var PGPlayerLayer = cc.Layer.extend({
             //待加转向改图片
             this.changeImage(this._playerArrayB[i],direction);
 
+            cc.log(this._playerArrayB[i]._typeP);
+
             //每次移动一格
             this._playerArrayB[i].runAction(new cc.MoveBy(1, cc.p(x*256, y*256)));
             this._character++;
@@ -252,65 +257,51 @@ var PGPlayerLayer = cc.Layer.extend({
 
     changeImage : function(player,direction){
 
-        //set frame
-
         player.stopActionByTag("before");
-        var animFrames = [];
+        var animFrames = [],
+            directionTemp = "",
+            typeTemp = "";
 
-        if (player._typeP == "A") {
-            if(direction == "U"){
-                for(var i = 1;i<player._imgLength+1;i++){
-                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅背面" + i + ".png"));
-                }
-            } else if (direction == "D"){
-                for(var i = 1;i<player._imgLength+1;i++){
-                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅正面" + i + ".png"));
-                }
-            } else if (direction == "L"){
-                for(var i = 1;i<player._imgLength+1;i++){
-                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅左侧" + i + ".png"));
-                }
-            } else if (direction == "R"){
-                for(var i = 1;i<player._imgLength+1;i++){
-                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅右侧" + i + ".png"));
-                }
-            }
-        } else if (player._typeP == "B") {
-            if(direction == "U"){
-                for(var i = 1;i<player._imgLength+1;i++){
-                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("大便背面" + i + ".png"));
-                }
-            } else if (direction == "D"){
-                for(var i = 1;i<player._imgLength+1;i++){
-                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("大便正面" + i + ".png"));
-                }
-            } else if (direction == "L"){
-                for(var i = 1;i<player._imgLength+1;i++){
-                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("大便左侧" + i + ".png"));
-                }
-            } else if (direction == "R"){
-                for(var i = 1;i<player._imgLength+1;i++){
-                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("大便右侧" + i + ".png"));
-                }
-            }
-        } else if (player._typeP == "C") {
-            if(direction == "U"){
-                for(var i = 1;i<player._imgLength+1;i++){
-                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("外星人背面" + i + ".png"));
-                }
-            } else if (direction == "D"){
-                for(var i = 1;i<player._imgLength+1;i++){
-                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("外星人正面" + i + ".png"));
-                }
-            } else if (direction == "L"){
-                for(var i = 1;i<player._imgLength+1;i++){
-                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("外星人左侧" + i + ".png"));
-                }
-            } else if (direction == "R"){
-                for(var i = 1;i<player._imgLength+1;i++){
-                    animFrames.push(cc.spriteFrameCache.getSpriteFrame("外星人右侧" + i + ".png"));
-                }
-            }
+        switch(player._typeP){
+            case "A":
+                typeTemp = "企鹅";
+                break;
+            case "B":
+                typeTemp = "大便";
+                break;
+            case "C":
+                typeTemp = "外星人";
+                break;
+            case "D":
+                typeTemp = "坏企鹅";
+                break;
+            case "E":
+                typeTemp = "坏大便";
+                break;
+            case "F":
+                typeTemp = "坏外星人";
+                break;
+            default:
+                return "error";
+        }
+
+        switch(direction){
+            case "U":
+                directionTemp = "背面";
+                break;
+            case "D":
+                directionTemp = "正面";
+                break;
+            case "R":
+                directionTemp = "右侧";
+                break;
+            case "L":
+                directionTemp = "左侧";
+                break;
+        }
+
+        for(var i = 1;i<player._imgLength+1;i++){
+            animFrames.push(cc.spriteFrameCache.getSpriteFrame(typeTemp + directionTemp + i + ".png"));
         }
 
         //player animate

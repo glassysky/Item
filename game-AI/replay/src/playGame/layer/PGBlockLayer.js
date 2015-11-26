@@ -110,6 +110,9 @@ var PGBlockLayer = cc.Layer.extend({
             this.changeBlock();
             //cc.log(this._playerArray);
             this.time = 0;
+            if(this._step == this._sptMap.round){
+                this.unscheduleUpdate();
+            }
         }
     },
 
