@@ -128,15 +128,17 @@ var PGBlockLayer = cc.Layer.extend({
             for(var i = 0;i<data[this._step].length;i++){
                 position = data[this._step][i]["position"];
                 status = data[this._step][i]["status"];
-                //console.log(position);
+                //删除原位置精灵
                 if(this._sptBlockArray[(position[0])+Math.round((position[1]))*17]){
                     this.removeChild(this._sptBlockArray[(position[0])+Math.round((position[1]))*17]);
                 }
+                //添加新精灵
                 this._sptBlockArray[(position[0])+Math.round((position[1]))*17] = this.makeBlock(status,position[0],position[1]);
                 block = this._sptBlockArray[(position[0])+Math.round((position[1]))*17];
 
                 this.addChild(block);
 
+                //如果是爆炸，默认1.5秒后自动删除精灵
                 if(status == "5"){
                     this.scheduleOnce(function(){this.removeChild(block)},1.5);
                 }

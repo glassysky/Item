@@ -105,10 +105,18 @@ var PGPlayerLayer = cc.Layer.extend({
             var x = 0,
                 y = 0,
                 direction = "D";
+            //获取当前坐标位置
             this._posxBefore = this._playerArray[i]._position.x/256;
             this._posyBefore = this._playerArray[i]._position.y/256;
+            //获取下一次坐标位置
             this._posxAfter = this._playerPos.playerMove["A"+this._character][this._step][0];
             this._posyAfter = this._playerPos.playerMove["A"+this._character][this._step][1];
+
+            if(this._posxAfter < 0 && this._posyAfter < 0 ){
+                this._character++;
+                this._playerArray[i].removeFromParent();
+                continue;
+            }
 
             x = Math.round(this._posxAfter) - Math.round(this._posxBefore);
             y = Math.round(this._posyAfter) - Math.round(this._posyBefore);
@@ -127,12 +135,10 @@ var PGPlayerLayer = cc.Layer.extend({
             //待加转向改图片
             this.changeImage(this._playerArray[i],direction);
 
+            //每次移动一格
             this._playerArray[i].runAction(new cc.MoveBy(1, cc.p(x*256, y*256)));
             this._character++;
 
-            //console.log([this._posxAfter,this._posyAfter]);
-            //console.log([this._posxBefore,this._posyBefore]);
-            //console.log([x,y]);
         }
         this._character = 1;
         this._step++;
