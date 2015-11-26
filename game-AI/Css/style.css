@@ -11,7 +11,7 @@ body {
 .cover-layer {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 1000; }
 
 .second-container {
@@ -54,12 +54,22 @@ body {
   padding-right: 0;
   width: 100%;
   height: 100%;
-  -webkit-background-size: 100% 100%;
-  background-size: 100% 100%; }
+  background-color: rgba(233, 233, 233, 0.7); }
   #ai-game #homepage .jumbotron img {
     margin: 0 auto; }
-  #ai-game #homepage .description-text p {
-    font-size: 0.9em; }
+  #ai-game #homepage .description-text {
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    overflow: hidden; }
+    #ai-game #homepage .description-text .text-wrap {
+      position: relative;
+      top: 0; }
+      #ai-game #homepage .description-text .text-wrap p {
+        font-size: 2em;
+        font-weight: 700; }
   #ai-game #regpage {
     padding: 30px 0; }
     #ai-game #regpage form {
@@ -168,7 +178,8 @@ body {
       font-size: 1.5em;
       font-weight: 700;
       margin-top: 0;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      color: #ff9e32; }
     #ai-game #code-management .code-header span {
       font-size: 1.2em;
       color: #666; }
@@ -179,14 +190,14 @@ body {
       margin: 10px;
       padding: 5px;
       color: #000;
-      background-color: rgba(230, 230, 230, 0.7);
-      border: 1px solid #1b6d85;
+      background-color: rgba(255, 158, 50, 0.7);
+      border: 1px solid #FF9E32;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px;
-      -webkit-box-shadow: 1px 1px 1px 2px #204d74;
-      -moz-box-shadow: 1px 1px 1px 2px #204d74;
-      box-shadow: 1px 1px 1px 2px #204d74; }
+      -webkit-box-shadow: 1px 1px 1px 2px #ff9e32;
+      -moz-box-shadow: 1px 1px 1px 2px #ff9e32;
+      box-shadow: 1px 1px 1px 2px #ff9e32; }
       #ai-game #code-management .version-list .ver-list-wrap .ver-item .ver-pic {
         display: inline-block;
         float: left;

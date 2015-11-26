@@ -10,7 +10,8 @@ requirejs.config({
         reg: 'reg',
         style: 'style',
         battle: 'battle',
-        bootstrapSelect: 'lib/bootstrap-select'
+        bootstrapSelect: 'lib/bootstrap-select',
+        describe : 'describe'
     },
     shim: {
         'jquery' : { exports : 'jquery' },
@@ -22,6 +23,6 @@ requirejs.config({
     }
 });
 
-requirejs(['reg','style','battle'],function(reg,style){
+requirejs(['reg','style','battle','describe'],function(reg,style){
     reg.reg();
 });

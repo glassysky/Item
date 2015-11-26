@@ -11,9 +11,9 @@ define(['jquery','jquerycolor'],function($){
     $(".ver-item").each(function(){
         $(this).css("cursor","pointer");
         $(this).hover(function(){
-            $(this).css("background-color","rgba(150,150,150,0.9)");
+            $(this).css("background-color","rgba(255,158,50,1)");
         },function(){
-            $(this).css("background-color","rgba(233,233,233,0.7)");
+            $(this).css("background-color","rgba(255,158,50,0.7)");
         });
     });
     $("#Cocos2dGameContainer").ready(function(){
