@@ -23,6 +23,6 @@ requirejs.config({
     }
 });
 
-requirejs(['reg','style','battle','describe'],function(reg,style){
+requirejs(['reg','style','battle'],function(reg,style){
     reg.reg();
 });

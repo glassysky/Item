@@ -53,6 +53,26 @@ var res = {
     DplayerL_plist : "res/playGame/player/坏企鹅左侧.plist",
     DplayerL_png : "res/playGame/player/坏企鹅左侧.png",
 
+    //playerE
+    EplayerD_plist : "res/playGame/player/坏大便正面.plist",
+    EplayerD_png : "res/playGame/player/坏大便正面.png",
+    EplayerR_plist : "res/playGame/player/坏大便右侧.plist",
+    EplayerR_png : "res/playGame/player/坏大便右侧.png",
+    EplayerU_plist : "res/playGame/player/坏大便背面.plist",
+    EplayerU_png : "res/playGame/player/坏大便背面.png",
+    EplayerL_plist : "res/playGame/player/坏大便左侧.plist",
+    EplayerL_png : "res/playGame/player/坏大便左侧.png",
+
+    //playerF
+    FplayerD_plist : "res/playGame/player/坏外星人正面.plist",
+    FplayerD_png : "res/playGame/player/坏外星人正面.png",
+    FplayerR_plist : "res/playGame/player/坏外星人右侧.plist",
+    FplayerR_png : "res/playGame/player/坏外星人右侧.png",
+    FplayerU_plist : "res/playGame/player/坏外星人背面.plist",
+    FplayerU_png : "res/playGame/player/坏外星人背面.png",
+    FplayerL_plist : "res/playGame/player/坏外星人左侧.plist",
+    FplayerL_png : "res/playGame/player/坏外星人左侧.png",
+
 };
 
 var resJSON = {
