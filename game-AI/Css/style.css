@@ -53,8 +53,7 @@ body {
   padding-left: 0;
   padding-right: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(233, 233, 233, 0.7); }
+  height: 100%; }
   #ai-game #homepage .description-text {
     position: relative;
     margin-bottom: 50px;
@@ -79,11 +78,12 @@ body {
       #ai-game #regpage form h1 {
         text-align: center;
         margin: 20px;
-        color: #fff;
+        color: #ff9e32;
         font-size: 2em;
-        font-weight: 700; }
+        font-weight: 700;
+        text-shadow: 1px 1px 1px #000; }
       #ai-game #regpage form label {
-        color: #fff; }
+        color: #000; }
     #ai-game #regpage .submit-compoments {
       width: 500px;
       margin: 0 auto;
