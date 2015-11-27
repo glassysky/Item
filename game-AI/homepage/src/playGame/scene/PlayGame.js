@@ -33,7 +33,7 @@ var PlayGameScene = cc.Scene.extend({
         var playerLayer = new PGPlayerLayer();
         this.addChild(playerLayer);
 
-        var panelLayer = new PGPanelLayer();
-        this.addChild(panelLayer);
+        //var panelLayer = new PGPanelLayer();
+        //this.addChild(panelLayer);
     }
 });

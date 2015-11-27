@@ -12,6 +12,7 @@ var PGBlockLayer = cc.Layer.extend({
     _step : 0,
     time : 0,
     maxLength : 0,
+    _removedBlock : [],
 
     ctor : function(){
         this._super();
@@ -41,9 +42,9 @@ var PGBlockLayer = cc.Layer.extend({
 
         var blockStyle = null;
 
-        for(var i = 0;i<17;i++){
-            for(var j = 0;j<17;j++){
-                blockStyle = this._sptMap.map[i*17+j];
+        for(var i = 0;i<9;i++){
+            for(var j = 0;j<9;j++){
+                blockStyle = this._sptMap.map[i*9+j];
                 if(blockStyle == 1){
                     var blockPaper = new cc.Sprite(res.paperBlock);
                     blockPaper.attr({
@@ -110,6 +111,9 @@ var PGBlockLayer = cc.Layer.extend({
             this.changeBlock();
             //cc.log(this._playerArray);
             this.time = 0;
+            if(this._step == this._sptMap.round){
+                this.unscheduleUpdate();
+            }
         }
     },
 
@@ -124,25 +128,39 @@ var PGBlockLayer = cc.Layer.extend({
             status = null,
             block = null;
         if(data[this._step]){
+            //console.log(this._removedBlock);
+
+            //如果是爆炸，默认下一回合删除精灵
+            if(this._removedBlock){
+                for(var i = 0;i<this._removedBlock.length;i++){
+                    this.removeChild(this._removedBlock[i]);
+                }
+                this._removedBlock = [];
+            }
+
             //console.log(data[this._step].length);
             for(var i = 0;i<data[this._step].length;i++){
                 position = data[this._step][i]["position"];
                 status = data[this._step][i]["status"];
-                //console.log(position);
-                if(this._sptBlockArray[(position[0])+Math.round((position[1]))*17]){
-                    this.removeChild(this._sptBlockArray[(position[0])+Math.round((position[1]))*17]);
+                //删除原位置精灵
+                if(this._sptBlockArray[(position[0])+Math.round((position[1]))*9]){
+                    this.removeChild(this._sptBlockArray[(position[0])+Math.round((position[1]))*9]);
                 }
-                this._sptBlockArray[(position[0])+Math.round((position[1]))*17] = this.makeBlock(status,position[0],position[1]);
-                block = this._sptBlockArray[(position[0])+Math.round((position[1]))*17];
-
-                this.addChild(block);
+                //添加新精灵
+                if(status){
+                    this._sptBlockArray[(position[0])+Math.round((position[1]))*9] = this.makeBlock(status,position[0],position[1]);
+                    block = this._sptBlockArray[(position[0])+Math.round((position[1]))*9];
+                    this.addChild(block);
+                }
 
                 if(status == "5"){
-                    this.scheduleOnce(function(){this.removeChild(block)},1.5);
+                    this._removedBlock.push(block);
                 }
-
             }
+
         }
+
+        //console.log(this._removedBlock);
 
     },
 
@@ -157,9 +175,6 @@ var PGBlockLayer = cc.Layer.extend({
     makeBlock : function(number,x,y){
         var block = null;
         switch(number){
-            case 0: //null
-                block = null;
-                break;
             case 1: //paper
                 block = new cc.Sprite(res.paperBlock);
                 block.attr({

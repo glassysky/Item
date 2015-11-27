@@ -114,100 +114,116 @@ var PlayerSpriteC = cc.Sprite.extend({
 });
 //
 //角色D
-//var PlayerSpriteD = cc.Sprite.extend({
-//    _x : null,
-//    _y : null,
-//    _sptPlayer : null,
-//    active : true,
-//
-//    ctor : function(aTexture){
-//        this._super(aTexture);
-//
-//        cc.spriteFrameCache.addSpriteFrames(res.DplayerD_plist);
-//        cc.textureCache.addImage(res.DplayerD_png);
-//        cc.spriteFrameCache.addSpriteFrames(res.DplayerU_plist);
-//        cc.textureCache.addImage(res.DplayerU_png);
-//        cc.spriteFrameCache.addSpriteFrames(res.DplayerR_plist);
-//        cc.textureCache.addImage(res.DplayerR_png);
-//        cc.spriteFrameCache.addSpriteFrames(res.DplayerL_plist);
-//        cc.textureCache.addImage(res.DplayerL_png);
-//
-//        //set frame
-//        var animFrames = [];
-//        for(var i = 1;i<43;i++){
+var PlayerSpriteD = cc.Sprite.extend({
+    _x : null,
+    _y : null,
+    _sptPlayer : null,
+    _typeP : "D",
+    active : true,
+    _imgLength :45,
 
-//            animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅正面" + i + ".png"));
-//        }
-//
-//        //player animate
-//        var animation = new cc.Animation(animFrames, 0.1);
-//        var animate = cc.animate(animation);
-//        var action = animate.repeatForever();
-//        action.setTag("before");
-//        this.runAction(action);
-//    },
-//
-//});
-//
-////角色E
-//var PlayerSpriteE = cc.Sprite.extend({
-//    _x : null,
-//    _y : null,
-//    _sptPlayer : null,
-//    active : true,
-//
-//    ctor : function(aTexture){
-//        this._super(aTexture);
-//
-//        cc.spriteFrameCache.addSpriteFrames(res.playerD_plist);
-//        cc.textureCache.addImage(res.playerD_png);
-//
-//        //set frame
-//        var animFrames = [];
-//        for(var i = 1;i<43;i++){
+    ctor : function(aTexture){
+        this._super(aTexture);
 
-//            animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅正面" + i + ".png"));
-//        }
-//
-//        //player animate
-//        var animation = new cc.Animation(animFrames, 0.1);
-//        var animate = cc.animate(animation);
-//        var action = animate.repeatForever();
-//        action.setTag("before");
-//        this.runAction(action);
-//    },
-//
-//});
-//
-////角色F
-//var PlayerSpriteF = cc.Sprite.extend({
-//    _x : null,
-//    _y : null,
-//    _sptPlayer : null,
-//    active : true,
-//
-//    ctor : function(aTexture){
-//        this._super(aTexture);
-//
-//        cc.spriteFrameCache.addSpriteFrames(res.playerD_plist);
-//        cc.textureCache.addImage(res.playerD_png);
-//
-//        //set frame
-//        var animFrames = [];
-//        for(var i = 1;i<43;i++){
+        cc.spriteFrameCache.addSpriteFrames(res.DplayerD_plist);
+        cc.textureCache.addImage(res.DplayerD_png);
+        cc.spriteFrameCache.addSpriteFrames(res.DplayerU_plist);
+        cc.textureCache.addImage(res.DplayerU_png);
+        cc.spriteFrameCache.addSpriteFrames(res.DplayerR_plist);
+        cc.textureCache.addImage(res.DplayerR_png);
+        cc.spriteFrameCache.addSpriteFrames(res.DplayerL_plist);
+        cc.textureCache.addImage(res.DplayerL_png);
 
-//            animFrames.push(cc.spriteFrameCache.getSpriteFrame("企鹅正面" + i + ".png"));
-//        }
-//
-//        //player animate
-//        var animation = new cc.Animation(animFrames, 0.1);
-//        var animate = cc.animate(animation);
-//        var action = animate.repeatForever();
-//        action.setTag("before");
-//        this.runAction(action);
-//    },
-//
-//});
+        //set frame
+        var animFrames = [];
+        for(var i = 1;i<46;i++){
+            animFrames.push(cc.spriteFrameCache.getSpriteFrame("坏企鹅正面" + i + ".png"));
+        }
+
+        //player animate
+        var animation = new cc.Animation(animFrames, 0.1);
+        var animate = cc.animate(animation);
+        var action = animate.repeatForever();
+        action.setTag("before");
+        this.runAction(action);
+    },
+
+});
+
+//角色E
+var PlayerSpriteE = cc.Sprite.extend({
+    _x : null,
+    _y : null,
+    _sptPlayer : null,
+    _typeP : "E",
+    active : true,
+    _imgLength : 28,
+
+    ctor : function(aTexture){
+        this._super(aTexture);
+
+        cc.spriteFrameCache.addSpriteFrames(res.EplayerD_plist);
+        cc.textureCache.addImage(res.EplayerD_png);
+        cc.spriteFrameCache.addSpriteFrames(res.EplayerU_plist);
+        cc.textureCache.addImage(res.EplayerU_png);
+        cc.spriteFrameCache.addSpriteFrames(res.EplayerR_plist);
+        cc.textureCache.addImage(res.EplayerR_png);
+        cc.spriteFrameCache.addSpriteFrames(res.EplayerL_plist);
+        cc.textureCache.addImage(res.EplayerL_png);
+
+        //set frame
+        var animFrames = [];
+        for(var i = 1;i<29;i++){
+
+            animFrames.push(cc.spriteFrameCache.getSpriteFrame("坏大便正面" + i + ".png"));
+        }
+
+        //player animate
+        var animation = new cc.Animation(animFrames, 0.1);
+        var animate = cc.animate(animation);
+        var action = animate.repeatForever();
+        action.setTag("before");
+        this.runAction(action);
+    },
+
+});
+
+//角色F
+var PlayerSpriteF = cc.Sprite.extend({
+    _x : null,
+    _y : null,
+    _sptPlayer : null,
+    _typeP : "F",
+    active : true,
+    _imgLength : 40,
+
+    ctor : function(aTexture){
+        this._super(aTexture);
+
+        cc.spriteFrameCache.addSpriteFrames(res.FplayerD_plist);
+        cc.textureCache.addImage(res.FplayerD_png);
+        cc.spriteFrameCache.addSpriteFrames(res.FplayerU_plist);
+        cc.textureCache.addImage(res.FplayerU_png);
+        cc.spriteFrameCache.addSpriteFrames(res.FplayerR_plist);
+        cc.textureCache.addImage(res.FplayerR_png);
+        cc.spriteFrameCache.addSpriteFrames(res.FplayerL_plist);
+        cc.textureCache.addImage(res.FplayerL_png);
+
+        //set frame
+        var animFrames = [];
+        for(var i = 1;i<41;i++){
+            animFrames.push(cc.spriteFrameCache.getSpriteFrame("坏外星人正面" + i + ".png"));
+        }
+
+        //player animate
+        var animation = new cc.Animation(animFrames, 0.1);
+        var animate = cc.animate(animation);
+        var action = animate.repeatForever();
+        action.setTag("before");
+        this.runAction(action);
+    },
+
+});
 //
 ////角色G
 //var PlayerSpriteG = cc.Sprite.extend({
