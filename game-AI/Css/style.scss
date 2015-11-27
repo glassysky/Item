@@ -17,7 +17,7 @@ $version-height: 100px;
 
 html {
 	min-height: 100%;
-	background: url("../Image/background.gif") no-repeat top center;
+	background: url("../Image/background.png") no-repeat top center;
 	-webkit-background-size: 100%;
 	background-size: 100%;
 }
@@ -117,24 +117,22 @@ body {
 
 	background-color: rgba(233,233,233,0.7);
 	#homepage {
-		.jumbotron {
-			img {
-				margin: 0 auto;
-			}
-		}
 		.description-text {
 			position: relative;
 			margin-bottom: 50px;
-			text-align: center;
+			text-indent: 2em;
 			width: 100%;
-			height: 50px;
-			overflow: hidden;
 			.text-wrap {
 				position: relative;
 				top: 0;
+				padding: 20px;
+				background-color: #eee;
+				-webkit-border-radius: 15px;
+				-moz-border-radius: 15px;
+				border-radius: 15px;
 				p {
-					font-size: 2em;
-					font-weight: 700;
+					font-size: 1em;
+					font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 				}
 			}
 		}

@@ -1,6 +1,6 @@
 html {
   min-height: 100%;
-  background: url("../Image/background.gif") no-repeat top center;
+  background: url("../Image/background.png") no-repeat top center;
   -webkit-background-size: 100%;
   background-size: 100%; }
 
@@ -55,21 +55,22 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(233, 233, 233, 0.7); }
-  #ai-game #homepage .jumbotron img {
-    margin: 0 auto; }
   #ai-game #homepage .description-text {
     position: relative;
     margin-bottom: 50px;
-    text-align: center;
-    width: 100%;
-    height: 50px;
-    overflow: hidden; }
+    text-indent: 2em;
+    width: 100%; }
     #ai-game #homepage .description-text .text-wrap {
       position: relative;
-      top: 0; }
+      top: 0;
+      padding: 20px;
+      background-color: #eee;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      border-radius: 15px; }
       #ai-game #homepage .description-text .text-wrap p {
-        font-size: 2em;
-        font-weight: 700; }
+        font-size: 1em;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
   #ai-game #regpage {
     padding: 30px 0; }
     #ai-game #regpage form {
