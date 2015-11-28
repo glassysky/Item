@@ -100,7 +100,7 @@ body {
     margin-bottom: 20px;
     font-weight: 700;
     color: #FF9E32;
-    text-shadow: 2px 2px 2px #000; }
+    text-shadow: 1px 1px 1px #000; }
   #ai-game #rankpage table thead {
     color: #FF9E32;
     font-size: 1em;
@@ -155,7 +155,7 @@ body {
       margin-bottom: 20px;
       font-weight: 700;
       color: #FF9E32;
-      text-shadow: 2px 2px 2px #000; }
+      text-shadow: 1px 1px 1px #000; }
     #ai-game #battlepage .battle-history table thead {
       color: #FF9E32;
       font-size: 1em;
@@ -249,6 +249,45 @@ body {
     #ai-game #replay .scene-container {
       height: 650px;
       margin: 0 auto; }
+  #ai-game #about-us {
+    width: 80%;
+    padding: 20px;
+    margin: 30px auto; }
+    #ai-game #about-us .about-text {
+      width: 100%;
+      padding: 20px 30px 40px;
+      background-color: #eee;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px; }
+      #ai-game #about-us .about-text h1 {
+        text-align: center;
+        margin: 20px auto 30px auto;
+        font-size: 1.5em;
+        font-weight: 700;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      #ai-game #about-us .about-text .p-wrap p {
+        text-indent: 2em;
+        font-size: 0.8em; }
+      #ai-game #about-us .about-text .p-wrap .activity-holder a {
+        display: inline-block; }
+      #ai-game #about-us .about-text .p-wrap .activity-holder a:hover {
+        color: #337ab7;
+        text-decoration: none; }
+      #ai-game #about-us .about-text .img-wrap {
+        width: 100%; }
+        #ai-game #about-us .about-text .img-wrap img {
+          font-size: 30%;
+          margin: 2.5%; }
+  #ai-game #notice .notice-container h1 {
+    font-weight: 700;
+    text-align: center;
+    color: #FF9E32;
+    text-shadow: 1px 1px 1px #000; }
+  #ai-game #notice .notice-container .notice-panel-wrap .panel .panel-body p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  #ai-game #notice .notice-container .notice-panel-wrap .panel .panel-body .panel-info-wrap span {
+    color: #5e5e5e; }
 
 /*@media (max-width: 1390px){#nav-background{height: 200px;}}
 @media (max-width: 1108px){#nav-background{height: 300px;}}
