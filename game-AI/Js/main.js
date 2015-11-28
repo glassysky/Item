@@ -2,12 +2,13 @@ requirejs.config({
     //forbid cache
     urlArgs: "bust=" + (new Date()).getTime(),
 
-    baseUrl: '/game-AI/Js',
+    //baseUrl: '/game-AI/Js',
     paths: {
         jquery: 'lib/jquery.min',
         bootstrap: 'lib/bootstrap.min',
         jquerycolor: 'lib/jquery.color',
         reg: 'reg',
+        login: 'login',
         style: 'style',
         battle: 'battle',
         bootstrapSelect: 'lib/bootstrap-select',
@@ -23,6 +24,7 @@ requirejs.config({
     }
 });
 
-requirejs(['reg','style','battle'],function(reg,style){
+requirejs(['reg','login','style','battle'],function(reg,login,style){
     reg.reg();
+    login.login();
 });

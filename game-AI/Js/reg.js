@@ -2,7 +2,7 @@ define(['jquery'],function(){
 	return {
 		reg : function(){
 			$("#reg-btn").on("click",function(){
-				var email = $("inputEmail").val(),
+				var email = $("#inputEmail").val(),
 					nickname = $("#inputNickname").val(),
 					password = $("#inputPassword").val(),
 					school = $("#inputSchool").val(),
@@ -17,7 +17,7 @@ define(['jquery'],function(){
 						studentnumber && name && year && validate){
 					$.ajax({
 						type : 'post',
-						datatype : 'json',
+						dataType : 'json',
 						url : '',
 						data : {
 							'email' : email,
@@ -29,7 +29,7 @@ define(['jquery'],function(){
 							'year' : year
 						},
 						success : function(){
-
+							window.location.href = "homepage/homepage.html";
 						},
 						error : function(){
 							console.log('请求失败');
