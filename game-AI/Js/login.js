@@ -2,14 +2,16 @@
  * Created by cui on 2015/11/28.
  */
 define(['jquery','common'],function($,common){
+    var checked = false;
+
     return {
         login : function(){
+
             check();
 
             $("#login-btn").on("click",function(){
                 var email = $("#inputEmail").val(),
-                    password = $("#inputPassword").val(),
-                    checked = false;
+                    password = $("#inputPassword").val();
 
                 // 信息是否完整
                 if(email && password){
@@ -44,6 +46,8 @@ define(['jquery','common'],function($,common){
                 $("form").find("input").each(function(){
                     $(this).blur(function(){
                         checked = common.check($(this).attr("data-name"),$(this).val());
+                        console.log($(this).attr("data-name"));
+                        console.log($(this).val());
                         if(checked){
                             $(this).css("border-color","green");
                         } else {

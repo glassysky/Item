@@ -1,6 +1,9 @@
 define(['jquery','common'],function($,common){
 	return {
 		reg : function(){
+
+			check();
+
 			$("#reg-btn").on("click",function(){
 				var email = $("#inputEmail").val(),
 					nickname = $("#inputNickname").val(),
@@ -45,6 +48,20 @@ define(['jquery','common'],function($,common){
 					alert("请补全信息");
 				}
 			});
+
+			function check(){
+				var checked = false;
+				$("form").find("input").each(function(){
+					$(this).blur(function(){
+						checked = common.check($(this).attr("data-name"),$(this).val());
+						if(checked){
+							$(this).css("border-color","green");
+						} else {
+							$(this).css("border-color","red");
+						}
+					});
+				});
+			}
 		}
 	};
 });
