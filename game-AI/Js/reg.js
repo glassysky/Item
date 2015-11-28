@@ -1,4 +1,4 @@
-define(['jquery'],function(){
+define(['jquery','common'],function($,common){
 	return {
 		reg : function(){
 			$("#reg-btn").on("click",function(){
@@ -10,7 +10,6 @@ define(['jquery'],function(){
 					name = $("#inputName").val(),
 					year = $("#inputYear").val(),
 					validate = $("#inputValidate").val();
-
 
 				// 信息是否完整
 				if(email && nickname && password && school && 
@@ -36,7 +35,14 @@ define(['jquery'],function(){
 						}
 					});
 				} else {
-					console.log('信息不完整');
+					$("form").find("input").each(function(){
+						if($(this).val()){
+							$(this).css("border-color","green");
+						} else {
+							$(this).css("border-color","red");
+						}
+					});
+					alert("请补全信息");
 				}
 			});
 		}

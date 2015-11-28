@@ -1,9 +1,11 @@
 /**
  * Created by cui on 2015/11/28.
  */
-define(['jquery'],function(){
+define(['jquery','common'],function($,common){
     return {
         login : function(){
+            check();
+
             $("#login-btn").on("click",function(){
                 var email = $("#inputEmail").val(),
                     password = $("#inputPassword").val(),
@@ -37,6 +39,19 @@ define(['jquery'],function(){
                     alert("请补全信息");
                 }
             });
+
+            function check(){
+                $("form").find("input").each(function(){
+                    $(this).blur(function(){
+                        checked = common.check($(this).attr("data-name"),$(this).val());
+                        if(checked){
+                            $(this).css("border-color","green");
+                        } else {
+                            $(this).css("border-color","red");
+                        }
+                    });
+                });
+            }
         }
     };
 });

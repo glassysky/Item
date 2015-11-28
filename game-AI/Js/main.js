@@ -9,6 +9,7 @@ requirejs.config({
         jquerycolor: 'lib/jquery.color',
         reg: 'reg',
         login: 'login',
+        common: 'common',
         style: 'style',
         battle: 'battle',
         bootstrapSelect: 'lib/bootstrap-select',
