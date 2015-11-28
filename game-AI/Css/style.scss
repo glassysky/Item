@@ -401,6 +401,39 @@ body {
 			}
 		}
 	}
+	#game-plan {
+		ul,li {
+			list-style-type: none;
+		}
+		p {
+			text-indent: 2em;
+		}
+		h3,h5 {
+			font-weight: 700;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+		span {
+			display: inline-block;
+		}
+		img {
+			width: 80%;
+		}
+		.plan-container {
+			background-color: #eee;
+			padding: 20px;
+			margin-bottom: 40px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			h1 {
+				text-align: center;
+				font-weight: 700;
+			}
+			.text-wrap {
+
+			}
+		}
+	}
 }
 
 

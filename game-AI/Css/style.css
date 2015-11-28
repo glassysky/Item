@@ -288,6 +288,27 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
   #ai-game #notice .notice-container .notice-panel-wrap .panel .panel-body .panel-info-wrap span {
     color: #5e5e5e; }
+  #ai-game #game-plan ul, #ai-game #game-plan li {
+    list-style-type: none; }
+  #ai-game #game-plan p {
+    text-indent: 2em; }
+  #ai-game #game-plan h3, #ai-game #game-plan h5 {
+    font-weight: 700;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  #ai-game #game-plan span {
+    display: inline-block; }
+  #ai-game #game-plan img {
+    width: 80%; }
+  #ai-game #game-plan .plan-container {
+    background-color: #eee;
+    padding: 20px;
+    margin-bottom: 40px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+    #ai-game #game-plan .plan-container h1 {
+      text-align: center;
+      font-weight: 700; }
 
 /*@media (max-width: 1390px){#nav-background{height: 200px;}}
 @media (max-width: 1108px){#nav-background{height: 300px;}}
