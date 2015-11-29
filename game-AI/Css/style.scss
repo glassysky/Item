@@ -258,8 +258,9 @@ body {
 		.version-list {
 			.ver-list-wrap {
 				margin: 20px 0;
+				overflow: hidden;
 				.ver-item {
-					display: inline-block;
+					float: left;
 					margin: 10px;
 					padding:5px;
 					color: #000;

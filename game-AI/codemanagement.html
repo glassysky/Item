@@ -54,50 +54,11 @@
         <div id="code-management"  class="second-container">
             <div class="code-header">
                 <h1>当前代码版本</h1>
-                <span>Ver 1.0</span>
+                <span id="currentVersion"></span>
                 <span>Hash:0x2es0dfe</span>
             </div>
             <div class="version-list">
-                <div class="ver-list-wrap">
-                    <div class="ver-item">
-                        <div class="ver-pic">
-                            <p>版本1</p>
-                        </div>
-                        <div class="ver-detail">
-                            <span>版本详细信息：</span>
-                            <span>编程语言：C++</span>
-                            <span>提交日期：2015/10/23</span>
-                            <span>对战次数：20</span>
-                            <span>获胜次数：10</span>
-                            <span>Commit: Init. Commit.</span>
-                        </div>
-                    </div>
-                    <div class="ver-item">
-                        <div class="ver-pic">
-                            <p>版本1</p>
-                        </div>
-                        <div class="ver-detail">
-                            <span>版本详细信息：</span>
-                            <span>编程语言：C++</span>
-                            <span>提交日期：2015/10/23</span>
-                            <span>对战次数：20</span>
-                            <span>获胜次数：10</span>
-                            <span>Commit: Init. Commit.</span>
-                        </div>
-                    </div>
-                    <div class="ver-item">
-                        <div class="ver-pic">
-                            <p>版本1</p>
-                        </div>
-                        <div class="ver-detail">
-                            <span>版本详细信息：</span>
-                            <span>编程语言：C++</span>
-                            <span>提交日期：2015/10/23</span>
-                            <span>对战次数：20</span>
-                            <span>获胜次数：10</span>
-                            <span>Commit: Init. Commit.</span>
-                        </div>
-                    </div>
+                <div class="ver-list-wrap" id="verlist">
                 </div>
                 <div class="ver-select">
                     <a href="" class="btn btn-primary btn-lg">更换版本</a>
@@ -117,7 +78,7 @@
                     <div class="lang-select form-group">
                         <label for="" class="col-sm-2 control-label">代码语言</label>
                         <div class="col-sm-5">
-                            <select name="" id="" class="form-control">
+                            <select name="" id="filetype-select" class="form-control">
                                 <option value="0">选择代码编写语言</option>
                                 <option value="c">C</option>
                                 <option value="c++">C++</option>

@@ -192,9 +192,10 @@ body {
       font-size: 1.2em;
       color: #666; }
   #ai-game #code-management .version-list .ver-list-wrap {
-    margin: 20px 0; }
+    margin: 20px 0;
+    overflow: hidden; }
     #ai-game #code-management .version-list .ver-list-wrap .ver-item {
-      display: inline-block;
+      float: left;
       margin: 10px;
       padding: 5px;
       color: #000;
