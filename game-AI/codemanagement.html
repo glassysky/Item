@@ -36,6 +36,7 @@
                 <div class="collapse navbar-collapse" id="navbar-game">
                     <ul class="nav navbar-nav">
                         <li><a href="homepage/homepage.html">首页</a></li>
+                        <li><a href="preview/homepage.html">预览</a></li>
                         <li><a href="rank.html">排行榜</a></li>
                         <li><a href="battle.html">战役</a></li>
                         <li><a href="codemanagement.html">下载</a></li>
@@ -110,7 +111,7 @@
                         <label for="" class="col-sm-2 control-label">上传代码</label>
                         <div class="col-sm-5">
                             <input type="file" class="form-control" id="file-select">
-                            <p class="help-block">未选择任何文件</p>
+                            <!--<p class="help-block">未选择任何文件</p>-->
                         </div>
                     </div>
                     <div class="lang-select form-group">
@@ -118,16 +119,16 @@
                         <div class="col-sm-5">
                             <select name="" id="" class="form-control">
                                 <option value="0">选择代码编写语言</option>
-                                <option value="">C</option>
-                                <option value="">C++</option>
-                                <option value="">Java</option>
-                                <option value="">C#</option>
-                                <option value="">Python</option>
+                                <option value="c">C</option>
+                                <option value="c++">C++</option>
+                                <option value="java">Java</option>
+                                <option value="c#">C#</option>
+                                <option value="python">Python</option>
                             </select>
                         </div>
                     </div>
                     <div class="submit-file-btn">
-                        <a href="" class="btn btn-primary btn-lg">上传代码</a>
+                        <a class="btn btn-primary btn-lg" id="submitCode">上传代码</a>
                     </div>
                 </div>
             </div>

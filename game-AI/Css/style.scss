@@ -33,6 +33,15 @@ body {
 	z-index: 1000;
 }
 
+.dividePage {
+	text-align: center;
+}
+
+#checkpic{
+	width: 100%;
+	cursor: pointer;
+}
+
 @mixin nav-a {
 	padding: 0 30px;
 	height: $a-height;
@@ -328,7 +337,7 @@ body {
 	#replay {
 		padding: 10px;
 		.scene-container {
-			height: 650px;
+			height: 500px;
 			margin: 0 auto;
 		}
 	}
@@ -346,14 +355,14 @@ body {
 			h1 {
 				text-align: center;
 				margin: 20px auto 30px auto;
-				font-size: 1.5em;
+				//font-size: 1.5em;
 				font-weight: 700;
 				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 			}
 			.p-wrap {
 				p {
 					text-indent: 2em;
-					font-size: 0.8em;
+					font-size: 1.2em;
 				}
 				.activity-holder {
 					a {
@@ -368,8 +377,8 @@ body {
 			.img-wrap {
 				width: 100%;
 				img {
-					font-size: 30%;
-					margin: 2.5%;
+					width: 29%;
+					margin: 2%;
 				}
 			}
 		}

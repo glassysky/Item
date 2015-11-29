@@ -1,8 +1,14 @@
 define(['jquery','common'],function($,common){
+
+	$("#checkpic").on("click",function(){
+		$("#checkpic").src = "";
+	});
+
 	return {
 		reg : function(){
 
 			check();
+			vertifyImg();
 
 			$("#reg-btn").on("click",function(){
 				var email = $("#inputEmail").val(),
@@ -12,7 +18,10 @@ define(['jquery','common'],function($,common){
 					studentnumber = $("#inputStudentNum").val(),
 					name = $("#inputName").val(),
 					year = $("#inputYear").val(),
-					validate = $("#inputValidate").val();
+					validate = $("#inputValidate").val(),
+					secondPlayer = $("#inputSecond").val(),
+					thirdPlayer = $("#inputThird").val(),
+					repassword = $("#repeatPassword").val();
 
 				// 信息是否完整
 				if(email && nickname && password && school && 
@@ -20,17 +29,22 @@ define(['jquery','common'],function($,common){
 					$.ajax({
 						type : 'post',
 						dataType : 'json',
-						url : '',
+						url : 'http://localhost/playai/game.php/User/Login/register',
 						data : {
 							'email' : email,
 							'nickname' : nickname,
 							'password' : password,
+							'repassword' : repassword,
 							'school' : school,
-							'studentnumber' : studentnumber,
+							'studentid' : studentnumber,
 							'name' : name,
-							'year' : year
+							'entrance' : year,
+							'secondPlayer' : secondPlayer,
+							'thirdPlayer' : thirdPlayer,
+							'validate' : validate
 						},
 						success : function(){
+							//console.log("成功");
 							window.location.href = "homepage/homepage.html";
 						},
 						error : function(){
@@ -42,7 +56,11 @@ define(['jquery','common'],function($,common){
 						if($(this).val()){
 							$(this).css("border-color","green");
 						} else {
-							$(this).css("border-color","red");
+							if($(this).attr("data-name") == "second" || $(this).attr("data-name") == "third"){
+								$(this).css("border-color","green");
+							} else {
+								$(this).css("border-color","red");
+							}
 						}
 					});
 					alert("请补全信息");
@@ -60,6 +78,12 @@ define(['jquery','common'],function($,common){
 							$(this).css("border-color","red");
 						}
 					});
+				});
+			}
+
+			function vertifyImg(){
+				$("#checkpic").on("click",function(){
+					$("#checkpic").attr("src","http://localhost/playai/game.php/User/Login/verify");
 				});
 			}
 		}

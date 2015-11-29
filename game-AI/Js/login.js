@@ -18,13 +18,14 @@ define(['jquery','common'],function($,common){
                     $.ajax({
                         type : 'post',
                         dataType : 'json',
-                        url : '',
+                        url : 'http://localhost/playai/game.php/User/Login/login',
                         data : {
                             'email' : email,
                             'password' : password
                         },
                         success : function(){
-                            window.location.href = "homepage/homepage.html";
+                            //window.location.href = "homepage/homepage.html";
+                            console.log("ok");
                         },
                         error : function(){
                             console.log('请求失败');
@@ -46,8 +47,6 @@ define(['jquery','common'],function($,common){
                 $("form").find("input").each(function(){
                     $(this).blur(function(){
                         checked = common.check($(this).attr("data-name"),$(this).val());
-                        console.log($(this).attr("data-name"));
-                        console.log($(this).val());
                         if(checked){
                             $(this).css("border-color","green");
                         } else {

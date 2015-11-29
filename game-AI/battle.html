@@ -36,6 +36,7 @@
                 <div class="collapse navbar-collapse" id="navbar-game">
                     <ul class="nav navbar-nav">
                         <li><a href="homepage/homepage.html">首页</a></li>
+                        <li><a href="preview/homepage.html">预览</a></li>
                         <li><a href="rank.html">排行榜</a></li>
                         <li><a href="battle.html">战役</a></li>
                         <li><a href="codemanagement.html">下载</a></li>
@@ -55,13 +56,8 @@
                 <div class="choose-enemy row">
                     <span class="col-sm-3">请选择对手:</span>
                     <select name="enemy" id="enemy-choose" class="col-sm-4 col-sm-offset-1">
-                        <option value="1">对手1</option>
-                        <option value="2">对手2</option>
-                        <option value="3">对手3</option>
-                        <option value="4">对手4</option>
-                        <option value="5">对手5</option>
                     </select>
-                    <a href="" class="btn btn-primary col-sm-3 col-sm-offset-1">对战</a>
+                    <a class="btn btn-primary col-sm-3 col-sm-offset-1" id="fight">对战</a>
                 </div>
                 <div class="battle-result">
                     <span>对战结果</span>
@@ -71,7 +67,7 @@
             </div>
             <div class="battle-history">
                 <h1>对战历史</h1>
-                <table class="table table-striped">
+                <table class="table table-striped" id="battleTable">
                     <thead>
                         <tr>
                             <th>编号</th>
@@ -83,24 +79,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Player1</td>
-                            <td>Player2</td>
-                            <td>Player1胜</td>
-                            <td>2015-10-23</td>
-                            <td><a class="btn btn-primary battle-replay">对战细节</a></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Player1</td>
-                            <td>Player2</td>
-                            <td>Player1胜</td>
-                            <td>2015-10-23</td>
-                            <td><a class="btn btn-primary battle-replay">对战细节</a></td>
-                        </tr>
                     </tbody>
                 </table>
+                <nav class="dividePage">
+                    <ul class="pagination">
+                        <li>
+                            <a aria-label="Previous" id="Bprevious">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a aria-label="Next" id="Bnext">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
         <!-- battle over -->

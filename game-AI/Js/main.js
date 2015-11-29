@@ -13,7 +13,11 @@ requirejs.config({
         style: 'style',
         battle: 'battle',
         bootstrapSelect: 'lib/bootstrap-select',
-        describe : 'describe'
+        describe : 'describe',
+        dividepage : 'dividepage',
+        codeupdate : 'codeupdate',
+        rank : 'rank',
+        ajax : 'ajax'
     },
     shim: {
         'jquery' : { exports : 'jquery' },
@@ -25,7 +29,7 @@ requirejs.config({
     }
 });
 
-requirejs(['reg','login','style','battle'],function(reg,login,style){
+requirejs(['reg','login','style','battle','dividepage','codeupdate','rank','ajax'],function(reg,login,style){
     reg.reg();
     login.login();
 });

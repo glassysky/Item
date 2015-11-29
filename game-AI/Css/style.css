@@ -14,6 +14,13 @@ body {
   position: fixed;
   z-index: 1000; }
 
+.dividePage {
+  text-align: center; }
+
+#checkpic {
+  width: 100%;
+  cursor: pointer; }
+
 .second-container {
   width: 85%;
   margin: 0 auto; }
@@ -247,7 +254,7 @@ body {
   #ai-game #replay {
     padding: 10px; }
     #ai-game #replay .scene-container {
-      height: 650px;
+      height: 500px;
       margin: 0 auto; }
   #ai-game #about-us {
     width: 80%;
@@ -263,12 +270,11 @@ body {
       #ai-game #about-us .about-text h1 {
         text-align: center;
         margin: 20px auto 30px auto;
-        font-size: 1.5em;
         font-weight: 700;
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
       #ai-game #about-us .about-text .p-wrap p {
         text-indent: 2em;
-        font-size: 0.8em; }
+        font-size: 1.2em; }
       #ai-game #about-us .about-text .p-wrap .activity-holder a {
         display: inline-block; }
       #ai-game #about-us .about-text .p-wrap .activity-holder a:hover {
@@ -277,8 +283,8 @@ body {
       #ai-game #about-us .about-text .img-wrap {
         width: 100%; }
         #ai-game #about-us .about-text .img-wrap img {
-          font-size: 30%;
-          margin: 2.5%; }
+          width: 29%;
+          margin: 2%; }
   #ai-game #notice .notice-container h1 {
     font-weight: 700;
     text-align: center;
