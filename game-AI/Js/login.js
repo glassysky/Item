@@ -18,14 +18,18 @@ define(['jquery','common'],function($,common){
                     $.ajax({
                         type : 'post',
                         dataType : 'json',
-                        url : 'http://localhost/playai/game.php/User/Login/login',
+                        url : 'http://bomb.play.cn/User/Login/login',
                         data : {
                             'email' : email,
                             'password' : password
                         },
-                        success : function(){
-                            //window.location.href = "homepage/homepage.html";
-                            console.log("ok");
+                        success : function(callback){
+                            if(callback.status == "success"){
+                                alert("登陆成功");
+                                window.location.href = "homepage/homepage.html";
+                            } else {
+                                alert(callback.msg);
+                            }
                         },
                         error : function(){
                             console.log('请求失败');

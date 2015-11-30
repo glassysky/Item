@@ -15,13 +15,15 @@ requirejs.config({
         bootstrapSelect: 'lib/bootstrap-select',
         describe : 'describe',
         dividepage : 'dividepage',
-        codeupdate : 'codeupdate',
-        rank : 'rank',
-        ajax : 'ajax'
+        code : 'code',
+        rank : 'rank'
     },
     shim: {
         'jquery' : { exports : 'jquery' },
-        'bootstrap' : { exports : 'bootstrap' },
+        'bootstrap' : {
+            deps : ['jquery'],
+            exports : 'bootstrap'
+        },
         'jquerycolor' : {
             deps : ['jquery'],
             exports : 'jquerycolor'
@@ -29,7 +31,44 @@ requirejs.config({
     }
 });
 
-requirejs(['reg','login','style','battle','dividepage','codeupdate','rank','ajax'],function(reg,login,style){
-    reg.reg();
-    login.login();
+requirejs(['reg','login','common','rank','battle','code','dividepage','style','bootstrap'],function(reg,login,common,rank,battle,code){
+    common.logStatus();
+    common.logOut();
+
+    var section = $("body").attr("id");
+
+    switch(section){
+        case "homepageLoc":
+            break;
+        case "previewLoc":
+            break;
+        case "rankLoc":
+            rank.rankTable();
+            rank.rankPK();
+            break;
+        case "battleLoc":
+            battle.enemyChoose();
+            battle.battleHistory();
+            break;
+        case "downLoc":
+            break;
+        case "noticeLoc":
+            break;
+        case "aboutLoc":
+            break;
+        case "logLoc":
+            login.login();
+            break;
+        case "regLoc":
+            reg.reg();
+            break;
+        case "settingLoc":
+            break;
+        case "codeLoc":
+            code.codeVersion();
+            code.submitCode();
+            break;
+        default:
+            break;
+    }
 });

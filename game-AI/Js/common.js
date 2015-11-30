@@ -37,6 +37,54 @@ define(['jquery'],function($){
             } else {
                 return false;
             }
+        },
+
+        logOut : function(){
+            $("#logOut").ready(function(){
+                var logOutBtn = $("#logOut");
+                logOutBtn.on("click",function(){
+                    console.log(1);
+                    $.ajax({
+                        type : 'post',
+                        url : 'http://bomb.play.cn/User/Login/logout',
+                        success : function(callback){
+                            if(callback.status == "success"){
+                                alert("成功注销");
+                            } else {
+                                console.log("error");
+                            }
+                        },
+                        error : function(){
+                            alert("注销失败");
+                        }
+                    });
+                });
+            });
+
+        },
+
+        logStatus : function(){
+            var self = this;
+            $.ajax({
+                type : 'post',
+                url : 'http://bomb.play.cn/User/Login/loginStatus',
+                success : function(callback){
+                    if(callback.status == "success"){
+                        $("#toSelf").removeClass("hidden");
+                        $("#toReg").addClass("hidden");
+                        $("#username").html("您好," + callback.msg.nickname + "<span class='caret'></span>");
+                        self.showCodeManage();
+                    }
+                },
+                error : function(){
+                    console.log("请求失败");
+                }
+            });
+        },
+
+        showCodeManage : function(){
+            $("#codeM").attr("class","");
         }
-    }
+
+    };
 });

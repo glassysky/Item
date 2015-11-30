@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>game-plan</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="Css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Css/style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -16,7 +16,7 @@
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body id="planLoc">
 <!-- <div id="nav-background"></div> -->
 <div class="container" id="ai-game">
     <!-- nav -->
@@ -39,12 +39,23 @@
                     <li><a href="preview/homepage.html">预览</a></li>
                     <li><a href="rank.html">排行榜</a></li>
                     <li><a href="battle.html">战役</a></li>
-                    <li><a href="codemanagement.html">下载</a></li>
+                    <li><a href="download.html">下载</a></li>
                     <li><a href="notice.html">通知公告</a></li>
                     <li><a href="about.html">关于我们</a></li>
+                    <li class="hidden" id="codeM"><a href="codemanagement.html">代码管理</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="reg.html">注册/登陆</a></li>
+                    <li id="toReg" class="toggle-nav">
+                        <a href="reg.html" class="dropdown">注册/登陆</a>
+                    </li>
+                    <li class="dropdown toggle-nav hidden" id="toSelf">
+                        <a href="#" id="username" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">您好<span class="caret"></span></a>
+                        <ul class="dropdown-menu" id="mydropdown">
+                            <li><a id="selfSetting"  href="setting.html">设置</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a id="logOut" href="reg.html">退出登录</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -60,62 +71,24 @@
                         <h3>活动目的</h3>
                         <p>本次活动旨在提升以炫彩俱乐部成员为代表的大学生群体对于行业、公司技术品牌的认知，通过比赛的形式，扩大炫彩俱乐部在南京各高校的影响力，进而扩大公司雇主品牌影响力。</p>
                     </li>
-                    <!--<li>-->
-                        <!--<h3>活动形式</h3>-->
-                        <!--<ul>-->
-                            <!--<li>-->
-                                <!--<h5>1.比赛形式</h5>-->
-                                <!--<ul>-->
-                                    <!--<li>本次比赛暂定为炸弹人（bomber man）游戏AI比赛，选手编写人工智能程序控制游戏中角色的行动，并在比赛页面提交代码。 </li>-->
-                                    <!--<li>线上赛期结束后，由技术承办方统一通过比赛后台进行预选。</li>-->
-                                    <!--<li>预选通过的选手邀请参加线下对抗排位赛。</li>-->
-                                    <!--<li>-->
-                                        <!--<img src="Image/gameplan1.png" alt="赛制流程图">-->
-                                        <!--<span>备注：本次比赛由炫彩互动网络科技有限公司主办，炫彩俱乐部、南邮计算机学院科协及南邮通信与信息工程学院科协技术承办。</span>-->
-                                    <!--</li>-->
-                                <!--</ul>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<h5>2.比赛面向对象</h5>-->
-                                <!--<p>面向在校大学生，不限专业、年级</p>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<h5>3.比赛宗旨</h5>-->
-                                <!--<p>大赛的宗旨是普及游戏及算法逻辑的基础知识，培养同学以程序设计为手段研究和解决问题的能力，基本形式为选手设计相对简单的AI程序在平台上进行比赛。</p>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<h5>4.比赛概要简介</h5>-->
-                                <!--<p>游戏AI是一项参赛门槛低，同时具备趣味性和算法深度的赛事，旨在面向水平一般的参赛者，希望有更多的程序设计入门者，或非专业的选手参与比赛。-->
-                                    <!--通过在线平台，参赛者可以在赛期参加比赛，还可以在线提交程序，和测试代码发起对战， 用户可以通过replay观看其他选手的对战录像。</p>-->
-                                <!--<span>（下图如腾讯AI比赛情况演示参考）</span>-->
-                                <!--<img src="Image/gameplan2.png" alt="游戏参考图">-->
-                            <!--</li>-->
-                        <!--</ul>-->
-                    <!--&lt;!&ndash;</li>&ndash;&gt;-->
-                    <!--<li>-->
-                        <h3>赛制流程</h3>
-                        <p>本次赛事分为线上参赛、线下预选、现场决赛。</p>
-                        <ul>
-                            <li>
-                                <h5>一、线上参赛</h5>
-                                <span>时间：11.20-11.30（跟进开发进度估算，暂定）</span>
-                                <p>比赛期间，选手可以在赛事页面提交代码。</p>
-                            </li>
-                            <li>
-                                <h5>二、线下预选</h5>
-                                <span>时间：12月初</span>
-                                <p>技术承办方导出所有代码，在比赛后台进行PK，选出前64名选手晋级决赛。</p>
-                            </li>
-                            <li>
-                                <h5>三、现场决赛</h5>
-                                <span>时间：12月初（根据南邮计算机科技节的实际时间定）</span>
-                                <ul>
-                                    <li>预选前64名晋级，分为16组，每组4人进行小组淘汰赛，得出前16名参赛选手。</li>
-                                    <li>前16名选手抽签分为4组，晋级半决赛， 得出前4名。</li>
-                                    <li>前4名两两对抗进行决赛，分组落败选手进行3、4名争夺赛，分组获胜选手进行1、2名争夺赛，得出前四名排名。</li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <h3>赛制流程</h3>
+                    <p>本次赛事分为线上参赛、线下预选、现场决赛。</p>
+                    <ul>
+                        <li>
+                            <h5>一、线上参赛</h5>
+                            <span>时间：11.28-12.09</span>
+                            <p>比赛期间，选手可以在赛事页面提交代码。</p>
+                        </li>
+                        <li>
+                            <h5>二、线下预选</h5>
+                            <span>时间：12月12日</span>
+                            <p>技术承办方导出所有代码，在比赛后台进行PK</p>
+                        </li>
+                        <li>
+                            <h5>三、现场决赛</h5>
+                            <span>时间：12月12日</span>
+                        </li>
+                    </ul>
                     </li>
                     <li>
                         <h3>活动规则</h3>
@@ -126,10 +99,6 @@
                                     <li>面向在校大学生，不限专业、年级；</li>
                                     <li>一个选手仅限用一个帐号参赛。</li>
                                 </ul>
-                            </li>
-                            <li>
-                                <h5>报名方式</h5>
-                                <p>大赛官方页面报名（需搭建-预计10个工作日）——报名通道及展示页面</p>
                             </li>
                         </ul>
                     </li>
@@ -145,15 +114,11 @@
                                 </ul>
                             </li>
                             <li>
-                                <h5>4-16名小组冠军：</h5>
-                                <p>500元同等价值奖品</p>
-                            </li>
-                            <li>
                                 <h5>其他奖励：</h5>
                                 <ul>
                                     <li>参赛选手纪念礼包；</li>
                                     <li>爱游戏评奖证书；</li>
-                                    <li>获奖选手可活动公司实习和校招绿色通道；</li>
+                                    <li>获奖选手可获得公司实习和校招绿色通道；</li>
                                     <li>获奖作品有机会在“金鹏奖”及“Efun手游大赛”决赛进行展示。</li>
                                 </ul>
                             </li>

@@ -29,7 +29,7 @@ define(['jquery','common'],function($,common){
 					$.ajax({
 						type : 'post',
 						dataType : 'json',
-						url : 'http://localhost/playai/game.php/User/Login/register',
+						url : 'http://bomb.play.cn/User/Login/register',
 						data : {
 							'email' : email,
 							'nickname' : nickname,
@@ -43,9 +43,13 @@ define(['jquery','common'],function($,common){
 							'thirdPlayer' : thirdPlayer,
 							'validate' : validate
 						},
-						success : function(){
-							//console.log("成功");
-							window.location.href = "homepage/homepage.html";
+						success : function(callback){
+							if(callback.status == "success"){
+								alert("注册成功");
+								window.location.href = "homepage/homepage.html";
+							} else {
+								alert(callback.msg);
+							}
 						},
 						error : function(){
 							console.log('请求失败');
@@ -83,7 +87,7 @@ define(['jquery','common'],function($,common){
 
 			function vertifyImg(){
 				$("#checkpic").on("click",function(){
-					$("#checkpic").attr("src","http://localhost/playai/game.php/User/Login/verify");
+					$("#checkpic").attr("src","http://bomb.play.cn/User/Login/verify");
 				});
 			}
 		}

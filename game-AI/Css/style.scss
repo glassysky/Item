@@ -24,6 +24,7 @@ html {
 body {
 	height: 100%;
 	background: none;
+	font-family:"Microsoft YaHei";
 }
 
 .cover-layer {
@@ -45,10 +46,27 @@ body {
 @mixin nav-a {
 	padding: 0 30px;
 	height: $a-height;
-	line-height: $a-height; 
+	line-height: $a-height;
 	color: #eee;
 	font-size: medium;
 	font-weight: 700;
+}
+
+#mydropdown {
+	background-color: #ff873f;
+	li {
+		a{
+			height: 30px !important;
+			line-height: 30px !important;
+			cursor: pointer;
+		}
+	}
+}
+
+.toggle-nav {
+	a {
+		background-color: #ff873f !important;
+	}
 }
 
 @mixin table-compoment {
@@ -99,7 +117,7 @@ body {
 			padding: 0 30px;
 			@include nav-a;
 			img {
-				width: 200px;
+				width: 150px;
 				height: 100%;
 			}
 		}
@@ -234,6 +252,12 @@ body {
 			@include table-compoment;
 		}
 	}
+	#download-page {
+		@include table-compoment;
+		a {
+			font-weight: 700;
+		}
+	}
 	#code-management {
 		.code-header {
 			margin-top: 5px;
@@ -345,9 +369,11 @@ body {
 	#about-us {
 		width: 80%;
 		padding: 20px;
+		padding: 20px;
 		margin: 30px auto;
 		.about-text {
 			width: 100%;
+			height:870px;
 			padding: 20px 30px 40px;
 			background-color: #eee;
 			-webkit-border-radius: 10px;
@@ -358,7 +384,7 @@ body {
 				margin: 20px auto 30px auto;
 				//font-size: 1.5em;
 				font-weight: 700;
-				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-family:"Microsoft YaHei";
 			}
 			.p-wrap {
 				p {
@@ -380,6 +406,7 @@ body {
 				img {
 					width: 29%;
 					margin: 2%;
+					float: left;
 				}
 			}
 		}
@@ -399,7 +426,7 @@ body {
 					}
 					.panel-body {
 						p {
-							font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+							font-family:"Microsoft YaHei";
 						}
 						.panel-info-wrap {
 							span {
@@ -420,7 +447,7 @@ body {
 		}
 		h3,h5 {
 			font-weight: 700;
-			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-family:"Microsoft YaHei";
 		}
 		span {
 			display: inline-block;
