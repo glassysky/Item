@@ -1,0 +1,8 @@
+{
+  "status" : "success",
+  "msg" : [
+    {"id":"1","uid":"1","oid":"2","ufileid":"1","ofileid":"2","station":"1","result":"1","process":"","begintime":"","overtime":""},
+    {"id":"2","uid":"2","oid":"1","ufileid":"2","ofileid":"1","station":"0","result":"0.5","process":"","begintime":"","overtime":""},
+    {"id":"3","uid":"2","oid":"1","ufileid":"1","ofileid":"1","station":"0","result":"0","process":"","begintime":"","overtime":""}
+  ]
+}

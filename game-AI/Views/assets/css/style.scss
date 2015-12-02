@@ -1,0 +1,479 @@
+$design01: #337ab7;
+$design02: #00FFBC;
+$design03: #7FCCFF;
+$design04: #FF873F;
+$design05: #363636;
+$design06: #A4A4A4;
+$design07: #242424;
+$design08: #262F3C;
+
+$container-padding: 50px;
+$a-height: 100px;
+$form-width: 500px;
+$nav-color: rgb(255,135,63);
+$battle-color: #ddd;
+$choose-enemy-height: 40px;
+$version-height: 100px;
+
+html {
+	min-height: 100%;
+	background: url("../Image/background.png") no-repeat top center;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+}
+body {
+	height: 100%;
+	background: none;
+	font-family:"Microsoft YaHei";
+}
+
+.cover-layer {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 1000;
+}
+
+.dividePage {
+	text-align: center;
+}
+
+#checkpic{
+	width: 100%;
+	cursor: pointer;
+}
+
+@mixin nav-a {
+	padding: 0 30px;
+	height: $a-height;
+	line-height: $a-height;
+	color: #eee;
+	font-size: medium;
+	font-weight: 700;
+}
+
+#mydropdown {
+	background-color: #ff873f;
+	li {
+		a{
+			height: 30px !important;
+			line-height: 30px !important;
+			cursor: pointer;
+		}
+	}
+}
+
+.toggle-nav {
+	a {
+		background-color: #ff873f !important;
+	}
+}
+
+@mixin table-compoment {
+	h1 {
+		text-align: center;
+		margin-bottom: 20px;
+		font-weight: 700;
+		color: #FF9E32;
+		text-shadow: 1px 1px 1px #000;
+	}
+	table {
+		thead {
+			color: #FF9E32;
+			font-size: 1em;
+			background-color: #eee;
+			th {
+				text-align: center;
+			}
+		}
+		tbody {
+			tr:nth-child(even) {
+				background-color: #ddd;
+			}
+			td {
+				text-align: center;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+.second-container {
+	width: 85%;
+	margin: 0 auto;
+}
+
+#Cocos2dGameContainer {
+	text-align: center;
+}
+
+#navbar {
+	margin-bottom: 20px;
+	background-color: $nav-color;
+	border: none;
+	box-shadow: 1px 1px 2px #aaa;
+	.navbar-header {
+		.navbar-brand {
+			padding: 0 30px;
+			@include nav-a;
+			img {
+				width: 150px;
+				height: 100%;
+			}
+		}
+	}
+	#navbar-game {
+		width: 100%;
+		margin: 0 auto;
+		ul {
+			li {
+				a {
+					text-align: center;
+					@include nav-a;
+				}
+			}
+		}
+	}
+}
+
+#ai-game {
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
+	height: 100%;
+
+	//background-color: rgba(233,233,233,0.7);
+	#homepage {
+		.description-text {
+			position: relative;
+			margin-bottom: 50px;
+			text-indent: 2em;
+			width: 100%;
+			.text-wrap {
+				position: relative;
+				top: 0;
+				padding: 20px;
+				background-color: #eee;
+				-webkit-border-radius: 15px;
+				-moz-border-radius: 15px;
+				border-radius: 15px;
+				p {
+					font-size: 1em;
+					font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				}
+			}
+		}
+	}
+	#regpage {
+		padding: 30px 0;
+		form {
+			width: $form-width;
+			margin: 0 auto;
+			h1 {
+				text-align: center;
+				margin: 20px;
+				color: #ff9e32;
+				font-size: 2em;
+				font-weight: 700;
+				text-shadow: 1px 1px 1px #000;
+			}
+			label {
+				color: #000;
+			}
+		}
+		.submit-compoments {
+			width: $form-width;
+			margin: 0 auto;
+			text-align: right;
+			.submit-btn {
+				a {
+					width: 100%;
+					font-weight: 700;
+				}
+			}
+			.details {
+				margin-top: 10px;
+				a {
+					text-decoration-line: underline;
+				}
+			}
+		}
+	}
+	#rankpage {
+		@include table-compoment;
+	}
+	#battlepage {
+		margin-top: 5px;
+		padding: 0 20px;
+		.battle-part {
+			width: 100%;
+			height: 300px;
+			padding: 10px;
+			border: 2px solid #FF9E32;
+			-webkit-box-shadow: 1px 1px 1px 2px #FF9E32;
+			-moz-box-shadow: 1px 1px 1px 2px #FF9E32;
+			box-shadow: 1px 1px 1px 2px #FF9E32;
+			.choose-enemy {
+				width: 60%;
+				height: $choose-enemy-height;
+				line-height: $choose-enemy-height;
+				margin: 30px auto;
+				select {
+					height: $choose-enemy-height;
+				}
+				a {
+					height: $choose-enemy-height;
+					padding: 0;
+					line-height: $choose-enemy-height;
+				}
+				span {
+					font-size: 1.1em;
+					font-weight: 700;
+					color: white;
+				}
+			}
+			.battle-result {
+				width: 60%;
+				margin: 0 auto;
+				text-align: center;
+				span {
+					color: #999;
+					font-size: 1em;
+				}
+				p {
+					color: $design04;
+					font-size: 2.5em;
+					margin-top: 20px;
+					margin-bottom: 30px;
+				}
+			}
+		}
+		.battle-history {
+			@include table-compoment;
+		}
+	}
+	#download-page {
+		@include table-compoment;
+		a {
+			font-weight: 700;
+		}
+	}
+	#code-management {
+		.code-header {
+			margin-top: 5px;
+			padding: 15px;
+			text-align: left;
+			background-color: rgba(233,233,233,0.7);
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			h1 {
+				font-size: 1.5em;
+				font-weight: 700;
+				margin-top: 0;
+				margin-bottom: 15px;
+				color: #ff9e32;
+			}
+			span {
+				font-size: 1.2em;
+				color: #666;
+			}
+		}
+		.version-list {
+			.ver-list-wrap {
+				margin: 20px 0;
+				overflow: hidden;
+				.ver-item {
+					float: left;
+					margin: 10px;
+					padding:5px;
+					color: #000;
+					background-color: rgba(255,158,50,0.7);
+					border: 1px solid #FF9E32;
+					-webkit-border-radius:5px;
+					-moz-border-radius:5px;
+					border-radius:5px;
+					-webkit-box-shadow: 1px 1px 1px 2px #ff9e32;
+					-moz-box-shadow: 1px 1px 1px 2px #ff9e32;
+					box-shadow: 1px 1px 1px 2px #ff9e32;
+					.ver-pic {
+						display: inline-block;
+						float: left;
+						height: $version-height;
+						width: $version-height;
+						border: 1px solid #999;
+						line-height: $version-height;
+						p {
+							text-align: center;;
+							margin: 0 auto;
+							font-size: .9em;
+						}
+					}
+					.ver-detail {
+						display: inline-block;
+						margin: 0 10px;
+						span {
+							display: block;
+							font-size: .8em;
+						}
+					}
+				}
+			}
+			.ver-select {
+				text-align: center;
+				span {
+					display: block;
+					margin: 15px;
+					color: #999;
+				}
+			}
+		}
+		.file-submit {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 50px;
+			background-color: #ddd;
+			border-radius: 5px;
+			-webkit-box-shadow: 2px 2px 2px 2px  rgba(150, 150, 150, 0.5);
+			-moz-box-shadow: 2px 2px 2px 2px  rgba(150, 150, 150, 0.5);
+			box-shadow: 2px 2px 2px 2px  rgba(150, 150, 150, 0.5);
+			h1 {
+				margin: 0;
+			};
+			.submit-part {
+				width: 80%;
+				margin: 20px auto;
+				.file-select {
+					input {
+						background-color: #ddd;
+					}
+				}
+				.confirm {
+					color: #1E90FF;
+				}
+				.submit-file-btn {
+					width: 100%;
+					margin: 20px 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+	#replay {
+		padding: 10px;
+		.scene-container {
+			height: 500px;
+			margin: 0 auto;
+		}
+	}
+	#about-us {
+		width: 80%;
+		padding: 20px;
+		padding: 20px;
+		margin: 30px auto;
+		.about-text {
+			width: 100%;
+			height:870px;
+			padding: 20px 30px 40px;
+			background-color: #eee;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			h1 {
+				text-align: center;
+				margin: 20px auto 30px auto;
+				//font-size: 1.5em;
+				font-weight: 700;
+				font-family:"Microsoft YaHei";
+			}
+			.p-wrap {
+				p {
+					text-indent: 2em;
+					font-size: 1.2em;
+				}
+				.activity-holder {
+					a {
+						display: inline-block;
+					}
+					a:hover {
+						color: #337ab7;
+						text-decoration: none;
+					}
+				}
+			}
+			.img-wrap {
+				width: 100%;
+				img {
+					width: 29%;
+					margin: 2%;
+					float: left;
+				}
+			}
+		}
+	}
+	#notice {
+		.notice-container {
+			h1 {
+				font-weight: 700;
+				text-align: center;
+				color: #FF9E32;
+				text-shadow: 1px 1px 1px #000;
+			}
+			.notice-panel-wrap {
+				.panel {
+					.panel-heading {
+						
+					}
+					.panel-body {
+						p {
+							font-family:"Microsoft YaHei";
+						}
+						.panel-info-wrap {
+							span {
+								color: #5e5e5e;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#game-plan {
+		ul,li {
+			list-style-type: none;
+		}
+		p {
+			text-indent: 2em;
+		}
+		h3,h5 {
+			font-weight: 700;
+			font-family:"Microsoft YaHei";
+		}
+		span {
+			display: inline-block;
+		}
+		img {
+			width: 80%;
+		}
+		.plan-container {
+			background-color: #eee;
+			padding: 20px;
+			margin-bottom: 40px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			h1 {
+				text-align: center;
+				font-weight: 700;
+			}
+			.text-wrap {
+
+			}
+		}
+	}
+}
+
+
+/*@media (max-width: 1390px){#nav-background{height: 200px;}}
+@media (max-width: 1108px){#nav-background{height: 300px;}}
+@media (max-width: 767px){#nav-background{height: 100px;}}*/

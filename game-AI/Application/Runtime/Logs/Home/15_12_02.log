@@ -1,0 +1,36 @@
+[ 2015-12-02T00:49:55+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001112s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0184s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0008s ]
+
+[ 2015-12-02T00:49:59+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004655s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0078s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0005s ]
+
+[ 2015-12-02T15:56:11+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000906s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0069s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0002s ]
+
+[ 2015-12-02T16:31:00+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001060s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0072s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0002s ]
+

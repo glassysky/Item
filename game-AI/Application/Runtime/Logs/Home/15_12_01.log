@@ -1,0 +1,90 @@
+[ 2015-12-01T23:02:58+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001679s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0709s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0083s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0558s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0214s ]
+
+[ 2015-12-01T23:26:08+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001384s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0118s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0004s ]
+
+[ 2015-12-01T23:26:16+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001525s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0082s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0097s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0003s ]
+
+[ 2015-12-01T23:26:18+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001101s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0086s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0002s ]
+
+[ 2015-12-01T23:26:46+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0079s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0002s ]
+
+[ 2015-12-01T23:26:46+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001133s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0069s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0003s ]
+
+[ 2015-12-01T23:59:31+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0146s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0003s ]
+
+[ 2015-12-01T23:59:53+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001437s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0128s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0136s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0004s ]
+
+[ 2015-12-01T23:59:57+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0103s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0084s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0002s ]
+
+[ 2015-12-01T23:59:59+08:00 ] ::1 /Home/Index/userRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+SQL: SHOW COLUMNS FROM `user_battle` [ RunTime:0.0142s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0107s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`email`,`nickname`,`score`,`school`,`studentid`,`name`,`entrance` FROM `user` ORDER BY score desc LIMIT 20   [ RunTime:0.0004s ]
+
