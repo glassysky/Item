@@ -36,7 +36,7 @@ class UserModel extends Model {
 		return -1;
 	}
 
-	public function userFind($id) {
+	public function userFind($uid) {
 		return $this->where(array('id' => $uid))->find();
 		
 	}
@@ -44,8 +44,9 @@ class UserModel extends Model {
 	public function getAllUser($lastid, $page) {
 		$count = $this->count();
 		$count = $count / C('PAGE_NUM');
+		//$count = 2.05;
 		if (!is_int($count)) {
-			$count++;
+			$count = intval($count) + 1;
 		}
 		if (!$lastid && !$page) {
 			$limit = C('PAGE_NUM');

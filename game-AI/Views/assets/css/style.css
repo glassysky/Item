@@ -12,6 +12,10 @@ body {
     font-family: "Microsoft YaHei";
 }
 
+.pagination li {
+    cursor: pointer;
+}
+
 .cover-layer {
     width: 100%;
     height: 100%;

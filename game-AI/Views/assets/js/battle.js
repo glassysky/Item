@@ -1,56 +1,84 @@
 /**
  * Created by cui on 2015/11/20.
  */
-define(['jquery'],function($){
+define(['jquery','common'],function($,common){
+    var page = 1,
+        currentPage = 1;
 
     return {
         battleHistory : function(){
-            $(document).ready(function(){
-                var str = "",
-                    tpl = "",
-                    lenght = 0;
+            var str = "",
+                tpl = "",
+                pageStr = "",
+                pageTpl = "",
+                length = 0,
+                totalPage = 0,
+                list = null;
 
-                $.ajax({
-                    type : 'post',
-                    //待改
-                    //url : 'http://localhost/playai/game.php/User/Upload/getBattles',
-                    //url : 'http://localhost/playai/test/battle.json',
-                    success : function(callback){
+            $.ajax({
+                type : 'post',
+                url : '/Home/Index/getBattles',
+                success : function(callback){
 
-                        var msg = callback["msg"];
+                    var msg = callback["msg"],
+                        totalPage = callback["msg"].count;
+                    console.log(msg);
 
-                        for(var i = 0;i<msg.length;i++){
-                            switch (msg[i].result){
-                                case "1":
-                                    msg[i].result = msg[i].uid + "胜";
-                                    break;
-                                case "0.5":
-                                    msg[i].result = msg[i].oid + "胜";
-                                    break;
-                                case "0":
-                                    msg[i].result = "平局";
-                                    break;
-                                default:
-                                    break;
-                            }
+                    list = msg.list;
+                    length = msg.list.length;
+                    totalPage = msg.count;
 
-                            tpl = "<tr>"+
-                                "<td>" + (i+1) + "</td>" +
-                                "<td>" + msg[i].uid + "</td>" +
-                                "<td>" + msg[i].oid + "</td>" +
-                                "<td>" + msg[i].result + "</td>" +
-                                "<td>" + msg[i].begintime + "</td>" +
-                                "<td><a href='" + msg[i].process + "' class='btn btn-primary battle-replay' id='" + msg[i].id + "detail'>对战细节</a></td>" +
-                                "</tr>";
-                            str = str + tpl;
+                    for(var i = 0;i<length;i++){
+                        switch (list[i].result){
+                            case "1":
+                                list[i].result = list[i].uid + "胜";
+                                break;
+                            case "0.5":
+                                list[i].result = list[i].oid + "胜";
+                                break;
+                            case "0":
+                                list[i].result = "平局";
+                                break;
+                            default:
+                                break;
                         }
 
-                        $("#battleTable").find("tbody").html(str);
-                    },
-                    error : function(){
-                        console.log('error');
+                        tpl = "<tr>"+
+                            "<td>" + list[i].id + "</td>" +
+                            "<td>" + list[i].uid + "</td>" +
+                            "<td>" + list[i].oid + "</td>" +
+                            "<td>" + list[i].result + "</td>" +
+                            "<td>" + list[i].begintime + "</td>" +
+                            "<td><a href='" + list[i].process + "' class='btn btn-primary battle-replay' id='" + list[i].id + "detail'>对战细节</a></td>" +
+                            "</tr>";
+                        str = str + tpl;
                     }
-                });
+
+                    for(var j = 0;j<totalPage;j++){
+
+                        if(j == 0){
+                            pageTpl = "<li class='active'><a href='javascript:void(0)'>" + (j+1) + "</a></li>";
+                        } else {
+                            pageTpl = "<li><a href='javascript:void(0)'>" + (j+1) + "</a></li>";
+                        }
+
+                        pageStr = pageStr + pageTpl;
+                    }
+
+                    pageStr = "<li><a aria-label='Previous' id='Bprevious' class='director'><span aria-hidden='true'>&laquo;</span></a></li>" +
+                        pageStr +
+                        "<li><a aria-label='Next' id='Bnext' class='director'><span aria-hidden='true'>&raquo;</span></a></li>";
+
+                    $("#battleTable").find("tbody").html(str);
+                    $(".pagination").html(pageStr)
+                        .attr("data-count",totalPage);
+
+                    common.BdividePage();
+
+                },
+                error : function(){
+                    console.log('error');
+                }
             });
         },
         fightWith : function(){

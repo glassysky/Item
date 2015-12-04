@@ -1,0 +1,18 @@
+[ 2015-11-25T15:17:44+08:00 ] 127.0.0.1 /testplayai/index.php/User/Upload/getDownload
+ERR: Think\Model:findFile方法不存在！
+
+[ 2015-11-25T15:20:03+08:00 ] 127.0.0.1 /testplayai/index.php/User/Upload/getDownload
+ERR: Think\Model:findFile方法不存在！
+
+[ 2015-11-25T15:23:11+08:00 ] 127.0.0.1 /testplayai/index.php/User/Upload/getDownload
+ERR: Think\Model:findFile方法不存在！
+
+[ 2015-11-25T15:24:02+08:00 ] 127.0.0.1 /testplayai/index.php/User/Upload/getDownload
+ERR: Think\Model:findFile方法不存在！
+
+[ 2015-11-25T15:24:42+08:00 ] 127.0.0.1 /testplayai/index.php/User/Upload/getDownload
+ERR: Think\Model:findFile方法不存在！
+
+[ 2015-11-25T15:26:41+08:00 ] 127.0.0.1 /testplayai/index.php/User/Upload/getDownload
+ERR: Think\Model:findFile方法不存在！
+

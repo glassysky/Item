@@ -22,12 +22,12 @@ class IndexController extends Controller {
      */
     public function getBattles() {
         $lastid = I('lastid');
-        $battles = $this->battle->getAllBattles($lastid);
-        $count = $battles[1];
+        $page = I('page');
+        $battles = $this->battle->getAllBattles($lastid, $page);
         if ($battles == -1) {
             $this->ajaxReturn(array('status' => 'error', 'msg' => ''));
         }
-        $this->ajaxReturn(array('status' => 'success', 'msg' => $battles));
+        $this->ajaxReturn(array('status' => 'success', 'msg' => array('list' => $battles[0], 'count' => $battles[1], 'page' => $page)));
     }
 
     public function getProcess() {
@@ -65,7 +65,7 @@ class IndexController extends Controller {
         if ($rank == -1) {
             $this->ajaxReturn(array('status' => 'error', 'msg' => ''));
         }
-        $this->ajaxReturn(array('status' => 'success', 'msg' => array('rank' => $rank[0], 'page' => $rank[1])));
+        $this->ajaxReturn(array('status' => 'success', 'msg' => array('rank' => $rank[0], 'count' => $rank[1], 'page' => $page)));
     }
 
 }

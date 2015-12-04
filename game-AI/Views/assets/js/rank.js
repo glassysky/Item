@@ -1,13 +1,15 @@
 /**
  * Created by cui on 2015/11/30.
  */
-define(['jquery'],function($){
+define(['jquery','common'],function($,common){
 
     return {
         rankTable : function(){
             $(document).ready(function(){
-                var str = "",
-                    tpl = "",
+                var listStr = "",
+                    dividepageStr = "",
+                    listTpl = "",
+                    dividepageTpl = "",
                     length = 0;
                 $.ajax({
                     type : 'post',
@@ -15,22 +17,44 @@ define(['jquery'],function($){
                     success : function(callback){
                         if(callback.status == "success"){
                             var rank = callback.msg.rank,
+                                //每页多少人
                                 length = callback.msg.rank.length,
-                                page = callback.msg.page;
+                                //一共多少页
+                                page = callback.msg.count;
 
                             console.log(callback);
 
                             for(var i = 0;i<length;i++){
-                                tpl = "<tr data-uid='" + rank[i].id + "'>" +
+                                listTpl = "<tr data-uid='" + rank[i].id + "'>" +
                                     "<td>" + (i+1) + "</td>" +
                                     "<td>" + rank[i].nickname + "</td>" +
                                     "<td>" + rank[i].score + "</td>" +
                                     "<td><a class='btn btn-primary pk-btn' id='" + rank[i].id + "PK'>PK一下</a></td>" +
                                     "</tr>";
-                                str = str + tpl;
+                                listStr = listStr + listTpl;
                             }
 
-                            $("#rankTable").find("tbody").append(str);
+                            for(var j = 0;j<page;j++){
+
+                                if(j == 0){
+                                    dividepageTpl = "<li class='active'><a href='javascript:void(0)'>" + (j+1) + "</a></li>";
+                                } else {
+                                    dividepageTpl = "<li><a href='javascript:void(0)'>" + (j+1) + "</a></li>";
+                                }
+
+                                dividepageStr = dividepageStr + dividepageTpl;
+                            }
+
+                            dividepageStr = "<li><a aria-label='Previous' id='Rprevious' class='director'><span aria-hidden='true'>&laquo;</span></a></li>" +
+                                    dividepageStr +
+                                    "<li><a aria-label='Next' id='Rnext' class='director'><span aria-hidden='true'>&raquo;</span></a></li>";
+
+                            $("#rankTable").find("tbody").append(listStr);
+                            $(".pagination").html(dividepageStr).
+                                attr("data-count",page);
+
+                            common.RdividePage();
+
                         } else {
                             console.log("失败");
                         }

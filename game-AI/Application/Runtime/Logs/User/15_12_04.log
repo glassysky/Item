@@ -1,0 +1,267 @@
+[ 2015-12-04T23:23:32+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001642s ]
+NOTIC: [2] PDO::__construct(): MySQL server has gone away F:\test\ThinkPHP\Library\Think\Db\Driver.class.php 第 103 行.
+NOTIC: [2] PDO::__construct(): Error while reading greeting packet. PID=15220 F:\test\ThinkPHP\Library\Think\Db\Driver.class.php 第 103 行.
+ERR: SQLSTATE[HY000] [2006] MySQL server has gone away
+
+[ 2015-12-04T23:24:21+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0612s ]
+
+[ 2015-12-04T23:24:47+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000954s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0081s ]
+
+[ 2015-12-04T23:24:53+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001385s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0108s ]
+
+[ 2015-12-04T23:24:54+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000817s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0075s ]
+
+[ 2015-12-04T23:25:07+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0077s ]
+
+[ 2015-12-04T23:25:29+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0087s ]
+
+[ 2015-12-04T23:25:58+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0079s ]
+
+[ 2015-12-04T23:26:06+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001260s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0247s ]
+
+[ 2015-12-04T23:26:06+08:00 ] ::1 /User/Info/getUserInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001063s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0272s ]
+NOTIC: [8] Undefined variable: uid F:\test\Application\User\Model\UserModel.class.php 第 40 行.
+SQL: SELECT * FROM `user` WHERE `id` = null LIMIT 1   [ RunTime:0.0432s ]
+
+[ 2015-12-04T23:26:11+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001166s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0101s ]
+
+[ 2015-12-04T23:26:11+08:00 ] ::1 /User/Info/getUserInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0112s ]
+NOTIC: [8] Undefined variable: uid F:\test\Application\User\Model\UserModel.class.php 第 40 行.
+SQL: SELECT * FROM `user` WHERE `id` = null LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-12-04T23:26:14+08:00 ] ::1 /User/Login/logout
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001176s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0264s ]
+
+[ 2015-12-04T23:26:14+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0084s ]
+
+[ 2015-12-04T23:26:15+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0072s ]
+
+[ 2015-12-04T23:26:34+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0074s ]
+
+[ 2015-12-04T23:26:42+08:00 ] ::1 /User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0086s ]
+SQL: SELECT * FROM `user` WHERE `email` = '873661157@qq.com' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-12-04T23:26:44+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0080s ]
+
+[ 2015-12-04T23:26:45+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000899s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0107s ]
+
+[ 2015-12-04T23:26:45+08:00 ] ::1 /User/Info/getUserInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001060s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0119s ]
+NOTIC: [8] Undefined variable: uid F:\test\Application\User\Model\UserModel.class.php 第 40 行.
+SQL: SELECT * FROM `user` WHERE `id` = null LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-12-04T23:26:56+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001502s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0112s ]
+
+[ 2015-12-04T23:26:56+08:00 ] ::1 /User/Info/getUserInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001359s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0144s ]
+NOTIC: [8] Undefined variable: uid F:\test\Application\User\Model\UserModel.class.php 第 40 行.
+SQL: SELECT * FROM `user` WHERE `id` = null LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-12-04T23:28:48+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001192s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0109s ]
+
+[ 2015-12-04T23:28:48+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001338s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0072s ]
+
+[ 2015-12-04T23:28:49+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001008s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0158s ]
+
+[ 2015-12-04T23:29:41+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000827s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001402s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0148s ]
+
+[ 2015-12-04T23:29:58+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001932s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0093s ]
+
+[ 2015-12-04T23:29:58+08:00 ] ::1 /User/Info/getUserInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002661s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0009s ]
+
+[ 2015-12-04T23:31:29+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0088s ]
+
+[ 2015-12-04T23:32:10+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001684s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0090s ]
+
+[ 2015-12-04T23:32:50+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0092s ]
+
+[ 2015-12-04T23:33:34+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000699s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0088s ]
+
+[ 2015-12-04T23:33:38+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0093s ]
+
+[ 2015-12-04T23:33:39+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0100s ]
+
+[ 2015-12-04T23:33:40+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0078s ]
+
+[ 2015-12-04T23:33:40+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001273s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0103s ]
+
+[ 2015-12-04T23:33:42+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000958s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001579s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0083s ]
+
+[ 2015-12-04T23:33:42+08:00 ] ::1 /User/Info/getUserInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001449s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-12-04T23:44:27+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000830s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0078s ]
+
+[ 2015-12-04T23:44:27+08:00 ] ::1 /User/Info/getUserInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2015-12-04T23:45:02+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0080s ]
+
+[ 2015-12-04T23:45:02+08:00 ] ::1 /User/Info/getUserInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001018s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+

@@ -14,7 +14,6 @@ requirejs.config({
         battle: 'battle',
         bootstrapSelect: 'lib/bootstrap-select',
         describe : 'describe',
-        dividepage : 'dividepage',
         code : 'code',
         rank : 'rank',
         setting : 'setting'
@@ -32,7 +31,7 @@ requirejs.config({
     }
 });
 
-requirejs(['reg','login','common','rank','battle','code','setting','dividepage','style','bootstrap'],function(reg,login,common,rank,battle,code,setting){
+requirejs(['reg','login','common','rank','battle','code','setting','style','bootstrap'],function(reg,login,common,rank,battle,code,setting){
     common.logStatus();
     common.logOut();
 
@@ -46,10 +45,12 @@ requirejs(['reg','login','common','rank','battle','code','setting','dividepage',
         case "rankLoc":
             rank.rankTable();
             rank.rankPK();
+            common.RdividePage();
             break;
         case "battleLoc":
             battle.battleHistory();
             battle.fightWith();
+            common.BdividePage();
             break;
         case "downLoc":
             break;

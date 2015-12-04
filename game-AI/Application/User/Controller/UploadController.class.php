@@ -88,7 +88,7 @@ class UploadController extends CommonController {
 		if ($battles == -1) {
 			$this->ajaxReturn(array('status' => 'error', 'msg' => ''));
 		}
-		$this->ajaxReturn(array('status' => 'success', 'msg' => array('battles' => $battles[0], 'count' => $battles[1])));
+		$this->ajaxReturn(array('status' => 'success', 'msg' => array('battles' => $battles[0], 'count' => $battles[1], 'page' => $page)));
 	}
 
 }

@@ -5,7 +5,30 @@ define(['jquery'],function(){
 
     return {
         preFillInfo : function(){
+            $.ajax({
+                type : 'json',
+                url : '/User/Info/getUserInfo',
+                success : function(callback){
+                    console.log(callback);
+                    var msg = callback.msg;
 
+                    if(callback.status == "success"){
+                        var details = $(".info-details");
+                        details.find(".nickname").find(".info-body").html(msg.nickname)
+                            .end().end()
+                            .find(".school").find(".info-body").html(msg.school)
+                            .end().end()
+                            .find(".entrance").find(".info-body").html(msg.entrance)
+                            .end().end()
+                            .find(".email").find(".info-body").html(msg.email);
+                    } else {
+                        console.log(msg);
+                    }
+                },
+                error : function(){
+                    console.log("失败");
+                }
+            });
         },
         editInfo : function(){
             //切换按钮

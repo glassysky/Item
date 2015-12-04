@@ -10,14 +10,24 @@ class UserBattleModel extends Model {
 
 	protected $tableName = 'user_battle';
 
-	public function getAllBattles($lastid) {
-		if (!$lastid) {
+	public function getAllBattles($lastid, $page) {
+		if (!$lastid && !$page) {
 			$limit = C('PAGE_NUM');
-		}else {
+		}elseif ($lastid && !$page) {
 			$limit = ($lastid - C('PAGE_NUM')) . ',' . C('PAGE_NUM');
+		}elseif (!$lastid && $page) {
+			$limit = (($page - 1) * C('PAGE_NUM')) . ',' . C('PAGE_NUM');
+		}elseif($page && $lastid) {
+			return -1;
 		}
 		$user = M('user');
+
 		$count = $this->count();
+		$count = $count / C('PAGE_NUM');
+		if (!is_int($count)) {
+			$count = intval($count) + 1;
+		}
+		
 		$battle = $this->limit($limit)->order('id desc')->select();
 		if ($battle) {
 			foreach ($battle as &$bv) {
@@ -60,29 +70,29 @@ class UserBattleModel extends Model {
 				$map['uid'] = $uid;
 				$map['oid'] = $uid;
 				$map['_logic'] = 'OR';
-				$battles = $this->where($map)->order('begintime desc')->select();
+				$battles = $this->where($map)->order('begintime desc')->limit($limit)->select();
 				$count = $this->where($map)->count();
 				$count = $count / C('PAGE_NUM');
 				if (!is_int($count)) {
-					$count++;
+					$count = intval($count) + 1;
 				}
 				break;
 			
 			case 1: //主动发起
-				$battles = $this->where(array('uid' => $uid))->order('begintime desc')->select();
+				$battles = $this->where(array('uid' => $uid))->order('begintime desc')->limit($limit)->select();
 				$count = $this->where(array('oid' => $uid))->count();
 				$count = $count / C('PAGE_NUM');
 				if (!is_int($count)) {
-					$count++;
+					$count = intval($count) + 1;
 				}
 				break;
 
 			default: //被动发起
-				$battles = $this->where(array('oid' => $uid))->order('begintime desc')->select();
+				$battles = $this->where(array('oid' => $uid))->order('begintime desc')->limit($limit)->select();
 				$count = $this->where(array('oid' => $uid))->count();
 				$count = $count / C('PAGE_NUM');
 				if (!is_int($count)) {
-					$count++;
+					$count = intval($count) + 1;
 				}
 				break;
 		}

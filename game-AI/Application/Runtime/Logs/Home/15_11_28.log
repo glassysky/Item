@@ -1,0 +1,6 @@
+[ 2015-11-28T15:11:27+08:00 ] 127.0.0.1 /testplayai/
+ERR: 模板不存在:./Application/Home/View/Index/index.html
+
+[ 2015-11-28T15:14:05+08:00 ] 127.0.0.1 /testplayai/
+ERR: 模板不存在:./Application/Home/View//testplayai/game-AI/homepage/homepage.html.html
+

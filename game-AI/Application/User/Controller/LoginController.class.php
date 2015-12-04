@@ -31,17 +31,17 @@ class LoginController extends Controller {
         if(!$verify->check($code)) {
             $this->ajaxReturn(array('status' => 'error', 'msg' => '验证码错位'));
         }
-
-        $_POST = [
-            'email' => '1364140672@qq.com',
-            'password' => '1364140672',
-            'repassword' => '1364140672',
-            'nickname' => 'tingyuge',
-            'school' => 'njupt',
-            'studentid' => '66666',
-            'name' => 'tingyuge',
-            'entrance' => '2013',
-        ];
+        
+        // $_POST = [
+        //     'email' => '1364140672@qq.com',
+        //     'password' => '1364140672',
+        //     'repassword' => '1364140672',
+        //     'nickname' => 'tingyuge',
+        //     'school' => 'njupt',
+        //     'studentid' => '66666',
+        //     'name' => 'tingyuge',
+        //     'entrance' => '2013',
+        // ];
 
         if ($this->model->create()) {
             $this->model->password = sha1($this->model->password . $this->model->salt);
@@ -58,7 +58,6 @@ class LoginController extends Controller {
     }
 
     public function login($email, $password) {
-
         $result = $this->model->checkPassword($email, $password);
         if (is_array($result) && $result['id'] > 0) {
             session('user_uid', $result['id']);

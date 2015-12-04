@@ -11,7 +11,6 @@ class IndexController extends Controller {
     public function _initialize() {
     	$this->user = D('User');
     	$this->file = D('UserFilecode');
-		$this->battle = new UserBattleModel();
 	}
 
 	public function playGame($uid, $oid, $result) {

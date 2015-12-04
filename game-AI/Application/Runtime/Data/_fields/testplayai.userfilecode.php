@@ -1,0 +1,1 @@
+a:9:{i:0;s:2:"id";i:1;s:3:"uid";i:2;s:7:"filenum";i:3;s:8:"filetype";i:4;s:8:"filesize";i:5;s:7:"content";i:6;s:10:"createtime";s:3:"_pk";s:2:"id";s:5:"_type";a:7:{s:2:"id";s:7:"int(10)";s:3:"uid";s:7:"int(10)";s:7:"filenum";s:11:"varchar(50)";s:8:"filetype";s:10:"varchar(5)";s:8:"filesize";s:7:"int(10)";s:7:"content";s:4:"text";s:10:"createtime";s:11:"varchar(32)";}}
