@@ -29,7 +29,7 @@ class LoginController extends Controller {
         $code = I('validate');
         $verify=new \Think\Verify();
         if(!$verify->check($code)) {
-            $this->ajaxReturn(array('status' => 'error', 'msg' => '验证码错位'));
+            $this->ajaxReturn(array('status' => 'error', 'msg' => '验证码错误'));
         }
         
         // $_POST = [

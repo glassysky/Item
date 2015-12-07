@@ -1,0 +1,31 @@
+{
+    "project_type": "javascript",
+
+    "debugMode" : 1,
+    "showFPS" : true,
+    "frameRate" : 60,
+    "noCache" : false,
+    "id" : "gameCanvas",
+    "renderMode" : 0,
+    "engineDir":"./cocos2d/cocos2d-html5",
+
+    "modules" : ["cocos2d"],
+
+    "jsList" : [
+        "./cocos2d/replay/src/resource.js",
+        "./cocos2d/replay/src/app.js",
+
+        "./cocos2d/replay/src/playGame/scene/playGame.js",
+
+        "./cocos2d/replay/src/playGame/layer/PGBackgroundLayer.js",
+        "./cocos2d/replay/src/playGame/layer/PGBlockLayer.js",
+        "./cocos2d/replay/src/playGame/layer/PGPlayerLayer.js",
+        "./cocos2d/replay/src/playGame/layer/PGPanelLayer.js",
+
+        "./cocos2d/replay/src/playGame/sprite/BlockSprite.js",
+        "./cocos2d/replay/src/playGame/sprite/PlayerSprite.js",
+        "./cocos2d/replay/src/playGame/sprite/PanelSprite.js",
+
+        "./cocos2d/replay/src/config/GameConfig.js"
+    ]
+}
