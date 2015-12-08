@@ -75,10 +75,13 @@ var res = {
 
 };
 
-var resJSON = {
-    Map_JSON : "../res/replay.json"
-};
 
+cc.log(1);
+console.log(localStorage);
+
+var resJSON = {
+    //Map_JSON : "../res/replay.json"
+};
 
 var g_resources = [];
 

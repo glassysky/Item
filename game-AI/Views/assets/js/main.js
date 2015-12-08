@@ -44,7 +44,7 @@ requirejs(['reg','login','common','rank','battle','code','setting','style','boot
             break;
         case "rankLoc":
             rank.rankTable();
-            rank.rankPK();
+            //rank.rankPK();
             common.RdividePage();
             break;
         case "battleLoc":

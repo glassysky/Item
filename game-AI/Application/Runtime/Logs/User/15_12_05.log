@@ -1,0 +1,58 @@
+[ 2015-12-05T01:21:19+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001226s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0040s ]
+
+[ 2015-12-05T01:21:19+08:00 ] ::1 /User/Info/getUserInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000953s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `user` WHERE `id` = null LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2015-12-05T01:21:21+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001090s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0041s ]
+
+[ 2015-12-05T01:21:21+08:00 ] ::1 /User/Info/getUserInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001348s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `user` WHERE `id` = null LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-12-05T01:21:21+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001102s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0044s ]
+
+[ 2015-12-05T01:21:21+08:00 ] ::1 /User/Info/getUserInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002219s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `user` WHERE `id` = null LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-12-05T01:21:22+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001146s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0031s ]
+
+[ 2015-12-05T01:21:22+08:00 ] ::1 /User/Info/getUserInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001314s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `user` WHERE `id` = null LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-12-05T01:21:26+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0031s ]
+

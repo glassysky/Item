@@ -1,0 +1,327 @@
+[ 2015-12-09T00:13:11+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001219s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0101s ]
+
+[ 2015-12-09T00:13:31+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001506s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0154s ]
+
+[ 2015-12-09T00:14:16+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001284s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0103s ]
+
+[ 2015-12-09T00:14:20+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000993s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001590s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0174s ]
+
+[ 2015-12-09T00:24:21+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0133s ]
+
+[ 2015-12-09T00:24:49+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002071s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0137s ]
+
+[ 2015-12-09T00:25:39+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001518s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0197s ]
+
+[ 2015-12-09T00:26:12+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0090s ]
+
+[ 2015-12-09T00:26:13+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0073s ]
+
+[ 2015-12-09T00:27:34+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001675s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0122s ]
+
+[ 2015-12-09T00:28:01+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0073s ]
+
+[ 2015-12-09T00:28:23+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001416s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0074s ]
+
+[ 2015-12-09T00:28:35+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000924s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0120s ]
+
+[ 2015-12-09T00:28:48+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001319s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0126s ]
+
+[ 2015-12-09T00:29:05+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001910s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0104s ]
+
+[ 2015-12-09T00:29:08+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000941s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001788s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0139s ]
+
+[ 2015-12-09T00:31:21+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001169s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0104s ]
+
+[ 2015-12-09T00:31:51+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000729s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001268s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0184s ]
+
+[ 2015-12-09T00:32:06+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001988s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0157s ]
+
+[ 2015-12-09T00:32:39+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001314s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0167s ]
+
+[ 2015-12-09T00:32:57+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001770s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0147s ]
+
+[ 2015-12-09T00:59:24+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001378s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0189s ]
+
+[ 2015-12-09T01:00:01+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001264s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0089s ]
+
+[ 2015-12-09T01:00:05+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001321s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0118s ]
+
+[ 2015-12-09T01:00:09+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001124s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0087s ]
+
+[ 2015-12-09T01:00:11+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0082s ]
+
+[ 2015-12-09T01:00:23+08:00 ] ::1 /User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000630s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001055s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `user` WHERE `email` = '873661157@qq.com' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-12-09T01:00:24+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0092s ]
+
+[ 2015-12-09T01:00:29+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0080s ]
+
+[ 2015-12-09T01:00:32+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001537s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0134s ]
+
+[ 2015-12-09T01:02:05+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001317s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0082s ]
+
+[ 2015-12-09T01:02:08+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002523s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0097s ]
+
+[ 2015-12-09T01:02:18+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001328s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0099s ]
+
+[ 2015-12-09T01:04:12+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0102s ]
+
+[ 2015-12-09T01:04:39+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001246s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0107s ]
+
+[ 2015-12-09T01:04:50+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001007s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0091s ]
+
+[ 2015-12-09T01:04:54+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001236s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0126s ]
+
+[ 2015-12-09T01:04:59+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0074s ]
+
+[ 2015-12-09T01:05:11+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001815s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0103s ]
+
+[ 2015-12-09T01:05:26+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0078s ]
+
+[ 2015-12-09T01:05:26+08:00 ] ::1 /User/Info/getUserInfo
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000872s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `user` WHERE `id` = null LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2015-12-09T01:05:30+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001516s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0088s ]
+
+[ 2015-12-09T01:05:39+08:00 ] ::1 /User/Login/login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001118s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `user` WHERE `email` = '873661157@qq.com' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2015-12-09T01:05:41+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0074s ]
+
+[ 2015-12-09T01:05:43+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000757s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0079s ]
+
+[ 2015-12-09T01:05:47+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001354s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0102s ]
+
+[ 2015-12-09T01:06:32+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000980s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002299s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0120s ]
+
+[ 2015-12-09T01:06:46+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001326s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0128s ]
+
+[ 2015-12-09T01:08:03+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001265s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0108s ]
+
+[ 2015-12-09T01:08:49+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000899s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0105s ]
+
+[ 2015-12-09T01:09:05+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001048s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0113s ]
+
+[ 2015-12-09T01:09:12+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001203s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0102s ]
+
+[ 2015-12-09T01:10:12+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0083s ]
+
+[ 2015-12-09T01:10:14+08:00 ] ::1 /User/Login/loginStatus
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001382s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0125s ]
+

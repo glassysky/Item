@@ -79,7 +79,6 @@ var resJSON = {
     Map_JSON : "../res/preview.json"
 };
 
-
 var g_resources = [];
 
 for (var i in res) {
@@ -89,4 +88,3 @@ for (var i in res) {
 for (var j in resJSON) {
     g_resources.push(resJSON[j]);
 }
-

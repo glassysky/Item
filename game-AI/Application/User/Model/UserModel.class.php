@@ -8,7 +8,7 @@ class UserModel extends Model {
 	protected $_validate = array(
 		array('email', 'email', 'email is empty', 1, 'unique', 3),
 		array('nickname', 'require', 'nickname is empty', 1),
-		array('password', '6,12', '密码长度6-12', 1, 'length', 3),
+		array('password', '6,12', 'password is unright', 1, 'length', 3),
 		array('repassword', 'password', 'confirm password failed', 1, 'confirm'),
 		array('school', 'require', 'school id empty', 1),
 		array('studentid', 'require', 'studentid is empty', 1),

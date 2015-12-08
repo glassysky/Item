@@ -5,12 +5,15 @@ define(['jquery','common'],function($,common){
 
     return {
         rankTable : function(){
+            var self = this;
+
             $(document).ready(function(){
                 var listStr = "",
                     dividepageStr = "",
                     listTpl = "",
                     dividepageTpl = "",
                     length = 0;
+
                 $.ajax({
                     type : 'post',
                     url : '/Home/Index/userRank',
@@ -53,6 +56,7 @@ define(['jquery','common'],function($,common){
                             $(".pagination").html(dividepageStr).
                                 attr("data-count",page);
 
+                            self.rankPK();
                             common.RdividePage();
 
                         } else {
@@ -70,44 +74,34 @@ define(['jquery','common'],function($,common){
             $(".pk-btn").each(function(){
                 $(this).on("click",function(){
                     var uid = parseInt($(this).attr("id"));
+                    console.log(1);
 
-                    $.ajax({
-                        type : 'post',
-                        url : '',
-                        dataType : 'json',
-                        data : {
-                            "uid" : uid
-                        },
-                        success : function(callback){
-                            if(callback.status == "success"){
-                                window.location.href = "rank.html";
-                            } else {
-                                alert("PK失败");
-                            }
-                        },
-                        error : function(){
-                            console.log("请求失败");
-                        }
-                    });
+                    //用localStorage储存返回的json
+                    localStorage.PKobj = uid;
+
+                    window.location.href = "../Views/replay.html";
+
+                    //$.ajax({
+                    //    type : 'post',
+                    //    url : '',
+                    //    dataType : 'json',
+                    //    data : {
+                    //        "uid" : uid
+                    //    },
+                    //    success : function(callback){
+                    //        if(callback.status == "success"){
+                    //            window.location.href = "rank.html";
+                    //        } else {
+                    //            alert("PK失败");
+                    //        }
+                    //    },
+                    //    error : function(){
+                    //        console.log("请求失败");
+                    //    }
+                    //});
+
                 });
             });
-        },
-
-        rankDividePage : function(){
-            var pageList = $(".pagination").find("a"),
-                page = 0,
-                lastid = 0;
-
-            pageList.each(function(){
-                $(this).on("click",function(){
-                    if($(this).attr("id")){
-
-                    } else {
-                        page = $(this).html();
-                    }
-                });
-            });
-
         }
 
 
