@@ -16,7 +16,7 @@ define(['jquery','common'],function($,common){
 
                 $.ajax({
                     type : 'post',
-                    url : '/Home/Index/userRank',
+                    url : '../Home/Index/userRank',
                     success : function(callback){
                         if(callback.status == "success"){
                             var rank = callback.msg.rank,

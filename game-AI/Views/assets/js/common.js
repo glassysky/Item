@@ -49,7 +49,7 @@ define(['jquery'],function($){
                     console.log(1);
                     $.ajax({
                         type : 'post',
-                        url : '/User/Login/logout',
+                        url : '../User/Login/logout',
                         success : function(callback){
                             if(callback.status == "success"){
                                 alert("成功注销");
@@ -70,7 +70,7 @@ define(['jquery'],function($){
             var self = this;
             $.ajax({
                 type : 'post',
-                url : '/User/Login/loginStatus',
+                url : '../User/Login/loginStatus',
                 success : function(callback){
                     if(callback.status == "success"){
                         $("#toSelf").removeClass("hidden");
@@ -127,7 +127,7 @@ define(['jquery'],function($){
 
                     $.ajax({
                         type : 'post',
-                        url : '/Home/Index/userRank',
+                        url : '../Home/Index/userRank',
                         dataType : 'json',
                         data : {
                             "page" : page
@@ -144,8 +144,6 @@ define(['jquery'],function($){
                             page = Math.floor(msg.page);
                             length = msg.rank.length;
                             rank = msg.rank;
-
-                            console.log(msg);
 
                             for(var i = 0;i<length;i++){
                                 tpl = "<tr data-uid='" + rank[i].id + "'>" +
@@ -203,7 +201,7 @@ define(['jquery'],function($){
                     console.log(page);
                     $.ajax({
                         type : 'post',
-                        url : '/Home/Index/getBattles',
+                        url : '../Home/Index/getBattles',
                         dataType : 'json',
                         data : {
                             "page" : page

@@ -11,7 +11,7 @@ define(['jquery'], function($) {
 
             $.ajax({
                 type: 'post',
-                url: '/User/Upload/getFile',
+                url: '../User/Upload/getFile',
                 success: function(callback) {
                     var msg = callback["msg"];
 

@@ -17,7 +17,7 @@ define(['jquery','common'],function($,common){
 
             $.ajax({
                 type : 'post',
-                url : '/Home/Index/getBattles',
+                url : '../Home/Index/getBattles',
                 success : function(callback){
 
                     var msg = callback["msg"],
@@ -81,29 +81,29 @@ define(['jquery','common'],function($,common){
                 }
             });
         },
-        fightWith : function(){
-            $("#fight").on("click",function(){
-                var uid = $("#enemy-choose").val();
+        watchReplay : function(){
+            $(".battle-replay").each(function(){
+                $(this).on("click",function(){
+                    var replayID = parseInt($(this).attr("id"));
 
-                console.log(uid);
-
-                $.ajax({
-                    type : 'post',
-                    url : '',
-                    dataType : 'json',
-                    data : {
-                        "uid" : uid
-                    },
-                    success : function(callback){
-                        if(callback.status == "success"){
-                            console.log("成功");
-                        } else {
-
+                    $.ajax({
+                        url : '',
+                        type : 'post',
+                        dataType : 'json',
+                        data : {
+                            "replayID" : replayID
+                        },
+                        success : function(callback){
+                            if(callback.status == "success"){
+                                localStorage.replayJSON = callback.msg;
+                            } else {
+                                console.log(callback.msg);
+                            }
+                        },
+                        error : function(){
+                            console.log("请求失败");
                         }
-                    },
-                    error : function(){
-                        console.log("请求失败");
-                    }
+                    });
                 });
             });
         }

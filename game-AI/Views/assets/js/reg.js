@@ -29,7 +29,7 @@ define(['jquery','common'],function($,common){
 					$.ajax({
 						type : 'post',
 						dataType : 'json',
-						url : '/User/Login/register',
+						url : '../User/Login/register',
 						data : {
 							'email' : email,
 							'nickname' : nickname,
@@ -87,7 +87,7 @@ define(['jquery','common'],function($,common){
 
 			function vertifyImg(){
 				$("#checkpic").on("click",function(){
-					$("#checkpic").attr("src","/User/Login/verify");
+					$("#checkpic").attr("src","../User/Login/verify");
 				});
 			}
 		}

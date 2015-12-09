@@ -536,6 +536,7 @@ body {
 }
 
 #ai-game #settingpage .personal-info {
+    overflow: hidden;
     padding: 0 0 20px;
     border: 2px solid #ff873f;
     -webkit-border-radius: 5px;

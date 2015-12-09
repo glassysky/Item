@@ -18,7 +18,7 @@ define(['jquery','common'],function($,common){
                     $.ajax({
                         type : 'post',
                         dataType : 'json',
-                        url : '/User/Login/login',
+                        url : '../User/Login/login',
                         data : {
                             'email' : email,
                             'password' : password

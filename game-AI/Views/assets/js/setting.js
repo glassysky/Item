@@ -7,11 +7,11 @@ define(['jquery'],function(){
         preFillInfo : function(){
             $.ajax({
                 type : 'json',
-                url : '/User/Info/getUserInfo',
+                url : '../User/Info/getUserInfo',
                 success : function(callback){
-                    console.log(callback);
                     var msg = callback.msg;
 
+                    console.log(callback);
                     if(callback.status == "success"){
                         var details = $(".info-details");
                         details.find(".nickname").find(".info-body").html(msg.nickname)
@@ -46,20 +46,18 @@ define(['jquery'],function(){
                     school = $("#inputSchool").val(),
                     year = $("#inputYear").val(),
                     secondPlayer = $("#inputSecond").val(),
-                    thirdPlayer = $("#inputThird").val(),
-                    validate = $("#inputValidate");
+                    thirdPlayer = $("#inputThird").val();
 
                 $.ajax({
                     type : 'post',
-                    url : '',
+                    url : '../User/Info/edit',
                     dataType : 'json',
                     data : {
                         'nickname' : nickname,
                         'school' : school,
                         'entrance' : year,
                         'secondPlayer' : secondPlayer,
-                        'thirdPlayer' : thirdPlayer,
-                        'validate' : validate
+                        'thirdPlayer' : thirdPlayer
                     },
                     success : function(callback){
                         if(callback.status == "success"){
@@ -83,6 +81,11 @@ define(['jquery'],function(){
                 $("#changeInfo").removeClass("btn-hidden");
                 $(".info-details").removeClass("hidden");
                 $(".change-form").addClass("hidden");
+            });
+
+            //验证码
+            $("#checkpic").on("click",function(){
+                $("#checkpic").attr("src","../User/Login/verify");
             });
         }
     }
