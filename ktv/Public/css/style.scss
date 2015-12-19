@@ -1,0 +1,109 @@
+$background-color : #101010;
+
+body {
+  background-color: $background-color;
+}
+
+texthead {
+  h2 {
+    font-weight: 700;
+    color: #ddd;
+  }
+}
+
+textdetails {
+  h4 {
+    font-weight: 700;
+    color: #999;
+  }
+  p {
+    color: #555;
+  }
+}
+
+#homepage {
+  .activity-info {
+    margin-top: 20px;
+
+    .panel {
+
+      .panel-heading {
+        background-color: #222;
+        color: #fff;
+
+        h3 {
+          display: inline-block;
+          font-weight: 700;
+        }
+
+        .more-info {
+          float: right;
+        }
+      }
+      .panel-body {
+        background-color: #333;
+        color: #fff;
+        a {
+          color: #ddd;
+        }
+        a:hover {
+          font-weight: 700;
+          color: #fff;
+          text-decoration: none;
+        }
+        li {
+          padding-right: 5px;
+        }
+        .publish-date {
+          float: right;
+        }
+      }
+    }
+  }
+  .ktv-info {
+    padding: 10px;
+    .ktv-info-head {
+      @extend texthead;
+    }
+    .ktv-details {
+      @extend textdetails;
+    }
+  }
+  .leader-info {
+    padding: 10px;
+    .leader-info-head {
+      @extend texthead;
+    }
+    .leader-info-details {
+      @extend textdetails;
+    }
+    .col-md-4 {
+      text-align: center;
+    }
+  }
+}
+
+#news {
+
+  .panel {
+    .panel-body {
+      padding: 30px 50px 30px;
+      .publish-date {
+        float: right;
+      }
+    }
+  }
+}
+
+#activity {
+  @extend #news;
+}
+
+footer {
+  .copy-right {
+    background-color: #1a1a1a;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+  }
+}

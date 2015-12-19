@@ -1,0 +1,55 @@
+body {
+  background-color: #101010; }
+
+texthead h2, #homepage .ktv-info .ktv-info-head h2, #homepage .leader-info .leader-info-head h2 {
+  font-weight: 700;
+  color: #ddd; }
+
+textdetails h4, #homepage .ktv-info .ktv-details h4, #homepage .leader-info .leader-info-details h4 {
+  font-weight: 700;
+  color: #999; }
+textdetails p, #homepage .ktv-info .ktv-details p, #homepage .leader-info .leader-info-details p {
+  color: #555; }
+
+#homepage .activity-info {
+  margin-top: 20px; }
+  #homepage .activity-info .panel .panel-heading {
+    background-color: #222;
+    color: #fff; }
+    #homepage .activity-info .panel .panel-heading h3 {
+      display: inline-block;
+      font-weight: 700; }
+    #homepage .activity-info .panel .panel-heading .more-info {
+      float: right; }
+  #homepage .activity-info .panel .panel-body {
+    background-color: #333;
+    color: #fff; }
+    #homepage .activity-info .panel .panel-body a {
+      color: #ddd; }
+    #homepage .activity-info .panel .panel-body a:hover {
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none; }
+    #homepage .activity-info .panel .panel-body li {
+      padding-right: 5px; }
+    #homepage .activity-info .panel .panel-body .publish-date {
+      float: right; }
+#homepage .ktv-info {
+  padding: 10px; }
+#homepage .leader-info {
+  padding: 10px; }
+  #homepage .leader-info .col-md-4 {
+    text-align: center; }
+
+#news .panel .panel-body, #activity .panel .panel-body {
+  padding: 30px 50px 30px; }
+  #news .panel .panel-body .publish-date, #activity .panel .panel-body .publish-date {
+    float: right; }
+
+footer .copy-right {
+  background-color: #1a1a1a;
+  text-align: center;
+  height: 100px;
+  line-height: 100px; }
+
+/*# sourceMappingURL=style.css.map */
