@@ -57,19 +57,40 @@
  			</div>
  		</div>
  	</nav>
-<div id="news" class="container">
-    <div class="panel panel-default">
-        <div class="panel-heading">公司新闻</div>
-        <div class="panel-body">
-            <ul class="article-wrap">
-                <li><a href="#">新闻新闻</a><span class="publish-date">2015-12-20</span></li>
-                <li><a href="#">新闻新闻</a><span class="publish-date">2015-12-20</span></li>
-                <li><a href="#">新闻新闻</a><span class="publish-date">2015-12-20</span></li>
-                <li><a href="#">新闻新闻</a><span class="publish-date">2015-12-20</span></li>
-                <li><a href="#">新闻新闻</a><span class="publish-date">2015-12-20</span></li>
-            </ul>
-        </div>
+<div class="container" id="reg">
+    <div class="ktv-logo">
+        <img src="/Public/image/logo.gif" alt="">
     </div>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail" class="col-sm-2 control-label">邮箱</label>
+            <div class="col-sm-8"><input type="email" class="form-control" id="inputEmail"></div>
+        </div>
+        <div class="form-group">
+            <label for="inputTel" class="col-sm-2 control-label">手机</label>
+            <div class="col-sm-8"><input type="tel" class="form-control" id="inputTel"></div>
+        </div>
+        <div class="form-group">
+            <label for="inputPass" class="col-sm-2 control-label">密码</label>
+            <div class="col-sm-8">
+                <input type="password" class="form-control" id="inputPass">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="confirmPass" class="col-sm-2 control-label">确认密码</label>
+            <div class="col-sm-8">
+                <input type="password" class="form-control" id="confirmPass">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-6 col-sm-2">
+                <span>已有账号?</span><a href="/index.php/Home/Index/log">登陆</a>
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-default">注册</button>
+            </div>
+        </div>
+    </form>
 </div>
 	<footer>
 		<div class="copy-right">

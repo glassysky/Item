@@ -15,6 +15,7 @@
     <![endif]-->
  </head>
  <body>
+ <div class="all-wrap">
  	<nav class="navbar navbar-inverse">
  		<div class="container-fluid">
  			<div class="navbar-header">
@@ -29,28 +30,27 @@
 
  			<div class="collapse navbar-collapse" id="mynav">
  				<ul class="nav navbar-nav">
- 					<li><a href="#">Link</a><span class="sr-only">(current)</span></li>
- 					<li><a href="#">Link</a></li>
- 					<li class="dropdown">
- 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
- 						<ul class="dropdown-menu">
- 							<li><a href="#"></a></li>
- 							<li><a href="#"></a></li>
- 							<li><a href="#"></a></li>
- 							<li><a href="#"></a></li>
- 							<li><a href="#"></a></li>
- 						</ul>
- 					</li>
+ 					<li><a href="/index.php/Home/Index/index">首页</a></li>
+ 					<li><a href="/index.php/Home/Index/news">新闻</a></li>
+ 					<li><a href="/index.php/Home/Index/activity">活动优惠</a></li>
+ 					<!--<li class="dropdown">-->
+ 						<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+ 						<!--<ul class="dropdown-menu">-->
+ 							<!--<li><a href="#"></a></li>-->
+ 							<!--<li><a href="#"></a></li>-->
+ 							<!--<li><a href="#"></a></li>-->
+ 							<!--<li><a href="#"></a></li>-->
+ 							<!--<li><a href="#"></a></li>-->
+ 						<!--</ul>-->
+ 					<!--</li>-->
  				</ul>
  				<ul class="nav navbar-nav navbar-right">
- 					<li><a href="#">Link</a></li>
+ 					<!--<li><a href="#">Link</a></li>-->
  					<li class="dropdown">
- 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+ 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">请先登录 <span class="caret"></span></a>
  						<ul class="dropdown-menu">
- 							<li><a href="#"></a></li>
- 							<li><a href="#"></a></li>
- 							<li><a href="#"></a></li>
- 							<li><a href="#"></a></li>
+ 							<li><a href="/index.php/Home/Index/log">登陆</a></li>
+ 							<li><a href="/index.php/Home/Index/reg">注册</a></li>
  						</ul>
  					</li>
  				</ul>
@@ -223,7 +223,7 @@
 			Copyright © 2011 - 2015 sermay KTV, All Rights Reserved
 		</div>
 	</footer>
- 	<script src="/Public/js/lib/jquery.min.js"></script>
- 	<script src="/Public/js/lib/bootstrap.min.js"></script>
+</div>
+	<script src="/Public/js/lib/require.js" data-main="/Public/js/index.js"></script>
  </body>
  </html>

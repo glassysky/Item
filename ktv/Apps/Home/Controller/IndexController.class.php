@@ -14,5 +14,13 @@ class IndexController extends Controller {
         $this->display();
     }
 
+    public function log(){
+    	$this->display();
+    }
+
+    public function reg(){
+    	$this->display();
+    }
+
 
 }
