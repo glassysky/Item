@@ -20,5 +20,6 @@ requirejs.config({
 });
 
 requirejs(['Init','jquery','bootstrap'],function(Init){
-
+    Init.formJudge();
+    Init.addClickListener();
 });
