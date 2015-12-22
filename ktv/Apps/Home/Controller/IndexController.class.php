@@ -2,6 +2,7 @@
 namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
+
     public function index(){
         $this->display();
     }
@@ -23,34 +24,72 @@ class IndexController extends Controller {
     }
 
     public function doReg(){
-        $User = D('User');
-        $User -> select();
+        header("Content-Type:text/html; charset=utf-8");
+        $User = M('User');
 
         $email = I('post.email');
-        $tel = I('post.tel');
+        $phone = I('post.phone');
 
         $condition['user_email'] = $email;
-        $condition['user_tel'] = $tel;
-        $condition['_logic'] = 'AND';
+        $condition['user_phone'] = $phone;
+        $condition['_logic'] = "AND";
 
         $search = $User->where($condition)->find();
 
         if(!$search){
             $data['user_email'] = $email;
-            $data['user_tel'] = $tel;
+            $data['user_phone'] = $email;
+            $data['user_tel'] = $email;
+            $data['user_level'] = 1;
             $data['user_pass'] = I('post.pass');
 
             $res = $User -> data($data) -> add();
+            $this -> ajaxReturn($data);
 
             if($res){
-                $res['status'] = "success";
+                $callback['status'] = "success";
+                $callback['id'] = $res;
 
-                $this -> ajaxReturn($res);
+                session_start();
+                session(array('email'=>$email));
+                $this -> ajaxReturn($callback);
+            } else {
+                $callback['status'] = "failed";
+
+                $this -> ajaxReturn($callback);
             }
         } else {
-            $this -> ajaxReturn($condition);
+            $callback['status'] = "failed";
+            $callback['msg'] = "已注册过";
+            $this -> ajaxReturn($callback);
         }
 
+    }
+
+    public function doLog(){
+        header("Content-Type:text/html; charset=utf-8");
+        $User = M('User');
+        $email = I('post.email');
+
+        $condition['user_email'] = $email;
+
+        $vip = $User->where($condition)->find();
+        if($vip){
+            if($vip['user_pass'] == I('post.pass')){
+                $res['status'] = "success";
+                session_start();
+                session("email",$email);
+                $this->ajaxReturn($res);
+            } else {
+                $res['status'] = "failed";
+                $res['msg'] = "密码错误";
+                $this->ajaxReturn($res);
+            }
+        } else {
+            $res['status'] = "error";
+            $res['msg'] = "此邮箱还未注册";
+            $this->ajaxReturn($res);
+        }
     }
 
 

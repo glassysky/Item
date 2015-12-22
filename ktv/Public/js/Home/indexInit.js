@@ -16,7 +16,7 @@ define(['jquery'],function($){
                     }
                     if(count == 4){
                         var email = $("#inputEmail").val(),
-                            tel = $("#inputTel").val(),
+                            phone = $("#inputTel").val(),
                             pass = $("#inputPass").val();
 
                         $.ajax({
@@ -25,7 +25,7 @@ define(['jquery'],function($){
                             url : 'doReg',
                             data : {
                                 "email" : email,
-                                "tel" : tel,
+                                "tel" : phone,
                                 "pass" : pass
                             },
                             success : function(callback){
@@ -41,6 +41,29 @@ define(['jquery'],function($){
                             }
                         });
                     }
+                } else {
+                    var email = $("#inputEmail").val(),
+                        pass = $("#inputPass").val();
+
+                    $.ajax({
+                        type : 'post',
+                        dataType : 'json',
+                        url : 'doLog',
+                        data : {
+                            "email" : email,
+                            "pass" : pass
+                        },
+                        success : function(callback){
+                            if(callback.status == "success"){
+                                console.log("登陆成功！");
+                            } else {
+                                console.log(callback.msg);
+                            }
+                        },
+                        error : function(){
+                            console.log("请求失败");
+                        }
+                    });
                 }
             });
         },

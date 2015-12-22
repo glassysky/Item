@@ -41,10 +41,15 @@ selfform {
     max-width: 600px;
     margin:50px auto;
     width: 50%;
-    button {
-      width: 100%;
-    }
   }
+}
+
+.input-error {
+  border: 2px solid red;
+}
+
+.input-right {
+  border: 2px solid green;
 }
 
 .all-wrap {
