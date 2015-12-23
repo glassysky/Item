@@ -89,4 +89,13 @@ footer .copy-right {
   height: 100px;
   line-height: 100px; }
 
+#admin .wrap-head {
+  margin: 20px 0; }
+  #admin .wrap-head span {
+    font-size: 2em;
+    color: #fff;
+    font-weight: 700; }
+#admin .wrap-body .panel-group .panel-body a {
+  cursor: pointer; }
+
 /*# sourceMappingURL=style.css.map */

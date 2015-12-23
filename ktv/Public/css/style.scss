@@ -156,3 +156,23 @@ footer {
     line-height: 100px;
   }
 }
+
+#admin {
+  .wrap-head {
+    margin: 20px 0;
+    span {
+      font-size: 2em;
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+  .wrap-body {
+    .panel-group {
+      .panel-body {
+        a {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

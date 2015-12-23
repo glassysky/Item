@@ -1,0 +1,84 @@
+<?php dump(session); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>Document</title>
+ 	<link href="__PUBLIC__/css/lib/bootstrap.min.css" rel="stylesheet">
+ 	<link href="__PUBLIC__/css/style.css" rel="stylesheet">
+ 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="admin">
+	<div class="container-fluid">
+		<div class="wrap-head">
+			<img src="__PUBLIC__/image/logo.gif" alt="logo">
+			<span>后台管理</span>
+		</div>
+		<div class="wrap-body row">
+			<div class="col-md-2">
+				<div class="panel-group" id="left-menu" role="tablist" aria-multiselectable="true">
+					<!-- 用户管理 -->
+					<div class="panel panel-default">
+						<div class="panel-heading" id="user-management" role="tab">
+							<h4 class="panel-title">
+								<a
+								<?php 
+								if(session('location')){
+									if(session('location') == "userList"){
+										echo 'aria-expanded="true"';
+									} else {
+										echo 'aria-expanded="true" class="collapsed"';
+									}
+								}
+								 ?> 
+								href="#user-manage-panel" role="button" data-toggle="collapse" data-parent="#left-menu"  aria-controls="user-manage-panel">
+									用户管理
+								</a>
+							</h4>
+						</div>
+						<div id="user-manage-panel" 
+						<?php 
+							if(session('location')){
+								if(session('location') == "userList"){
+									echo 'class="panel-collapse collapse in"';
+								} else {
+									echo 'class="panel-collapse collapse"';
+								}
+							}
+						 ?> 
+						class="panel-collapse collapse in" role="tabpanel" aria-labelledby="user-management">
+							<div class="panel-body">
+								<ul>
+									<li><a id="user-select-btn" class="select-btn">用户列表</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- 文章发布 -->
+					<div class="panel panel-default">
+						<div class="panel-heading" id="article-publish" role="tab">
+							<h4 class="panel-title">
+								<a class="collapsed" href="#article-publish-panel" role="button" data-toggle="collapse" data-parent="#left-menu" aria-expanded="false" aria-controls="article-publish-panel">
+									文章发布
+								</a>
+							</h4>
+						</div>
+						<div id="article-publish-panel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="article-publish">
+							<div class="panel-body">
+								<ul>
+									<li><a id="news-select-btn" class="select-btn">新闻发布</a></li>
+									<li><a id="activity-select-btn" class="select-btn">活动发布</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-10">
