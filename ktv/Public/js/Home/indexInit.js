@@ -8,6 +8,7 @@ define(['jquery'],function($){
         addClickListener : function(){
             $(".submit-btn").on("click",function(){
                 var count = 0;
+                // 注册
                 if($(this).attr("id") == "reg-btn"){
                     for(var i in judgeInput){
                         if(judgeInput[i]){
@@ -29,19 +30,20 @@ define(['jquery'],function($){
                                 "pass" : pass
                             },
                             success : function(callback){
-                                // if(callback.status == "success"){
-                                //     window.location.href = "index";
-                                // } else {
-                                //     alert(callback.msg);
-                                // }
-                                console.log(callback);
+                                if(callback.status == "success"){
+                                    alert("注册成功");
+                                    window.location.href = "index";
+                                } else {
+                                    alert(callback.msg);
+                                }
                             },
                             error : function(){
                                 alert("请求失败");
                             }
                         });
                     }
-                } else {
+                } else if($(this).attr("id") == "log-btn") {
+                    // 登陆
                     var email = $("#inputEmail").val(),
                         pass = $("#inputPass").val();
 
@@ -55,7 +57,8 @@ define(['jquery'],function($){
                         },
                         success : function(callback){
                             if(callback.status == "success"){
-                                console.log("登陆成功！");
+                                alert("登陆成功");
+                                window.location.href = "index";
                             } else {
                                 console.log(callback.msg);
                             }
@@ -64,7 +67,20 @@ define(['jquery'],function($){
                             console.log("请求失败");
                         }
                     });
-                }
+                } 
+            });
+
+            $("#log-out").on("click",function(){
+                $.ajax({
+                    type : 'post',
+                    url : 'logOut',
+                    success : function(){
+                        window.location.href = "index";
+                    },
+                    error : function(){
+                        alert("注销失败");
+                    }
+                });
             });
         },
 

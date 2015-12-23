@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>Document</title>
+ 	<link href="__PUBLIC__/css/lib/bootstrap.min.css" rel="stylesheet">
+ 	<link href="__PUBLIC__/css/style.css" rel="stylesheet">
+ 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="wrap-head"></div>
+		<div class="wrap-body row">
+			<div class="col-md-4">
+				<div class="panel-group" id="left-menu" role="tablist" aria-multiselectable="true">
+					<!-- 用户管理 -->
+					<div class="panel panel-default">
+						<div class="panel-heading" id="user-management" role="tab">
+							<h4 class="panel-title">
+								<a href="#user-manage-panel" role="button" data-toggle="collapse" data-parent="#left-menu" aria-expanded="true" aria-controls="user-manage-panel">
+									用户管理
+								</a>
+							</h4>
+						</div>
+						<div id="user-manage-panel" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="user-management">
+							<div class="panel-body">
+								普通用户
+							</div>
+						</div>
+					</div>
+					<!-- 文章发布 -->
+					<div class="panel panel-default">
+						<div class="panel-heading" id="article-publish" role="tab">
+							<h4 class="panel-title">
+								<a class="collapsed" href="#article-publish-panel" role="button" data-toggle="collapse" data-parent="#left-menu" aria-expanded="false" aria-controls="article-publish-panel">
+									文章发布
+								</a>
+							</h4>
+						</div>
+						<div id="article-publish-panel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="article-publish">
+							<div class="panel-body">
+								<ul>
+									<li><a href="">新闻发布</a></li>
+									<li><a href="">活动发布</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8"></div>
+		</div>
+	</div>
+
+	<script src="__PUBLIC__/js/lib/require.js" data-main="__PUBLIC__/js/index.js"></script>
+</body>
+</html>

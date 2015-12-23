@@ -44,23 +44,22 @@ class IndexController extends Controller {
             $data['user_pass'] = I('post.pass');
 
             $res = $User -> data($data) -> add();
-            $this -> ajaxReturn($data);
 
             if($res){
                 $callback['status'] = "success";
-                $callback['id'] = $res;
 
                 session_start();
-                session(array('email'=>$email));
+                session("email",$email);
                 $this -> ajaxReturn($callback);
             } else {
                 $callback['status'] = "failed";
+                $callback['msg'] = "注册失败";
 
                 $this -> ajaxReturn($callback);
             }
         } else {
             $callback['status'] = "failed";
-            $callback['msg'] = "已注册过";
+            $callback['msg'] = "此邮箱已注册过";
             $this -> ajaxReturn($callback);
         }
 
@@ -86,10 +85,14 @@ class IndexController extends Controller {
                 $this->ajaxReturn($res);
             }
         } else {
-            $res['status'] = "error";
+            $res['status'] = "failed";
             $res['msg'] = "此邮箱还未注册";
             $this->ajaxReturn($res);
         }
+    }
+
+    public function logOut(){
+        session_destroy();
     }
 
 
