@@ -1,4 +1,4 @@
-<?php dump(session); ?>
+<?php dump(session('location')); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,10 +53,10 @@
 								}
 							}
 						 ?> 
-						class="panel-collapse collapse in" role="tabpanel" aria-labelledby="user-management">
+						role="tabpanel" aria-labelledby="user-management">
 							<div class="panel-body">
 								<ul>
-									<li><a id="user-select-btn" class="select-btn">用户列表</a></li>
+									<li><a id="user-select-btn" class="select-btn" href="javascript:void(0);">用户列表</a></li>
 								</ul>
 							</div>
 						</div>
@@ -65,16 +65,36 @@
 					<div class="panel panel-default">
 						<div class="panel-heading" id="article-publish" role="tab">
 							<h4 class="panel-title">
-								<a class="collapsed" href="#article-publish-panel" role="button" data-toggle="collapse" data-parent="#left-menu" aria-expanded="false" aria-controls="article-publish-panel">
+								<a
+								<?php 
+								if(session('location')){
+									if(session('location') == "activityList" || session('location') == "newsList"){
+										echo 'aria-expanded="true"';
+									} else {
+										echo 'aria-expanded="true" class="collapsed"';
+									}
+								}
+								 ?>  
+								href="#article-publish-panel" role="button" data-toggle="collapse" data-parent="#left-menu" aria-expanded="false" aria-controls="article-publish-panel">
 									文章发布
 								</a>
 							</h4>
 						</div>
-						<div id="article-publish-panel" class="panel-collapse collapse" role="tabpanel" aria-labelledby="article-publish">
+						<div id="article-publish-panel" 
+						<?php 
+							if(session('location')){
+								if(session('location') == "activityList" || session('location') == "newsList"){
+									echo 'class="panel-collapse collapse in"';
+								} else {
+									echo 'class="panel-collapse collapse"';
+								}
+							}
+						 ?> 
+						role="tabpanel" aria-labelledby="article-publish">
 							<div class="panel-body">
 								<ul>
-									<li><a id="news-select-btn" class="select-btn">新闻发布</a></li>
-									<li><a id="activity-select-btn" class="select-btn">活动发布</a></li>
+									<li><a id="news-select-btn" class="select-btn" href="javascript:void(0);">新闻发布</a></li>
+									<li><a id="activity-select-btn" class="select-btn" href="javascript:void(0);" onclick="return false;">活动发布</a></li>
 								</ul>
 							</div>
 						</div>

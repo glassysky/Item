@@ -167,11 +167,16 @@ footer {
     }
   }
   .wrap-body {
-    .panel-group {
+    #left-menu {
       .panel-body {
         a {
           cursor: pointer;
         }
+      }
+    }
+    .col-md-10 {
+      .panel-heading {
+        font-weight: 700;
       }
     }
   }

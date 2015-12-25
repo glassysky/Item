@@ -12,7 +12,19 @@ class IndexController extends Controller {
     	$location = "userList";
     	session_start();
     	session("location",$location);
-    	$this->display();
+        $this->display();
+    }
+
+    public function getUserList(){
+        $User = M('User');
+        $condition['ID'] = 24;
+        // $search = $User->getField('ID,user_email,user_tel',10);
+        $search = $User->limit(10)->select();
+        if($User){
+            $res['status'] = "success";
+            $res['msg'] = $search;
+            $this->ajaxReturn($res);
+        }
     }
 
     public function newsList(){

@@ -95,7 +95,9 @@ footer .copy-right {
     font-size: 2em;
     color: #fff;
     font-weight: 700; }
-#admin .wrap-body .panel-group .panel-body a {
+#admin .wrap-body #left-menu .panel-body a {
   cursor: pointer; }
+#admin .wrap-body .col-md-10 .panel-heading {
+  font-weight: 700; }
 
 /*# sourceMappingURL=style.css.map */
